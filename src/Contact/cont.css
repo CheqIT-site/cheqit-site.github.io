@@ -1,0 +1,11 @@
+.cont-main{
+    
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.cont-img{
+    height: 30vh;
+    width: 100%;
+
+}
