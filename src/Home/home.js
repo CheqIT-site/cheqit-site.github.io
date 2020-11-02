@@ -22,6 +22,13 @@ import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
 import prob from "../images/prob.jpg";
 import doubt from "../images/doubt.svg";
+import sol from "../images/sol.svg";
+import post from "../images/post.svg";
+import before from "../images/before.png";
+import gr from "../images/graph.jpg";
+
+
+
 
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 const Mar = styled.div`
@@ -103,7 +110,7 @@ export default function Home() {
             <Row className="probut-row">
               <Col sm={12} className="type">
                 <img src={doubt} className="prob-icon"></img>
-                <p style={{ marginBottom: 0,textAlign:"center" }}>
+                <p style={{ marginBottom: 0, textAlign: "center" }}>
                   Low visibility due to wide distribution network
                 </p>
               </Col>
@@ -113,7 +120,7 @@ export default function Home() {
             <Row className="probut-row">
               <Col sm={6} className="type">
                 <img src={doubt} className="prob-icon"></img>
-                <p style={{ marginBottom: 0,textAlign:"center" }}>
+                <p style={{ marginBottom: 0, textAlign: "center" }}>
                   Increasing instances of brand counterfeit
                 </p>
               </Col>
@@ -128,7 +135,7 @@ export default function Home() {
             <Row className="probut-row">
               <Col sm={6} className="type">
                 <img src={doubt} className="prob-icon"></img>
-                <p style={{ marginBottom: 0,textAlign:"center" }}>
+                <p style={{ marginBottom: 0, textAlign: "center" }}>
                   Lower customer engagement and data inadequacy
                 </p>
               </Col>
@@ -138,7 +145,9 @@ export default function Home() {
             <Row className="probut-row">
               <Col sm={6} className="type">
                 <img src={doubt} className="prob-icon"></img>
-                <p style={{ marginBottom: 0,textAlign:"center"}}>Inventory Mismanagement</p>
+                <p style={{ marginBottom: 0, textAlign: "center" }}>
+                  Inventory Mismanagement
+                </p>
               </Col>
             </Row>
           </Card>
@@ -245,6 +254,90 @@ export default function Home() {
           </Flippy>
         </Col>
       </Row>
+      <Row>
+        <h2 className="post-head">Post CHEQIT</h2>
+      </Row>
+      
+      <Row className="post">
+        <Col sm={12} className="one">
+          <Card className="butpro-card">
+            <Row className="probut-row">
+              <Col sm={6} className="type">
+                <img src={post} className="prob-icon"></img>
+                <p style={{ marginBottom: 0, textAlign: "center" }}>
+                Inventory Management
+
+                </p>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+        <Col sm={12} className="two">
+          <Row style={{display:"flex",justifyContent:"center"}}>
+            <Col sm={3} className="mid-pic">
+              <Card className="butpro-card">
+                <Row className="probut-row">
+                  <Col sm={6} className="type">
+                    <img src={post} className="prob-icon"></img>
+                    <p style={{ marginBottom: 0, textAlign: "center" }}>
+                      End to End Supply Chain Visibility
+
+                    </p>
+                  </Col>
+                </Row>
+              </Card>
+            </Col>
+            <Col sm={4} style={{display:"contents"}}>
+              <img className="sol-pic" src={sol}></img>
+            </Col>
+            <Col sm={3} className="mid-pic">
+              <Card className="butpro-card">
+                <Row className="probut-row">
+                  <Col sm={6} className="type">
+                    <img src={post} className="prob-icon"></img>
+                    <p style={{ marginBottom: 0, textAlign: "center" }}>
+                    Product Tracking
+
+                    </p>
+                  </Col>
+                </Row>
+              </Card>
+            </Col>
+          </Row>
+        </Col>
+        <Col sm={12} className="third">
+          <Card className="butpro-card">
+            <Row className="probut-row">
+              <Col sm={6} className="type">
+                <img src={post} className="prob-icon"></img>
+                <p style={{ marginBottom: 0, textAlign: "center" }}>
+                Consumer Demographic Analytics
+
+                </p>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <h2 className="post-head">Graphs</h2>
+      </Row>
+      <Row style={{backgroundImage:"../images/before.jpg"}}>
+
+      </Row>
+      {/* <Flippy flipOnHover={true} flipDirection="vertical">
+        <FrontSide>
+          <Card>
+            <Row>
+              <Col sm={8}>
+                <img src={before}></img>
+              </Col>
+            </Row>
+          </Card>
+        </FrontSide>
+
+      </Flippy> */}
+
       <Row className="workhead">
         <h2 className="wor">How CHEQIT Works</h2>
       </Row>
