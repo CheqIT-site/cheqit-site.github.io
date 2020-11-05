@@ -25,10 +25,8 @@ import doubt from "../images/doubt.svg";
 import sol from "../images/sol.svg";
 import post from "../images/post.svg";
 import before from "../images/before.png";
+import after from "../images/After.png";
 import gr from "../images/graph.jpg";
-
-
-
 
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 const Mar = styled.div`
@@ -257,23 +255,21 @@ export default function Home() {
       <Row>
         <h2 className="post-head">Post CHEQIT</h2>
       </Row>
-      
       <Row className="post">
         <Col sm={12} className="one">
           <Card className="butpro-card">
             <Row className="probut-row">
               <Col sm={6} className="type">
                 <img src={post} className="prob-icon"></img>
-                <p style={{ marginBottom: 0, textAlign: "center" }}>
-                Inventory Management
-
+                <p style={{ marginBottom: 0, textAlign: "center",zIndex:1 }}>
+                  Inventory Management
                 </p>
               </Col>
             </Row>
           </Card>
         </Col>
         <Col sm={12} className="two">
-          <Row style={{display:"flex",justifyContent:"center"}}>
+          <Row style={{ display: "flex", justifyContent: "center" }}>
             <Col sm={3} className="mid-pic">
               <Card className="butpro-card">
                 <Row className="probut-row">
@@ -281,13 +277,12 @@ export default function Home() {
                     <img src={post} className="prob-icon"></img>
                     <p style={{ marginBottom: 0, textAlign: "center" }}>
                       End to End Supply Chain Visibility
-
                     </p>
                   </Col>
                 </Row>
               </Card>
             </Col>
-            <Col sm={4} style={{display:"contents"}}>
+            <Col sm={4} style={{ display: "contents" }}>
               <img className="sol-pic" src={sol}></img>
             </Col>
             <Col sm={3} className="mid-pic">
@@ -296,8 +291,7 @@ export default function Home() {
                   <Col sm={6} className="type">
                     <img src={post} className="prob-icon"></img>
                     <p style={{ marginBottom: 0, textAlign: "center" }}>
-                    Product Tracking
-
+                      Product Tracking
                     </p>
                   </Col>
                 </Row>
@@ -311,8 +305,7 @@ export default function Home() {
               <Col sm={6} className="type">
                 <img src={post} className="prob-icon"></img>
                 <p style={{ marginBottom: 0, textAlign: "center" }}>
-                Consumer Demographic Analytics
-
+                  Consumer Demographic Analytics
                 </p>
               </Col>
             </Row>
@@ -322,22 +315,44 @@ export default function Home() {
       <Row>
         <h2 className="post-head">Graphs</h2>
       </Row>
-      <Row style={{backgroundImage:"../images/before.jpg"}}>
-
+      <Row className="gra">
+        <Col sm={6} style={{marginLeft:"47%"}}>
+          <Flippy flipOnHover={true} flipDirection="vertical">
+            <FrontSide>
+              <Card className="gra-card">
+                <Row>
+                  <Col sm={12}>
+                    <h3 className="gra-head">
+                    Where we stand today?
+                    </h3>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={8}>
+                    <img className="gra-pic" src={before}></img>
+                  </Col>
+                </Row>
+              </Card>
+            </FrontSide>
+            <BackSide>
+              <Card className="gra-card">
+              <Row>
+                  <Col sm={12}>
+                    <h3 className="gra-head">
+                    What we can achieve together?
+                    </h3>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={8}>
+                    <img className="gra-pic" src={after}></img>
+                  </Col>
+                </Row>
+              </Card>
+            </BackSide>
+          </Flippy>
+        </Col>
       </Row>
-      {/* <Flippy flipOnHover={true} flipDirection="vertical">
-        <FrontSide>
-          <Card>
-            <Row>
-              <Col sm={8}>
-                <img src={before}></img>
-              </Col>
-            </Row>
-          </Card>
-        </FrontSide>
-
-      </Flippy> */}
-
       <Row className="workhead">
         <h2 className="wor">How CHEQIT Works</h2>
       </Row>
