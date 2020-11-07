@@ -38,10 +38,17 @@
     margin-left: 2%;
 }
 .try-sec{
-    /* background-image: url("../images/try.jpg"); */
-    /* background: center; */
+    /* background-image: url("../images/try.jpg");
+    background: center; */
 }
 .try-main{
     overflow: hidden;
     height: 100vh;
+}
+.qr-img{
+    border: 2px solid #0d7377;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+
 }

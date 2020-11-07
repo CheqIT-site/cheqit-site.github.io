@@ -154,7 +154,7 @@ export default function Home() {
       <Row>
         <h2 className="sol">Our Solution</h2>
       </Row>
-      <Row className="sec-section" id="#features">
+      <Row className="sec-section" id={'features'}>
         <Col sm={4} className="use">
           <Flippy flipOnHover={true} flipDirection="horizontal">
             <FrontSide style={{ boxShadow: "none" }}>

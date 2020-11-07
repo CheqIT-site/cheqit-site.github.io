@@ -36,16 +36,18 @@ export default function Contact() {
         </Col>
       </Row>
       <Row className="cont-main">
-          <Col sm={6}>
+          <Col sm={6} style={{width:"100%"}}>
               <Row className="offrow">
                 <h2 className="off-head">Office</h2>
                 <h3 className="off">Pune, Maharashtra, India</h3>
+                <h2 className="off-head">Mail Us</h2>
+                <a href="info@cheqit.in"><i class="fa fa-envelope" aria-hidden="true"></i>info@cheqit.in</a>
               </Row>
               <Row>
                 {/* map */}
               </Row>
           </Col>
-          <Col sm={6} style={{marginLeft:"49%"}}>
+          <Col sm={6}>
           <img src={cont} className="cont-img"></img>
 
           </Col>
