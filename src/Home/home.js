@@ -50,7 +50,7 @@ export default function Home() {
     <div className="main-container">
       <Row className="nav">
         <Col className="chq-head" sm={{ span: 4, offset: 1 }}>
-          <Link to="/home">
+          <Link to="/">
             <img className="chq-logo" src={logo} alt="Cheqit-logo" />
           </Link>
         </Col>

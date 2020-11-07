@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
     <Switch>
-      <Route path="/home" component={Home}></Route>
+      <Route path="/" exact component={Home}></Route>
       <Route path="/try" component={Try}></Route>
       <Route path="/about" component={About}></Route>
       <Route path="/features" component={Features}></Route>

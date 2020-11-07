@@ -37,16 +37,16 @@ export default function Contact() {
       </Row>
       <Row className="cont-main">
           <Col sm={6}>
-              <Row>
-                <h3>Office</h3>
-                <p>Pune,India</p>
+              <Row className="offrow">
+                <h2 className="off-head">Office</h2>
+                <h3 className="off">Pune, Maharashtra, India</h3>
               </Row>
               <Row>
-                
+                {/* map */}
               </Row>
           </Col>
           <Col sm={6} style={{marginLeft:"49%"}}>
-          <img src={cont} classname="cont-img"></img>
+          <img src={cont} className="cont-img"></img>
 
           </Col>
       </Row>

@@ -1,0 +1,47 @@
+.try-inst{
+    padding: 3%;
+    width: 100%;
+}
+.try-form{
+    padding: 3%;
+    width: 100%;
+    margin: auto;
+}
+.help{
+    color: #0d7377;
+    font-size: 1.3vw;
+    font-family: "Montserrat";
+
+}
+.inst{
+    font-size: 1.8vw;
+    font-family: sans-serif;
+    color: #898b8a;
+}
+.cri{
+    font-size: 1.5vw;
+    font-family: monospace;
+    color: #0d7377;
+    padding: 3%;
+}
+.field{
+    color: #898b8a;
+    font-size: 1vw;
+    padding: 1%;
+    border-radius: 8px;
+    border: 2px solid #0d7377;
+}
+.na{
+    margin-left: 15%;
+}
+.des{
+    margin-left: 2%;
+}
+.try-sec{
+    /* background-image: url("../images/try.jpg"); */
+    /* background: center; */
+}
+.try-main{
+    overflow: hidden;
+    height: 100vh;
+}
