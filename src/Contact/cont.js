@@ -36,21 +36,59 @@ export default function Contact() {
         </Col>
       </Row>
       <Row className="cont-main">
-          <Col sm={6} style={{width:"100%"}}>
-              <Row className="offrow">
-                <h2 className="off-head">Office</h2>
-                <h3 className="off">Pune, Maharashtra, India</h3>
-                <h2 className="off-head">Mail Us</h2>
-                <a><i class="fa fa-envelope" aria-hidden="true"></i>info@cheqit.in</a>
+        <Col sm={6} style={{ width: "100%" }}>
+          <Row className="info">
+            <Col sm={12} className="office-col">
+              <Row>
+                <h2 className="off-head">OFFICE</h2>
               </Row>
               <Row>
-                {/* map */}
+                <h2 className="off">India</h2>
               </Row>
-          </Col>
-          <Col sm={6}>
+              <Row>
+                <h2 className="add">Alandi road, Pune, Maharashtra,India, 411016</h2>
+              </Row>
+            </Col>
+            <Col sm={12} className="mail-col">
+              <Row>
+                <h2 className="off-head">MAIL US</h2>
+              </Row>
+              <Row style={{ display: "flex" }}>
+                <Col sm={3} className="icon-mail">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </Col>
+                <Col sm={9} className="email">info@cheqit.in</Col>
+              </Row>
+            </Col>
+            <Col sm={12} className="connect-col">
+              {" "}
+              <Row>
+                <h2 className="off-head">CONNECT WITH US</h2>
+              </Row>
+              <Row style={{ display: "flex" }}>
+                <Col sm={3} style={{marginRight:"3%"}}>
+                  <a href="https://www.instagram.com/cheqitco/" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </Col>
+                <Col sm={3} style={{marginRight:"3%"}}>
+                  <a>
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                  </a>
+                </Col>
+                <Col sm={3} style={{marginRight:"3%"}}>
+                  <a href="https://www.linkedin.com/in/cheqit-co-1b59371b7" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                  </a>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+          <Row className="map"></Row>
+        </Col>
+        <Col sm={6}>
           <img src={cont} className="cont-img"></img>
-
-          </Col>
+        </Col>
       </Row>
     </div>
   );
