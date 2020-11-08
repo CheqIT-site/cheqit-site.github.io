@@ -13,6 +13,7 @@
     margin-bottom: 8vh;
     background-color: #212121;
     height: 11vh;
+    position: sticky;
   }
   .chq-logo {
     height: 70%;
@@ -494,4 +495,7 @@
   font-size: 1vw;
   font-family: "Montserrat";
   color: #0d7377;
+}
+a{
+  text-decoration: none;
 }

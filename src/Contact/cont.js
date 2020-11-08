@@ -13,21 +13,21 @@ export default function Contact() {
     <div>
       <Row className="nav">
         <Col className="chq-head" sm={{ span: 4, offset: 1 }}>
-          <Link to="/home">
+          <Link to="/">
             <img className="chq-logo" src={logo} alt="Cheqit-logo" />
           </Link>
         </Col>
         <Col className="nav-options" sm={6}>
-          <Link to="#features" style={tabstyle}>
+          <Link to="/" style={tabstyle}>
             <p className="home-nav">Features</p>
           </Link>
           <Link to="/try" style={tabstyle}>
             <p className="home-nav">Try Us</p>
           </Link>
-          <Link to="/blog" style={tabstyle}>
+          <Link to="/" style={tabstyle}>
             <p className="home-nav">Blogs</p>
           </Link>
-          <Link to="/about" style={tabstyle}>
+          <Link to="/" style={tabstyle}>
             <p className="home-nav">About Us</p>
           </Link>
           <Link to="/contact" style={tabstyle}>
@@ -41,7 +41,7 @@ export default function Contact() {
                 <h2 className="off-head">Office</h2>
                 <h3 className="off">Pune, Maharashtra, India</h3>
                 <h2 className="off-head">Mail Us</h2>
-                <a href="info@cheqit.in"><i class="fa fa-envelope" aria-hidden="true"></i>info@cheqit.in</a>
+                <a><i class="fa fa-envelope" aria-hidden="true"></i>info@cheqit.in</a>
               </Row>
               <Row>
                 {/* map */}

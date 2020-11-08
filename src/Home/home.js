@@ -27,6 +27,8 @@ import post from "../images/post.svg";
 import before from "../images/before.png";
 import after from "../images/After.png";
 import gr from "../images/graph.jpg";
+import { Link as scroll } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
 
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 const Mar = styled.div`
@@ -55,18 +57,21 @@ export default function Home() {
           </Link>
         </Col>
         <Col className="nav-options" sm={6}>
-          <Link to="#features" style={tabstyle}>
+          <HashLink smooth to="#features">
             <p className="home-nav">Features</p>
-          </Link>
+          </HashLink>
+
           <Link to="/try" style={tabstyle}>
             <p className="home-nav">Try Us</p>
           </Link>
-          <Link to="/blog" style={tabstyle}>
+          <HashLink smooth to="#blog">
             <p className="home-nav">Blogs</p>
-          </Link>
-          <Link to="/about" style={tabstyle}>
+          </HashLink>
+
+          <HashLink smooth to="#about">
             <p className="home-nav">About Us</p>
-          </Link>
+          </HashLink>
+
           <Link to="/contact" style={tabstyle}>
             <p className="home-nav">Contact Us</p>
           </Link>
@@ -151,10 +156,10 @@ export default function Home() {
           </Card>
         </Col>
       </Row>
-      <Row>
+      <Row id={"features"}>
         <h2 className="sol">Our Solution</h2>
       </Row>
-      <Row className="sec-section" id={'features'}>
+      <Row className="sec-section">
         <Col sm={4} className="use">
           <Flippy flipOnHover={true} flipDirection="horizontal">
             <FrontSide style={{ boxShadow: "none" }}>
@@ -261,7 +266,7 @@ export default function Home() {
             <Row className="probut-row">
               <Col sm={6} className="type">
                 <img src={post} className="prob-icon"></img>
-                <p style={{ marginBottom: 0, textAlign: "center",zIndex:1 }}>
+                <p style={{ marginBottom: 0, textAlign: "center", zIndex: 1 }}>
                   Inventory Management
                 </p>
               </Col>
@@ -316,15 +321,13 @@ export default function Home() {
         <h2 className="post-head">Graphs</h2>
       </Row>
       <Row className="gra">
-        <Col sm={6} style={{marginLeft:"47%"}}>
+        <Col sm={6} style={{ marginLeft: "47%" }}>
           <Flippy flipOnHover={true} flipDirection="vertical">
             <FrontSide>
               <Card className="gra-card">
                 <Row>
                   <Col sm={12}>
-                    <h3 className="gra-head">
-                    Where we stand today?
-                    </h3>
+                    <h3 className="gra-head">Where we stand today?</h3>
                   </Col>
                 </Row>
                 <Row>
@@ -336,11 +339,9 @@ export default function Home() {
             </FrontSide>
             <BackSide>
               <Card className="gra-card">
-              <Row>
+                <Row>
                   <Col sm={12}>
-                    <h3 className="gra-head">
-                    What we can achieve together?
-                    </h3>
+                    <h3 className="gra-head">What we can achieve together?</h3>
                   </Col>
                 </Row>
                 <Row>
@@ -368,7 +369,7 @@ export default function Home() {
           </div>
         </Col>
       </Row>
-      <Row className="blog-row">
+      <Row className="blog-row" id={"blog"}>
         <h2 className="blog-head">More about Counterfeiting</h2>
       </Row>
       <Row className="blog">
@@ -660,7 +661,7 @@ export default function Home() {
           </Row>
         </Col>
       </Row>
-      <Row className="com-row">
+      <Row className="com-row" id={"about"}>
         <h2 className="com-head">Our Company</h2>
       </Row>
       <Row className="about">
