@@ -22,7 +22,7 @@ export default function Contact() {
             <p className="home-nav">Features</p>
           </Link>
           <Link to="/try" style={tabstyle}>
-            <p className="home-nav">Try Us</p>
+            <p className="home-nav">Get Demo</p>
           </Link>
           <Link to="/" style={tabstyle}>
             <p className="home-nav">Blogs</p>

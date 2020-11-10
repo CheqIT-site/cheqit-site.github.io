@@ -62,7 +62,7 @@ export default function Home() {
           </HashLink>
 
           <Link to="/try" style={tabstyle}>
-            <p className="home-nav">Try Us</p>
+            <p className="home-nav">Get Demo</p>
           </Link>
           <HashLink smooth to="#blog">
             <p className="home-nav">Blogs</p>
