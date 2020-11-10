@@ -42,7 +42,7 @@
     background: center; */
 }
 .try-main{
-    overflow: hidden;
+    
     height: 100vh;
 }
 .qr-img{
@@ -51,4 +51,7 @@
     justify-content: center;
     margin: 2%;
 
+}
+a{
+    text-decoration: none;
 }

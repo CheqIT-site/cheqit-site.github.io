@@ -456,12 +456,11 @@ export default function Home() {
                       }}
                     >
                       <p className="bcon">
-                        Counterfeiting, manufacture of false money for gain, a
-                        kind of forgery in that something is copied so as to
-                        defraud by passing it for the original or genuine
-                        article.
+                        According to the Authentication Solution Providers’
+                        Association (ASPA), the overall counterfeit products
+                        across various industries in India are..
                         <a
-                          href="https://www.britannica.com/topic/counterfeiting"
+                          href="https://auto.economictimes.indiatimes.com/news/auto-components/opinion-its-time-to-call-a-fake-a-fake/74225240"
                           target="_blank"
                         >
                           Read More
@@ -501,12 +500,11 @@ export default function Home() {
                       }}
                     >
                       <p className="bcon">
-                        Counterfeiting, manufacture of false money for gain, a
-                        kind of forgery in that something is copied so as to
-                        defraud by passing it for the original or genuine
-                        article.
+                        $200 Billion Pharma Counterfeit Drug Market Growing by
+                        20% Per Year alarming growth i.e. twice the rate of the
+                        legitimate pharmaceutical market, and..
                         <a
-                          href="https://www.britannica.com/topic/counterfeiting"
+                          href="https://www.packworld.com/home/article/21102806/200-billion-pharma-counterfeit-drug-market-growing-by-20-per-year"
                           target="_blank"
                         >
                           Read More
@@ -552,12 +550,11 @@ export default function Home() {
                       }}
                     >
                       <p className="bcon">
-                        Counterfeiting, manufacture of false money for gain, a
-                        kind of forgery in that something is copied so as to
-                        defraud by passing it for the original or genuine
-                        article.
+                        Fast-moving consumer goods (FMCG) packaging remains the
+                        worst affected industry due to fraudulent products which
+                        account for over 30% of..
                         <a
-                          href="https://www.britannica.com/topic/counterfeiting"
+                          href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/fmcg-loses-30-of-its-business-due-to-counterfeit-products/56965353"
                           target="_blank"
                         >
                           Read More
@@ -597,12 +594,11 @@ export default function Home() {
                       }}
                     >
                       <p className="bcon">
-                        Counterfeiting, manufacture of false money for gain, a
-                        kind of forgery in that something is copied so as to
-                        defraud by passing it for the original or genuine
-                        article.
+                        There is a significant share of non-genuine pesticides
+                        in the Indian market, which can be counterfeit,
+                        spurious, adulterated or sub-standard..
                         <a
-                          href="https://www.britannica.com/topic/counterfeiting"
+                          href="https://kashmirreader.com/2020/06/14/fake-pesticide-mafia-and-destruction-of-apple-industry/"
                           target="_blank"
                         >
                           Read More
@@ -642,12 +638,12 @@ export default function Home() {
                       }}
                     >
                       <p className="bcon">
-                        Counterfeiting, manufacture of false money for gain, a
-                        kind of forgery in that something is copied so as to
-                        defraud by passing it for the original or genuine
-                        article.
+                        Counterfeit alcohol is defined as “fake or illegally
+                        produced alcohol made in unlicensed distilleries or
+                        people’s homes, packaged to look like well-known brands”
+                        
                         <a
-                          href="https://www.britannica.com/topic/counterfeiting"
+                          href="https://alcoholchange.org.uk/blog/2020/counterfeit-alcohol-getting-to-grips-with-fake-booze#:~:text=Recent%20seizures%20of%20counterfeit%20alcohol,of%20fake%20Smirnoff%20were%20found"
                           target="_blank"
                         >
                           Read More

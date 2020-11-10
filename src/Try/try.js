@@ -8,7 +8,7 @@ import axios from "axios";
 import trypic from "../images/try.jpg";
 import "./try.css";
 import Form from "react-bootstrap/Form";
-const base64url = require("base64-url");
+import apk from "../images/APK.jpeg";
 
 export default function Try() {
   const [file, setfile] = useState({
@@ -45,44 +45,11 @@ export default function Try() {
       });
   };
 console.log(code);
-  // const [open, setOpen] = React.useState(false);
+  
   const tabstyle = {
     color: "#212121",
   };
  
-
-  // // const link = base64url.decode(
-  // //   "iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAINUlEQVR42u3d0W7qQAwAUf7/p7mPhSpTj29KoWVWvLSCAMlB2nht7+XaaDxgXDoFjWA1gtUIVqMRrEawGsFqNILVCFYjWI1GsBrBagSr0QhWI1iNYDUawWr8OViXBwx+r4/H9eZx99ftcW4e+Jzjf1/uj/9xoPtTdvyJrvef6OP4t8e5Pf7tUe6eTx/u9r2ef12CFaxgBStYwQrWY2GdmuLBceik8zk/fi09+Jhwse8oHUv/JOhGN14yeP78mfm7P/a6BCtYwQpWsIIVrOfA2k4G8QvA2b0/0Z++yOKkX3i2f3yxacJ+mafsiIxuDujz443CD16XYAUrWMEKVrCC9bthYcCQLjXgg4d5DnycT4HT+QJzIBeCvXB8NB+sYAUrWMEKVrCCpSfvxwj4gglMZrJ8977H/6fPSa91gVARQ+UIcrCCFaxgBStYwfrjsB6yCE3xRZj90sX7NP09houJgTMmk52oFshdZuMKVtkNwQpWsIIVrGD9PliPSNrv/+f/X5VOIIIVrGAFK1i/D9bDB82o18+hoOUc/KTptZq8f3G+DwO2dGNBNyLrN/7xCxisYAUrWMEKVrC+c/KuChOg8kEc5wqVDPziufhCZveNC8zXZYahS+6jwo35NJvz5gpVghWsYAUrWMEK1s/BmqswESIm3NF1Of7yF65qPVyp/mK1+XhBF16roONkn3p/0HvRj41+RpCoKH4k+PmDFaxgBStYwQrWzwVIcaaH0cbjf1OgEie5ooITI5s0XTcN1o6/Ox+f6j9muCa5z7yXKujFxnFnw6/BClawghWsYAXr/142N8YwE3B+Ol0MYYZiseJJHIA1wUazeDz/2JZmLgqoCYri5gbBClawghWsYAXrKZN3nBWbLzZHAPcJdLTeOjfq4EQ808SW8hHn77Ld+ElBVPmR4gcQrGAFK1jBClawnp/op5rfL+OvYjOB7cMlu82B03XQVaUajr18LypALW5i1I8zWMEKVrCCFaxg/WCAdDVHd0BFkQWe9CWgq+iM64K088bgvGk5BTbpYsPNBAWuVRIi/VCf1W0mWMEKVrCCFax3hzUHFTkeKWaGZkMl8fxl71lVgGCKZjknEp6Pmx6Yhfl5EygTaFXQgxWsYAUrWMEK1mMXocWc1UyoTUHm9rX8Gea3MkmF2w2YVKCVQOPSN+Uawg9+mdD3vCqdYAUrWMEKVrDeG5bbrpsCg7S5I9wEiOgeN/agYOC8+eW6EdyuR8nFNR3ZiTCvNTcNz0v0C1awghWsYAXrzWGJCbtZteYaTPFaU6FhzptpOMtVrWOg0jT5NdFb1yt4vllxiZMvscNqsIIVrGAFK1hvB2v94dRK8pwAeDW7A5iNkMziulkZdtURI2LVbM0sMJ9YzDZB42AFK1jBClawgvVzsFQTVZEMiIFK0ZzDNSKbk9o4eLvbfEAVOIjve6Yw5Eyhx/MS/YIVrGAFK1jBendYogBBFSPAhJ0KIkzzfrXzEBWDiDmxCniKBWNTKLFuBEzNP3YJg+cXpIMVrGAFK1jBCtZJV6bvqysQpcCmuPKcBWf2UBr3YvriPM+Je9tF622wVOEwk/3X2KQpWMEKVrCCFay3hqU20BYNYXnhed6QnKWIsoblArBRpjbmVI03dhuDbxfFVXz3Fe4KgxWsYAUrWMF6R1hiwZUn76LuwRSg0iTabIpkYqim6f52c3X+FYrEut2Go2hbbfb5tMZrwQpWsIIVrGC9OSwoksSktmUynSjcUAluqkGZKAwRAVvz4zEFqyKlUBWw8KZRc5HLi3T0C1awghWsYAXr7WCpL6kCmLQILTaGFBtwmjku1yjMy+jbREXVpM4UjBjEOP+eizJeZJOmYAUrWMEKVrDeD9ayQYVrsDZPotVk01xV1ezVNB0Rzdxw4/Tr6uH2DBUbJpiNq06vQgcrWMEKVrCCFazTmX6iEQWm+CNQWjBeJsQJKG6BlgpK1Sr6XIiBNEQinmmOsk4kPJ+OEKxgBStYwQpWsE5XU8z1quZDz7FPN/EUxQ5zeas8jkgeNPscfLFSPTevE7sxcULf/zcCDlawghWsYAUrWA+ANddjukmuAjcHWl0QkhZcdwu6pj7UvJf5kbidmaggVjzwfV9hA4FgBStYwQpWsN4Q1qnAKa3tUk8N0/B+N9E2i8pqU+7lxVM3HCK5jzcZWN53PWwEK1jBClawghWss4l+avF1juGpBMCLWtmew5DbXmuq8Zq4XnwYuuk5Tr47M8zm5M8rWA1WsIIVrGAF671hPXqY5VnVKEzdQPx/Qh9vBj7PzE2TN1NAsT2fKlD8eneFwQpWsIIVrGC9BazLA4a7kMtNKzFmOQdy1f/NeveJhWSXVLj7v9so9BXuCoMVrGAFK1jBem9Y3zVJ56Q5SvjHjhwzGgxaig04zyTuqca+UFC6TZBUiZYQEH6JbjPBClawghWsYAVrM6l3sMa1UbX4rYKQuD0BXRg4pkkMFFmI5sd28jZp3KD0fLA0WMEKVrCCFaxgvSQss2H4soiUC1Pn5Du+qLCYjT1150Jf1aRkuz/6NzXADVawghWsYAUrWH9n8v5FtHFu5A/MLsuH2zxcfMflgrfa9+nEJqOmCCVYwQpWsIIVrGD9oUVoEWzk+ajaLfN4kVsU4pqwrFmo5sRDWHQ3PzDEQfl8YuU/WMEKVrCCFaxgPQXWo4spVFd //HrzhcHn4DlfVh3gYjMVzYpALk3qxYZNptmJOSfBClawghWsYAXr+2E1GsFqBKsRrEYjWI1gNYLVaASrEaxGsBqNYDWC1QhWoxGsRrAawWo0gtUIVuPXjn+nGynqgDgD3QAAAABJRU5ErkJggg=="
-  // // );
-  // Postdata(){
-
-  // }
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-  // const handleCode = () => {
-  //   axios.post("ec2-13-234-213-26.ap-south-1.compute.amazonaws.com:8080/Identify/web-checker/genDemoQR").then()
-  //   axios
-  //     .get(
-  //       "ec2-13-234-213-26.ap-south-1.compute.amazonaws.com:8080/Identify/web-checker/genDemoQR"
-  //     )
-  //     .then((res) => {
-  //       // console.log(res);
-  //       setCode({
-  //         code: res.data
-
-  //       });
-  //     });
-  // };
-  // var link="data"
-  // // function onChangeFile() {
-  // //   setfile({
-  // //     file: URL.createObjectURL(code)
-  // //   });
-  // // };
-  // console.log(code);
-  // console.log(file);
-
-  // const qr = axios.get("http://api.qrserver.com/v1/create-qr-code/?data=HelloWorld!&size=100x100").then((res)=>res.data);
 
   return (
     <div className="try-main">
@@ -133,6 +100,20 @@ console.log(code);
               Step 3: Use CHEQIT APP to scan the generated QR code.
             </h3>
           </Row>
+          <Row>
+          <h3 className="inst" style={{fontSize:"1vw"}}>
+              Download CHEQIT APP from the link/QR below
+            </h3>
+            </Row>
+          
+            <Row>
+              <Button className="btn-learn" href="http://ec2-13-234-213-26.ap-south-1.compute.amazonaws.com:8080/download/androidAPK" style={{paddingTop:"1%"}}>
+                <span>Download APP</span>
+              </Button>
+            </Row>
+            <Row>
+              <img src={apk} style={{paddingTop:"3%"}}></img>
+            </Row>
         </Col>
         <Col className="try-form" sm={6}>
           <Form onSubmit={handlesubmit}>
