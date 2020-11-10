@@ -29,6 +29,17 @@ import after from "../images/After.png";
 import gr from "../images/graph.jpg";
 import { Link as scroll } from "react-scroll";
 import { HashLink } from "react-router-hash-link";
+import bev from "../images/bev.jpg";
+import pest from "../images/pest.jpg";
+import good from "../images/good.jpg";
+import med from "../images/med.jpg";
+import coin from "../images/coin.jpg";
+import auto from "../images/auto.jpg";
+
+
+
+
+
 
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 const Mar = styled.div`
@@ -397,7 +408,7 @@ export default function Home() {
                         paddingRight: 0,
                       }}
                     >
-                      <img src={eur} className="image-bl"></img>
+                      <img src={coin} className="image-bl"></img>
                     </Col>
                   </Row>
                   <Row>
@@ -442,7 +453,7 @@ export default function Home() {
                         paddingRight: 0,
                       }}
                     >
-                      <img src={eur} className="image-bl"></img>
+                      <img src={auto} className="image-bl"></img>
                     </Col>
                   </Row>
                   <Row>
@@ -486,7 +497,7 @@ export default function Home() {
                         paddingRight: 0,
                       }}
                     >
-                      <img src={eur} className="image-bl"></img>
+                      <img src={med} className="image-bl"></img>
                     </Col>
                   </Row>
                   <Row>
@@ -536,7 +547,7 @@ export default function Home() {
                         paddingRight: 0,
                       }}
                     >
-                      <img src={eur} className="image-bl"></img>
+                      <img src={good} className="image-bl"></img>
                     </Col>
                   </Row>
                   <Row>
@@ -580,7 +591,7 @@ export default function Home() {
                         paddingRight: 0,
                       }}
                     >
-                      <img src={eur} className="image-bl"></img>
+                      <img src={pest} className="image-bl"></img>
                     </Col>
                   </Row>
                   <Row>
@@ -624,7 +635,7 @@ export default function Home() {
                         paddingRight: 0,
                       }}
                     >
-                      <img src={eur} className="image-bl"></img>
+                      <img src={bev} className="image-bl"></img>
                     </Col>
                   </Row>
                   <Row>
