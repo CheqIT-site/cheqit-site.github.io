@@ -33,7 +33,7 @@ export default function Try() {
     console.log(file);
     axios
       .post(
-        "http://localhost:8080/Identify/web-checker/genDemoQR",
+        "http://ec2-13-234-213-26.ap-south-1.compute.amazonaws.com:8080/Identify/web-checker/genDemoQR",
         file
       )
       .then((res) => {
