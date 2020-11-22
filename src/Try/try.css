@@ -1,6 +1,10 @@
-.try-inst{
-    padding: 3%;
-    width: 100%;
+.try-main{
+    height: 100vh;
+    width: 100vw;
+}
+.try-section{
+    height: 100vh;
+    align-items: center;
 }
 .try-form{
     padding: 3%;
@@ -14,44 +18,39 @@
 
 }
 .inst{
-    font-size: 1.8vw;
+    font-size: 1vw;
     font-family: sans-serif;
-    color: #898b8a;
+    color: #0d7377;
 }
 .cri{
-    font-size: 1.5vw;
-    font-family: monospace;
+    font-size: 1.6vw;
+    font-family: sans-serif;
     color: #0d7377;
-    padding: 3%;
+    
+    
+}
+.scan{
+    font-size: 2vw !important;
+    font-family: sans-serif;
+    color:#0d7377;
+    font-weight: 600 !important;
 }
 .field{
     color: #898b8a;
     font-size: 1vw;
-    padding: 1%;
+
     border-radius: 8px;
     border: 2px solid #0d7377;
 }
-.na{
-    margin-left: 15%;
-}
-.des{
-    margin-left: 2%;
-}
-.try-sec{
-    /* background-image: url("../images/try.jpg");
-    background: center; */
-}
-.try-main{
-    
-    height: 100vh;
-}
-.qr-img{
-    border: 2px solid #0d7377;
-    display: flex;
-    justify-content: center;
-    margin: 2%;
 
+.qr-img{
+    width: 100%;
 }
 a{
     text-decoration: none;
+}
+.Form{
+    border-radius: 16px;
+    box-shadow:8px 8px 8px 8px #898b8a;
+    padding: 5%;
 }
