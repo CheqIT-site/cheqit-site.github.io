@@ -69,16 +69,16 @@ export default function Try() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#features" className="home-nav">
+                <Nav.Link href="/" className="home-nav">
                   Features
                 </Nav.Link>
                 <Nav.Link href="/try" className="home-nav">
                   Get Demo
                 </Nav.Link>
-                <Nav.Link href="#blog" className="home-nav">
+                <Nav.Link href="/" className="home-nav">
                   Blogs
                 </Nav.Link>
-                <Nav.Link href="#about" className="home-nav">
+                <Nav.Link href="/" className="home-nav">
                   About Us
                 </Nav.Link>
                 <Nav.Link href="/contact" className="home-nav">

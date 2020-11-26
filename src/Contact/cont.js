@@ -1,6 +1,6 @@
 import React from "react";
 import "./cont.css";
-import { Row, Col, Card, Modal, ModalBody } from "react-bootstrap";
+import { Row, Col,Nav, Navbar } from "react-bootstrap";
 import cont from "../images/cont.svg";
 import { Link } from "react-router-dom";
 import logo from "../images/2.svg";
@@ -11,31 +11,34 @@ export default function Contact() {
   };
   return (
     <div>
-      <Row className="nav">
-        <Col className="chq-head" sm={{ span: 4, offset: 1 }}>
-          <Link to="/">
-            <img className="chq-logo" src={logo} alt="Cheqit-logo" />
-          </Link>
-        </Col>
-        <Col className="nav-options" sm={6}>
-          <Link to="/" style={tabstyle}>
-            <p className="home-nav">Features</p>
-          </Link>
-          <Link to="/try" style={tabstyle}>
-            <p className="home-nav">Get Demo</p>
-          </Link>
-          <Link to="/" style={tabstyle}>
-            <p className="home-nav">Blogs</p>
-          </Link>
-          <Link to="/" style={tabstyle}>
-            <p className="home-nav">About Us</p>
-          </Link>
-          <Link to="/contact" style={tabstyle}>
-            <p className="home-nav">Contact Us</p>
-          </Link>
-        </Col>
+     <Row>
+      <Navbar bg="dark" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
+        <Navbar.Brand href="/">
+          <img className="chq-logo" src={logo} alt="Cheqit-logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#features" className="home-nav">
+              Features
+            </Nav.Link>
+            <Nav.Link href="/try" className="home-nav">
+              Get Demo
+            </Nav.Link>
+            <Nav.Link href="#blog" className="home-nav">
+              Blogs
+            </Nav.Link>
+            <Nav.Link href="#about" className="home-nav">
+              About Us
+            </Nav.Link>
+            <Nav.Link href="/contact" className="home-nav">
+              Contact Us
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
       </Row>
-      <Row className="cont-main">
+      {/* <Row className="cont-main">
         <Col sm={7} style={{display:"flex",justifyContent:"center"}}>
           <Row className="info">
             <Col sm={6} className="office-col">
@@ -104,7 +107,7 @@ export default function Contact() {
         <Col sm={6}>
           <img src={cont} className="cont-img"></img>
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 }
