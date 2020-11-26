@@ -167,7 +167,7 @@ export default function Try() {
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
               <Button
                 className="btn-learn"
-                href="http://ec2-13-234-213-26.ap-south-1.compute.amazonaws.com:8080/download/androidAPK"
+                href="https://cheqit.in/Identify/download/androidAPK"
                 style={{ paddingTop: "1%" }}
               >
                 <span>Download APP</span>
