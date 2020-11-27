@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Nav, Navbar, Modal } from "react-bootstrap";
+import { Row, Col, Nav, Navbar, Modal, ModalFooter } from "react-bootstrap";
 import logo from "../images/2.svg";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -27,7 +27,9 @@ export default function Try() {
     code: logo,
   });
   const [show, setShow] = useState(false);
-
+  const [open, setOpen] = useState(false);
+  const HandleOpen = () => setOpen(true);
+  const OffOpen = () => setOpen(false);
   const [model, setModel] = useState(false);
   const handleClose = () => setModel(false);
   const handleShow = () => setModel(true);
@@ -114,9 +116,12 @@ export default function Try() {
                 rows={3}
               />
             </Form.Group>
-            <Row>
+            <Row style={{ justifyContent: "space-around" }}>
               <Button className="btn-learn" type="submit">
                 <span>Get QR Code</span>
+              </Button>
+              <Button className="btn-learn" onClick={HandleOpen}>
+                <span>Fill More Details</span>
               </Button>
             </Row>
           </Form>
@@ -125,6 +130,7 @@ export default function Try() {
             onHide={handleShow}
             backdrop="static"
             keyboard={false}
+            centered
           >
             <Modal.Header style={{ justifyContent: "center" }}>
               <Modal.Title className="scan">Scan It !!!!!</Modal.Title>
@@ -138,7 +144,10 @@ export default function Try() {
                   {show === false ? (
                     <img src={logo}></img>
                   ) : (
-                    <img src={"data:image/png;base64," + code.code} className="qr-img"></img>
+                    <img
+                      src={"data:image/png;base64," + code.code}
+                      className="qr-img"
+                    ></img>
                   )}
                 </Col>
               </Row>
@@ -148,6 +157,92 @@ export default function Try() {
                 Done
               </Button>
             </Modal.Footer>
+          </Modal>
+          <Modal
+            show={open}
+            onHide={OffOpen}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
+          >
+            <Modal.Header style={{ justifyContent: "center" }}>
+              <Modal.Title className="scan">
+                Fill the required Details
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    Business ID No.
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    Business Name
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    CoR No.
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    SBP No.
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    BPA No.
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    Plot No.
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    Date of Issue
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} controlId="formPlaintextPassword">
+                  <Form.Label column sm="5" className="cri">
+                    Date of Expiry
+                  </Form.Label>
+                  <Col sm="7">
+                    <Form.Control type="number" />
+                  </Col>
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <ModalFooter>
+              <Button className="btn-learn">Get PDF</Button>
+              <Button onClick={OffOpen} className="btn-learn">
+                Done
+              </Button>
+            </ModalFooter>
           </Modal>
         </Col>
         <Col sm={6}>
@@ -237,7 +332,6 @@ export default function Try() {
           },
         ]}
         backgroundColor="#343a40"
-       
       />
     </div>
   );
