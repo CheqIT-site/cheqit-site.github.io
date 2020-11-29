@@ -16,6 +16,33 @@ export default function Try() {
     description: "",
   });
   const { name, description } = file;
+ const initialState={
+  businessID: "",
+  businessName: "",
+  corNo: "",
+  spaNo: "",
+  baNo: "",
+  plotNo: "",
+  issueDate: "",
+  dateExp: "",
+ }
+  const [data, setData] = useState(initialState);
+  const {
+    businessID,
+    businessName,
+    corNo,
+    spaNo,
+    baNo,
+    plotNo,
+    issueDate,
+    dateExp,
+  } = data;
+
+  const handleData = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData((prevdata) => ({ ...prevdata, [name]: value }));
+  };
 
   const changehandle = (e) => {
     const name = e.target.name;
@@ -29,7 +56,10 @@ export default function Try() {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
   const HandleOpen = () => setOpen(true);
-  const OffOpen = () => setOpen(false);
+  const OffOpen = () => {
+    setData(initialState);
+    setOpen(false);
+  };
   const [model, setModel] = useState(false);
   const handleClose = () => setModel(false);
   const handleShow = () => setModel(true);
@@ -48,8 +78,31 @@ export default function Try() {
         setModel(true);
       });
   };
+
+  const handlepdf = (e) => {
+    e.preventDefault();
+    console.log(data);
+    let sendData = {
+      businessID: businessID,
+      businessName: businessName,
+      corNo: corNo,
+      spaNo: spaNo,
+      baNo: baNo,
+      plotNo: plotNo,
+      issueDate: new Date(issueDate).getTime(),
+      dateExp: new Date(dateExp).getTime(),
+    };
+    console.log(sendData);
+
+    axios
+      .post("https://cheqit.in/Identify/web-checker/generatePDF", sendData)
+      .then((res) => {
+        console.log(res);
+      });
+  };
   console.log(code);
   console.log(model);
+  console.log(dateExp);
 
   const tabstyle = {
     color: "#212121",
@@ -170,13 +223,19 @@ export default function Try() {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form>
+              <Form onSubmit={handlepdf}>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
                   <Form.Label column sm="5" className="cri">
                     Business ID No.
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="number"
+                      name="businessID"
+                      value={businessID}
+                      onChange={handleData}
+                      required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -184,7 +243,12 @@ export default function Try() {
                     Business Name
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="text"
+                      name="businessName"
+                      value={businessName}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -192,7 +256,12 @@ export default function Try() {
                     CoR No.
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="number"
+                      name="corNo"
+                      value={corNo}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -200,7 +269,12 @@ export default function Try() {
                     SBP No.
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="number"
+                      name="spaNo"
+                      value={spaNo}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -208,7 +282,12 @@ export default function Try() {
                     BPA No.
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="number"
+                      name="baNo"
+                      value={baNo}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -216,7 +295,12 @@ export default function Try() {
                     Plot No.
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="number"
+                      name="plotNo"
+                      value={plotNo}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -224,7 +308,12 @@ export default function Try() {
                     Date of Issue
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="date"
+                      name="issueDate"
+                      value={issueDate}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Row} controlId="formPlaintextPassword">
@@ -232,13 +321,22 @@ export default function Try() {
                     Date of Expiry
                   </Form.Label>
                   <Col sm="7">
-                    <Form.Control type="number" />
+                    <Form.Control
+                      type="date"
+                      name="dateExp"
+                      value={dateExp}
+                      onChange={handleData} required
+                    />
                   </Col>
                 </Form.Group>
+                <Row>
+                  <Button className="btn-learn" type="submit">
+                    Get PDF
+                  </Button>
+                </Row>
               </Form>
             </Modal.Body>
             <ModalFooter>
-              <Button className="btn-learn">Get PDF</Button>
               <Button onClick={OffOpen} className="btn-learn">
                 Done
               </Button>
