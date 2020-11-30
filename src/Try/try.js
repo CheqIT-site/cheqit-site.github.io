@@ -11,7 +11,6 @@ import apk from "../images/APK.jpeg";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
 import { Document } from "react-pdf/dist/esm/entry.webpack";
-import pass from "../images/passport.pdf";
 import { saveAs } from "file-saver";
 
 export default function Try() {
