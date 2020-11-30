@@ -10,22 +10,26 @@ import Form from "react-bootstrap/Form";
 import apk from "../images/APK.jpeg";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
+import { Document } from "react-pdf/dist/esm/entry.webpack";
+import pass from "../images/passport.pdf";
+import { saveAs } from "file-saver";
+
 export default function Try() {
   const [file, setfile] = useState({
     name: "",
     description: "",
   });
   const { name, description } = file;
- const initialState={
-  businessID: "",
-  businessName: "",
-  corNo: "",
-  spaNo: "",
-  baNo: "",
-  plotNo: "",
-  issueDate: "",
-  dateExp: "",
- }
+  const initialState = {
+    businessID: "",
+    businessName: "",
+    corNo: "",
+    spaNo: "",
+    baNo: "",
+    plotNo: "",
+    issueDate: "",
+    dateExp: "",
+  };
   const [data, setData] = useState(initialState);
   const {
     businessID,
@@ -37,7 +41,9 @@ export default function Try() {
     issueDate,
     dateExp,
   } = data;
-
+  const [pdf, setPdf] = useState({
+    pdf: null,
+  });
   const handleData = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -95,14 +101,25 @@ export default function Try() {
     console.log(sendData);
 
     axios
-      .post("https://cheqit.in/Identify/web-checker/generatePDF", sendData)
+      .post("https://cheqit.in/Identify/web-checker/generatePDF", sendData,{responseType:'blob'})
       .then((res) => {
         console.log(res);
+        
+        let blob = new Blob([res.data], { type: "application/pdf" });
+        console.log(blob);
+        const fileURL = URL.createObjectURL(blob);
+
+        saveAs(blob, businessName + ".pdf");
+       
+
       });
   };
   console.log(code);
   console.log(model);
   console.log(dateExp);
+  console.log(pdf);
+
+  // process to auto download it
 
   const tabstyle = {
     color: "#212121",
@@ -247,7 +264,8 @@ export default function Try() {
                       type="text"
                       name="businessName"
                       value={businessName}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
@@ -260,7 +278,8 @@ export default function Try() {
                       type="number"
                       name="corNo"
                       value={corNo}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
@@ -273,7 +292,8 @@ export default function Try() {
                       type="number"
                       name="spaNo"
                       value={spaNo}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
@@ -286,7 +306,8 @@ export default function Try() {
                       type="number"
                       name="baNo"
                       value={baNo}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
@@ -299,7 +320,8 @@ export default function Try() {
                       type="number"
                       name="plotNo"
                       value={plotNo}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
@@ -312,7 +334,8 @@ export default function Try() {
                       type="date"
                       name="issueDate"
                       value={issueDate}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
@@ -325,7 +348,8 @@ export default function Try() {
                       type="date"
                       name="dateExp"
                       value={dateExp}
-                      onChange={handleData} required
+                      onChange={handleData}
+                      required
                     />
                   </Col>
                 </Form.Group>
