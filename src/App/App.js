@@ -13,6 +13,7 @@ import Try from "../Try/try";
 import Features from "../Features/feat";
 import Blog from "../Blog/blog";
 import Home from "../Home/home";
+import Cert from '../Cert/cert';
 
 
 
@@ -26,6 +27,8 @@ function App() {
       <Route path="/features" component={Features}></Route>
       <Route path="/contact" component={Contact}></Route>
       <Route path="/blog" component={Blog}></Route>
+      <Route path="/cert" component={Cert}></Route>
+
       
       
     </Switch>

@@ -11,7 +11,6 @@ import apk from "../images/APK.jpeg";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
 import { Document } from "react-pdf/dist/esm/entry.webpack";
-import pass from "../images/passport.pdf";
 import { saveAs } from "file-saver";
 
 export default function Try() {
@@ -101,17 +100,17 @@ export default function Try() {
     console.log(sendData);
 
     axios
-      .post("https://cheqit.in/Identify/web-checker/generatePDF", sendData,{responseType:'blob'})
+      .post("https://cheqit.in/Identify/web-checker/generatePDF", sendData, {
+        responseType: "blob",
+      })
       .then((res) => {
         console.log(res);
-        
+
         let blob = new Blob([res.data], { type: "application/pdf" });
         console.log(blob);
         const fileURL = URL.createObjectURL(blob);
 
         saveAs(blob, businessName + ".pdf");
-       
-
       });
   };
   console.log(code);
@@ -144,8 +143,11 @@ export default function Try() {
                 <Nav.Link href="/" className="home-nav">
                   Features
                 </Nav.Link>
-                <Nav.Link href="/try" className="home-nav">
+                <Nav.Link href="/cert" className="home-nav">
                   Get Demo
+                </Nav.Link>
+                <Nav.Link href="/try" className="home-nav">
+                  Get Product Demo
                 </Nav.Link>
                 <Nav.Link href="/" className="home-nav">
                   Blogs
