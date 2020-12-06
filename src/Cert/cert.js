@@ -183,10 +183,10 @@ export default function Cert() {
                   Features
                 </Nav.Link>
                 <Nav.Link href="/cert" className="home-nav">
-                  Get Demo
+                  Get Certificate
                 </Nav.Link>
                 <Nav.Link href="/try" className="home-nav">
-                  Get Product Demo
+                  Get Demo
                 </Nav.Link>
                 <Nav.Link href="/" className="home-nav">
                   Blogs
@@ -203,7 +203,7 @@ export default function Cert() {
         </Col>
       </Row>
       <Row className="cert-section">
-        <Col sm={6} style={{ paddingTop: "8%", paddingBottom: "3%" }}>
+        <Col sm={8} className="cert-col-1">
           <Form onSubmit={handlepdf} className="detail">
             <Row>
               <Col sm={5}>
@@ -550,7 +550,7 @@ export default function Cert() {
                 </Form.Group>
               </Col>
             </Row>
-            <Row>
+            <Row className="cert-btn">
               <Button className="btn-learn" type="submit">
                 Get PDF
               </Button>
@@ -728,7 +728,7 @@ export default function Cert() {
             </ModalFooter>
           </Modal>
         </Col>
-        <Col sm={6}>
+        <Col sm={4}>
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
               <p className="inst">
@@ -742,7 +742,7 @@ export default function Cert() {
             </Col>
           </Row>
           <Row>
-            <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
+            <Col sm={12} style={{ display: "flex", justifyContent: "center" }} className="cert-col-2">
               <Button
                 className="btn-learn"
                 href="https://cheqit.in/Identify/download/androidAPK"

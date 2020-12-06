@@ -11,6 +11,10 @@
     /* height: 100vh; */
     align-items: center;
 }
+.cert-col-1{
+    margin-top: 11%;
+    margin-bottom: 5%;
+}
 .try-form{
     padding: 3%;
     width: 100%;
@@ -64,8 +68,17 @@ a{
 }
 @media only screen and (max-width: 600px)
 {
-    .try-section{
-        height: 150vh;
+    .detail{
+        border-radius: 16px;
+        box-shadow:8px 8px 8px 8px #898b8a;
+        padding: 7% 10% 4% 2%;
+    }
+    .cert-col-1{
+        margin-top: 36%;
+        margin-bottom: 5%;
+    }
+    .cert-col-2{
+     padding-bottom: 2%;
     }
     .inst{
         font-size: 3vw;
@@ -73,7 +86,7 @@ a{
         color: #0d7377;
     }
     .cri{
-        font-size: 3.6vw;
+        font-size: 3.6vw !important;
         font-family: sans-serif;
         color: #0d7377;
         
@@ -91,6 +104,9 @@ a{
     
         border-radius: 8px;
         border: 2px solid #0d7377;
+    }
+    .cert-btn{
+        justify-content: center;
     }
     
 }

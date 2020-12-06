@@ -82,10 +82,10 @@ export default function Home() {
               Features
             </Nav.Link>
             <Nav.Link href="/cert" className="home-nav">
-              Get Demo
+              Get Certificate
             </Nav.Link>
             <Nav.Link href="/try" className="home-nav">
-              Get Product Demo
+              Get Demo
             </Nav.Link>
             <Nav.Link href="#blog" className="home-nav">
               Blogs

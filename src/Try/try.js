@@ -144,10 +144,10 @@ export default function Try() {
                   Features
                 </Nav.Link>
                 <Nav.Link href="/cert" className="home-nav">
-                  Get Demo
+                  Get Certificate
                 </Nav.Link>
                 <Nav.Link href="/try" className="home-nav">
-                  Get Product Demo
+                  Get Demo
                 </Nav.Link>
                 <Nav.Link href="/" className="home-nav">
                   Blogs
