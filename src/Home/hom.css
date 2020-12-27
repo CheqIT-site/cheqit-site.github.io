@@ -1,6 +1,6 @@
 .main-container {
   background-color: #ffffff;
-  width: 100vw !important;
+  /* width: 100vw !important; */
   /* height: 100vh; */
   /* position: relative; */
   overflow-x: hidden;
@@ -65,9 +65,9 @@
 }
 
 .que {
-  font-size: 1vw;
-  font-family: cursive;
-  font-weight: 600;
+  font-size: 0.9vw;
+  font-family: sans-serif;
+  font-weight: bolder;
   color: #968c83;
   margin-bottom: 0%;
 }
@@ -80,15 +80,15 @@
 
 } */
 .brand {
-  font-size: 3vw;
-  font-weight: 900;
-  font-family: -webkit-pictograph;
+  font-size: 2.5vw;
+  font-weight: 600;
+  font-family: sans-serif;
   color: #212121;
   margin: 0%;
 }
 
 .tag {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;
@@ -96,15 +96,15 @@
 }
 
 .btn-learn {
-  padding: 2%;
+  padding: 1%;
   color: #eeeeee;
   background-color: #0d7377 !important;
   border-radius: 4px;
-  font-family: cursive;
+  font-family: sans-serif;
   font-size: 0.9vw;
-  font-weight: 600;
-  width: 30%;
-  margin-top: 5%;
+  font-weight: 550;
+  width: 25%;
+  margin-top: 3%;
   border: none;
   transition: all 0.5s;
   cursor: pointer;
@@ -195,19 +195,16 @@
   width: 30vw;
 }
 .type-frnt {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 1.5vw;
-
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 1.6vw;
   text-align: center;
   padding: 0 2% 5% 2%;
   color: #212121;
 }
 .type-bk {
   font-family: sans-serif;
-  /* font-style: oblique; */
-  font-weight: 600;
+  font-weight: 550;
   font-size: 1.8vw;
   text-align: center;
   padding: 7%;
@@ -223,7 +220,7 @@
   margin-top: 1%;
 }
 .sol {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;
@@ -242,7 +239,7 @@
   background-color: #eeeeee;
 }
 .wor {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;
@@ -286,7 +283,7 @@
   margin: 0% !important;
 }
 .blog-head {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;
@@ -296,7 +293,7 @@
   text-align: center;
 }
 .blog-row {
-  background-color: #212121;
+  
   margin-top: 2%;
   justify-content: center;
   align-items: center;
@@ -342,7 +339,7 @@
 }
 .com-head {
   text-align: center;
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;
@@ -351,7 +348,7 @@
   padding: 1%;
 }
 .com-row {
-  background-color: #212121;
+
   margin-top: 2%;
   justify-content: center;
   align-items: center;
@@ -384,7 +381,7 @@
 }
 .propic {
   height: 80vh;
-  width: 80%;
+  width: 100%;
 }
 .probut-row {
   display: flex;
@@ -425,8 +422,9 @@
   box-shadow: 8px 8px #e8e8e8;
 }
 .type {
-  font-size: 0.9vw;
-  font-family: "Montserrat";
+  font-size: 1vw;
+  font-family: sans-serif;
+  font-weight: bolder;
   padding: 3%;
   display: flex;
   justify-content: center;
@@ -439,16 +437,16 @@
   z-index: 0;
 }
 .prob-start {
-  background-color: #212121;
+  /* background-color: #212121; */
   margin-top: 3%;
 }
 .prob-head {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;
   text-align: center;
-  padding: 1%;
+  
 }
 .prob-col {
   display: grid;
@@ -485,7 +483,7 @@
   justify-content: center;
 }
 .post-head {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-weight: 500;
   font-family: "Montserrat";
   color: #0d7377;

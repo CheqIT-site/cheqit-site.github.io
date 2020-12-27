@@ -71,34 +71,37 @@ export default function Home() {
   return (
     <div className="main-container">
       <Row>
-      <Navbar bg="dark" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
-        <Navbar.Brand href="/">
-          <img className="chq-logo" src={logo} alt="Cheqit-logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+        <Navbar bg="dark" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
+          <Navbar.Brand href="/">
+            <img className="chq-logo" src={logo} alt="Cheqit-logo" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
             <Nav.Link href="#features" className="home-nav">
-              Features
-            </Nav.Link>
-            <Nav.Link href="/cert" className="home-nav">
-              Get Certificate
-            </Nav.Link>
-            <Nav.Link href="/try" className="home-nav">
-              Get Demo
-            </Nav.Link>
-            <Nav.Link href="#blog" className="home-nav">
-              Blogs
-            </Nav.Link>
-            <Nav.Link href="#about" className="home-nav">
-              About Us
-            </Nav.Link>
-            <Nav.Link href="/contact" className="home-nav">
-              Contact Us
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+                Login
+              </Nav.Link>
+              <Nav.Link href="#features" className="home-nav">
+                Features
+              </Nav.Link>
+              <Nav.Link href="/cert" className="home-nav">
+                Get Certificate
+              </Nav.Link>
+              <Nav.Link href="/try" className="home-nav">
+                Get Demo
+              </Nav.Link>
+              <Nav.Link href="#blog" className="home-nav">
+                Blogs
+              </Nav.Link>
+              <Nav.Link href="#about" className="home-nav">
+                About Us
+              </Nav.Link>
+              <Nav.Link href="/contact" className="home-nav">
+                Contact Us
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </Row>
       {/* <Row className="nav">
         <Col className="chq-head" sm={{ span: 4, offset: 1 }}>
@@ -131,7 +134,7 @@ export default function Home() {
         <Col className="main-left" lg={{ span: 5, offset: 1 }} sm={12} md={8}>
           <Row>
             <Col>
-              <p className="brand">CHEQIT</p>
+              <p className="brand">CheqIt</p>
             </Col>
           </Row>
           <Row>
@@ -168,7 +171,7 @@ export default function Home() {
       </Row>
       <Row className="prob-start">
         <Col lg={12}>
-          <h2 className="prob-head">Market Problems</h2>
+          <h2 className="prob-head">Problems in market</h2>
         </Col>
       </Row>
       <Row className="prob">
@@ -339,7 +342,7 @@ export default function Home() {
       </Row>
       <Row className="post-start">
         <Col lg={12}>
-          <h2 className="post-head">Post CHEQIT</h2>
+          <h2 className="post-head">Post CheqIt</h2>
         </Col>
       </Row>
       <Row className="post">
@@ -416,8 +419,8 @@ export default function Home() {
           <h2 className="post-head">Graphs</h2>
         </Col>
       </Row>
-      <Row className="gra" style={{justifyContent:"flex-end"}}>
-        <Col sm={6} >
+      <Row className="gra" style={{ justifyContent: "flex-end" }}>
+        <Col sm={6}>
           <Flippy flipOnHover={true} flipDirection="vertical">
             <FrontSide>
               <Card className="gra-card">
@@ -452,7 +455,7 @@ export default function Home() {
       </Row>
       <Row className="workhead">
         <Col>
-          <h2 className="wor">How CHEQIT Works</h2>
+          <h2 className="wor">How CheqIt Works</h2>
         </Col>
       </Row>
       <Row className="work">
@@ -789,7 +792,7 @@ export default function Home() {
       <Row className="about">
         <Col sm={12}>
           <Row className="about" style={{ marginRight: "2%" }}>
-            <Col sm={4} style={{paddingRight:"0%"}}>
+            <Col sm={4} style={{ paddingRight: "0%" }}>
               <Row className="com-content">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
               </Row>
@@ -807,7 +810,7 @@ export default function Home() {
                 </p>
               </Row>
             </Col>
-            <Col sm={4} style={{paddingRight:"0%"}}>
+            <Col sm={4} style={{ paddingRight: "0%" }}>
               <Row className="com-content">
                 <i class="fa fa-bolt" aria-hidden="true"></i>
               </Row>
@@ -825,7 +828,7 @@ export default function Home() {
                 </p>
               </Row>
             </Col>
-            <Col sm={4} style={{paddingRight:"0%"}}>
+            <Col sm={4} style={{ paddingRight: "0%" }}>
               <Row className="com-content">
                 <i class="fa fa-users" aria-hidden="true"></i>
               </Row>
@@ -834,7 +837,7 @@ export default function Home() {
               </Row>
               <Row className="com-content">
                 <p className="com-con">
-                  Making CheqiT as one of the leading  Anti–Counterfeiting
+                  Making CheqIt as one of the leading  Anti–Counterfeiting
                   Solution Provider for the established and upcoming brands by
                   delivering genuine products to their target audience , thus 
                   becoming a  brand custodian partner in the emerging
@@ -848,58 +851,64 @@ export default function Home() {
       <Footer
         columns={[
           {
-            title: "CHEQIT",
+            title: "CheqIt",
             url: "CHEQIT.COM",
-            items:[{title:"Anti-Counterfeiting solutions to protect your brand"
-            },{title:"Pune, India"}],
-        
+            items: [
+              { title: "Anti-Counterfeiting solutions to protect your brand" },
+              { title: "Pune, India" },
+            ],
+
             openExternal: true,
           },
           {
-           title: "Useful Links",
-           items:[{
-             title:"Get Demo",
-             url:"/try",
-             openExternal:false
-
-           },{
-            title:"About Us",
-            url:"/about",
-            openExternal:false
-
-          },{
-            title:"Features",
-            url:"#features",
-            openExternal:false
-
-          },{
-            title:"Vector Credits",
-            url:"/credit",
-            openExternal:true
-
-          }] 
+            title: "Useful Links",
+            items: [
+              {
+                title: "Get Demo",
+                url: "/try",
+                openExternal: false,
+              },
+              {
+                title: "About Us",
+                url: "#about",
+                openExternal: false,
+              },
+              {
+                title: "Features",
+                url: "#features",
+                openExternal: false,
+              },
+              {
+                title: "Vector Credits",
+                url: "/credit",
+                openExternal: true,
+              },
+            ],
           },
-          { title: "Contact Us",
-            items:[{
-              icon:<i class="fa foot fa-phone" aria-hidden="true"></i>,
-              title:"8074638794"
-            },
-            {
-              icon:<i class="fa foot fa-instagram" aria-hidden="true"></i>,
-              title:"cheqitco",
-              url:"https://www.instagram.com/cheqitco/"
-            },
-            {
-              icon:<i class="fa foot fa-linkedin-square" aria-hidden="true"></i>,
-              
-              title:"cheqit-co",
-              url:"https://www.linkedin.com/in/cheqit-co-1b59371b7"
-            },
-          ]
-        },
+          {
+            title: "Contact Us",
+            items: [
+              {
+                icon: <i class="fa foot fa-envelope-o" aria-hidden="true"></i>,
+                title: "chegit@gmail.com",
+              },
+              {
+                icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
+                title: "cheqitco",
+                url: "https://www.instagram.com/cheqitco/",
+              },
+              {
+                icon: (
+                  <i class="fa foot fa-linkedin-square" aria-hidden="true"></i>
+                ),
+
+                title: "cheqit-co",
+                url: "https://www.linkedin.com/in/cheqit-co-1b59371b7",
+              },
+            ],
+          },
         ]}
         backgroundColor="#343a40"
-        
       />
       ,
     </div>
