@@ -31,11 +31,11 @@ class AdminNavbarLinks extends Component {
     return (
       <div>
         <Nav>
-          <NavItem eventKey={1} href="#">
+          {/* <NavItem eventKey={1} href="#">
             <i className="fa fa-dashboard" />
             <p className="hidden-lg hidden-md">Dashboard</p>
-          </NavItem>
-          <NavDropdown
+          </NavItem> */}
+          {/* <NavDropdown
             eventKey={2}
             title={notification}
             noCaret
@@ -46,8 +46,8 @@ class AdminNavbarLinks extends Component {
             <Dropdown.Item eventKey={2.3}>Notification 3</Dropdown.Item>
             <Dropdown.Item eventKey={2.4}>Notification 4</Dropdown.Item>
             <Dropdown.Item eventkey={2.5}>Another notifications</Dropdown.Item>
-          </NavDropdown>
-          <NavItem eventkey={3} href="#">
+          </NavDropdown> */}
+          {/* <NavItem eventkey={3} href="#">
             <i className="fa fa-search" />
             <p className="hidden-lg hidden-md">Search</p>
           </NavItem>
@@ -68,7 +68,7 @@ class AdminNavbarLinks extends Component {
             <Dropdown.Item eventKey={2.5}>Something</Dropdown.Item>
             <Dropdown.Item divider="true" />
             <Dropdown.Item eventKey={2.5}>Separated link</Dropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
           <NavItem eventKey={3} href="#">
             Log out
           </NavItem>
