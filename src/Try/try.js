@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Nav, Navbar, Modal, ModalFooter } from "react-bootstrap";
-import logo from "../images/2.svg";
+import logo from "../images/cheqitlogo.svg";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
@@ -191,9 +191,6 @@ export default function Try() {
             <Row style={{ justifyContent: "space-around" }}>
               <Button className="btn-learn" type="submit">
                 <span>Get QR Code</span>
-              </Button>
-              <Button className="btn-learn" onClick={HandleOpen}>
-                <span>Fill More Details</span>
               </Button>
             </Row>
           </Form>

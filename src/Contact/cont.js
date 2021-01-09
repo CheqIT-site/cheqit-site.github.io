@@ -3,7 +3,7 @@ import "./cont.css";
 import { Row, Col,Nav, Navbar } from "react-bootstrap";
 import cont from "../images/cont.svg";
 import { Link } from "react-router-dom";
-import logo from "../images/2.svg";
+import logo from "../images/cheqitlogo.svg";
 
 export default function Contact() {
   const tabstyle = {

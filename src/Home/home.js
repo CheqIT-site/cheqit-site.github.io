@@ -7,15 +7,9 @@ import {
   Modal,
   ModalBody,
   Container,
-  NavDropdown,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
   Carousel,
 } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import logo from "../images/2.svg";
 import thumb from "../images/1.svg";
 import main from "../images/main.jpg";
 import Icon from "@material-ui/core/Icon";
@@ -49,6 +43,7 @@ import good from "../images/good.jpg";
 import med from "../images/med.jpg";
 import coin from "../images/coin.jpg";
 import auto from "../images/auto.jpg";
+import HomeNav from "../HomeNavbar/HomeNavbar";
 
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 const Mar = styled.div`
@@ -71,65 +66,8 @@ export default function Home() {
   return (
     <div className="main-container">
       <Row>
-        <Navbar bg="dark" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
-          <Navbar.Brand href="/">
-            <img className="chq-logo" src={logo} alt="Cheqit-logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-            <Nav.Link href="#features" className="home-nav">
-                Login
-              </Nav.Link>
-              <Nav.Link href="#features" className="home-nav">
-                Features
-              </Nav.Link>
-              <Nav.Link href="/cert" className="home-nav">
-                Get Certificate
-              </Nav.Link>
-              <Nav.Link href="/try" className="home-nav">
-                Get Demo
-              </Nav.Link>
-              <Nav.Link href="#blog" className="home-nav">
-                Blogs
-              </Nav.Link>
-              <Nav.Link href="#about" className="home-nav">
-                About Us
-              </Nav.Link>
-              <Nav.Link href="/contact" className="home-nav">
-                Contact Us
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <HomeNav/>
       </Row>
-      {/* <Row className="nav">
-        <Col className="chq-head" sm={{ span: 4, offset: 1 }}>
-          <Link to="/">
-            <img className="chq-logo" src={logo} alt="Cheqit-logo" />
-          </Link>
-        </Col>
-        <Col className="nav-options" sm={6}>
-          <HashLink smooth to="#features">
-            <p className="home-nav">Features</p>
-          </HashLink>
-
-          <Link to="/try" style={tabstyle}>
-            <p className="home-nav">Get Demo</p>
-          </Link>
-          <HashLink smooth to="#blog">
-            <p className="home-nav">Blogs</p>
-          </HashLink>
-
-          <HashLink smooth to="#about">
-            <p className="home-nav">About Us</p>
-          </HashLink>
-
-          <Link to="/contact" style={tabstyle}>
-            <p className="home-nav">Contact Us</p>
-          </Link>
-        </Col>
-      </Row> */}
       <Row className="central-theme">
         <Col className="main-left" lg={{ span: 5, offset: 1 }} sm={12} md={8}>
           <Row>
@@ -416,7 +354,7 @@ export default function Home() {
       </Row>
       <Row className="gra-start">
         <Col>
-          <h2 className="post-head">Graphs</h2>
+          <h2 className="post-head">Market Trend</h2>
         </Col>
       </Row>
       <Row className="gra" style={{ justifyContent: "flex-end" }}>
@@ -607,7 +545,7 @@ export default function Home() {
           </Row>
           <Row>
             <Col>
-              <Marquee key={2} velocity={40}>
+              <Marquee key={2} velocity={32}>
                 <Mar>
                   <Row>
                     <Col
@@ -794,7 +732,7 @@ export default function Home() {
           <Row className="about" style={{ marginRight: "2%" }}>
             <Col sm={4} style={{ paddingRight: "0%" }}>
               <Row className="com-content">
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <i class="fa about-icon fa-info-circle" aria-hidden="true"></i>
               </Row>
               <Row className="com-content">
                 <h3 className="com-header">About Us</h3>
@@ -812,7 +750,7 @@ export default function Home() {
             </Col>
             <Col sm={4} style={{ paddingRight: "0%" }}>
               <Row className="com-content">
-                <i class="fa fa-bolt" aria-hidden="true"></i>
+                <i class="fa about-icon fa-bolt" aria-hidden="true"></i>
               </Row>
               <Row className="com-content">
                 <h3 className="com-header">Our Mission</h3>
@@ -830,7 +768,7 @@ export default function Home() {
             </Col>
             <Col sm={4} style={{ paddingRight: "0%" }}>
               <Row className="com-content">
-                <i class="fa fa-users" aria-hidden="true"></i>
+                <i class="fa about-icon fa-users" aria-hidden="true"></i>
               </Row>
               <Row className="com-content">
                 <h3 className="com-header">Our Vision</h3>

@@ -1,0 +1,17 @@
+.nav-options {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .home-nav {
+    margin: 0 20px;
+    color: #32e0c4 !important;
+    font-size: 1vw;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+  .chq-logo {
+    height: 11vh;
+   }

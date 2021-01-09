@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
   margin-top: 3vh;
   display: flex;
   width: 100%;
@@ -6,12 +6,10 @@
   margin-bottom: 8vh;
   background-color: #212121;
   height: 11vh;
-  /* position: sticky; */
-}
+  
+} */
 .chq-logo {
- height: 11vh !important;
-  /* width: 36%; */
-  /* margin-left: 10%; */
+ height: 11vh;
 }
 
 .nav-options {

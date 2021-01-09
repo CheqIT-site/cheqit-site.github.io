@@ -1,0 +1,23 @@
+.login-main{
+    height: 100vh;
+    overflow-y: hidden;
+}
+.login-col-1{
+    display: flex;
+    justify-content: center;
+}
+.login-pic{
+    margin-top: 18%;
+    width: 85%;
+}
+.login-form{
+    margin-top: 25%;
+    width: 50%;
+    border-radius: 16px;
+    
+    padding: 3%;
+}
+.login-col-2{
+    display: flex;
+    justify-content: center;
+}
