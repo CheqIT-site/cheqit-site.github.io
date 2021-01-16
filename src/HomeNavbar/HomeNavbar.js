@@ -5,7 +5,7 @@ import logo from "../images/cheqitlogo.svg";
 
 export default function HomeNav() {
   return (
-    <Navbar bg="dark" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
+    <Navbar bg="light" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
       <Navbar.Brand href="/">
         <img className="chq-logo" src={logo} alt="Cheqit-logo" />
       </Navbar.Brand>

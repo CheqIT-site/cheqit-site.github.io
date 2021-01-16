@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import thumb from "../images/1.svg";
-import main from "../images/main.jpg";
+import main from "../images/main.svg";
 import Icon from "@material-ui/core/Icon";
 import { Link } from "react-router-dom";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
@@ -28,7 +28,7 @@ import Zoom from "react-reveal/Zoom";
 import blog from "../images/bl.jpg";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
-import prob from "../images/prob.jpg";
+import prob from "../images/prob.svg";
 import doubt from "../images/doubt.svg";
 import sol from "../images/sol.svg";
 import post from "../images/post.svg";
@@ -59,20 +59,20 @@ const Mar = styled.div`
 `;
 
 export default function Home() {
-  const tabstyle = {
-    color: "#212121",
-  };
+  // const tabstyle = {
+  //   color: "#212121",
+  // };
 
   return (
     <div className="main-container">
       <Row>
-        <HomeNav/>
+        <HomeNav />
       </Row>
       <Row className="central-theme">
-        <Col className="main-left" lg={{ span: 5, offset: 1 }} sm={12} md={8}>
+        <Col className="main-left" lg={{ span: 4, offset: 1}} sm={12} md={8}>
           <Row>
             <Col>
-              <p className="brand">CheqIt</p>
+              <p className="brandn">CheQIT</p>
             </Col>
           </Row>
           <Row>
@@ -83,15 +83,11 @@ export default function Home() {
           <Row>
             <Col>
               <p className="que">
-                {" "}
                 Anti-Counterfeiting solutions to protect your brand through
                 continual innovations and keeping pace with your end customers
-                expectations{" "}
-                <span className="over">
-                  by delivering authentic products to ensure better customer
-                  satisfaction, enhanced productivity, thus sustainable growth
-                  and business profitability
-                </span>
+                expectations by delivering authentic products to ensure better
+                customer satisfaction, enhanced productivity, thus sustainable
+                growth and business profitability
               </p>
             </Col>
           </Row>
@@ -103,8 +99,8 @@ export default function Home() {
             </Col>
           </Row>
         </Col>
-        <Col className="main-right" lg={6}>
-          <img src={main} className="qrpic"></img>
+        <Col className="main-right" style={{paddingRight: 0}} lg={7}>
+          <img src={main} className="qrpic" alt="CheqIt"></img>
         </Col>
       </Row>
       <Row className="prob-start">
@@ -113,7 +109,7 @@ export default function Home() {
         </Col>
       </Row>
       <Row className="prob">
-        <Col sm={3} className="prob-col">
+        <Col sm={4} className="prob-col">
           <Card className="butpro-card">
             <Row className="probut-row">
               <Col sm={12} className="type">
@@ -143,14 +139,14 @@ export default function Home() {
             </Row>
           </Card>
         </Col>
-        <Col sm={6} className="procol">
-          <img src={prob} className="propic"></img>
+        <Col sm={4} className="procol">
+          <img src={prob} className="propic" alt="propic"></img>
         </Col>
-        <Col sm={3} className="prob-col">
+        <Col sm={4} className="prob-col">
           <Card className="butpro-card">
             <Row className="probut-row">
               <Col sm={6} className="type">
-                <img src={doubt} className="prob-icon-1"></img>
+                <img src={doubt} className="prob-icon-1" alt="problem"></img>
               </Col>
             </Row>
             <Row style={{ marginRight: "0" }}>
@@ -175,7 +171,7 @@ export default function Home() {
           </Card>
         </Col>
       </Row>
-      <Row id={"features"} className="sol-start">
+      <Row id={"features"}>
         <Col sm={12}>
           <h2 className="sol">Our Solution</h2>
         </Col>
@@ -278,7 +274,7 @@ export default function Home() {
           </Flippy>
         </Col>
       </Row>
-      <Row className="post-start">
+      <Row>
         <Col lg={12}>
           <h2 className="post-head">Post CheqIt</h2>
         </Col>
