@@ -7,11 +7,11 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Contact from "../Contact/cont";
+
 import About from "../About/about";
 import Try from "../Try/try";
 import Login from "../Login/login";
-import Features from "../Features/feat";
+
 import Blog from "../Blog/blog";
 import Home from "../Home/home";
 import Cert from '../Cert/cert';
@@ -28,8 +28,8 @@ class App extends Component {
         <Route path="/try" component={Try}></Route>
         <Route path="/login" component={Login}></Route>
         <Route path="/about" component={About}></Route>
-        <Route path="/features" component={Features}></Route>
-        <Route path="/contact" component={Contact}></Route>
+  
+  
         <Route path="/blog" component={Blog}></Route>
         <Route path="/cert" component={Cert}></Route>
         <Route path="/admin" render={props => <AdminLayout {...props} />} />
