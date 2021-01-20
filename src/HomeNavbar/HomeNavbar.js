@@ -2,6 +2,8 @@ import React from "react";
 import "./HomeNavbar.css";
 import { NavDropdown, Navbar, NavItem, NavLink, Nav } from "react-bootstrap";
 import logo from "../images/cheqitlogo.svg";
+import { Link } from "react-router-dom";
+
 
 export default function HomeNav() {
   return (
@@ -11,13 +13,14 @@ export default function HomeNav() {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="ml-auto">
           <Nav.Link href="/login" className="home-nav">
             Login
           </Nav.Link>
-          <Nav.Link href="#features" className="home-nav">
+          <Link to="/features">
+          <Nav.Link href="/features" className="home-nav">
             Features
-          </Nav.Link>
+          </Nav.Link></Link>
           <Nav.Link href="/cert" className="home-nav">
             Get Certificate
           </Nav.Link>
