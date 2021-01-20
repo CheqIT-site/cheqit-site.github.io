@@ -1,33 +1,34 @@
 import React from "react";
 import "./HomeNavbar.css";
-import { NavDropdown, Navbar, NavItem, NavLink, Nav } from "react-bootstrap";
+import {Navbar, Nav } from "react-bootstrap";
 import logo from "../images/cheqitlogo.svg";
 
 export default function HomeNav() {
   return (
-    <Navbar bg="light" fixed="top" expand="lg" style={{ paddingLeft: "3%" }}>
+    <Navbar bg="white" fixed="top" expand="lg" style={{
+      boxShadow: "0px 9px 25px rgba(0, 20, 73, 0.14)",
+      borderRadius: "0px 0px 114px 114px",
+      padding: "0% 3% 0% 5%"
+    }}>
       <Navbar.Brand href="/">
         <img className="chq-logo" src={logo} alt="Cheqit-logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="ml-auto" >
           <Nav.Link href="/login" className="home-nav">
-            Login
+            Dashboard
           </Nav.Link>
-          <Nav.Link href="#features" className="home-nav">
-            Features
+          <Nav.Link href="/try" className="home-nav">
+            Pricing
           </Nav.Link>
           <Nav.Link href="/cert" className="home-nav">
             Get Certificate
           </Nav.Link>
-          <Nav.Link href="/try" className="home-nav">
-            Get Demo
-          </Nav.Link>
-          <Nav.Link href="#blog" className="home-nav">
+          <Nav.Link href="/blog" className="home-nav">
             Blogs
           </Nav.Link>
-          <Nav.Link href="#about" className="home-nav">
+          <Nav.Link href="/about" className="home-nav">
             About Us
           </Nav.Link>
           <Nav.Link href="/contact" className="home-nav">

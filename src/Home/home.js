@@ -109,7 +109,7 @@ export default function Home() {
             items: [
               {
                 icon: <i class="fa foot fa-envelope-o" aria-hidden="true"></i>,
-                title: "chegit@gmail.com",
+                title: "cheqit@gmail.com",
               },
               {
                 icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
