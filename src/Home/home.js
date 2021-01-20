@@ -66,7 +66,344 @@ export default function Home() {
       <Row>
         <HomeNav />
       </Row>
-      
+  
+
+      <Row className="workhead">
+        <Col>
+          <h2 className="wor">How CheqIt Works</h2>
+        </Col>
+      </Row>
+      <Row className="work">
+        <Col sm={12}>
+          <div className="vid">
+            <ReactPlayer
+              className="player"
+              controls="true"
+              url={vid}
+              light={thumb}
+            />
+          </div>
+        </Col>
+      </Row>
+      <Row className="blog-row" id={"blog"}>
+        <Col>
+          <h2 className="blog-head">More about Counterfeiting</h2>
+        </Col>
+      </Row>
+      <Row className="blog">
+        <Col sm={6}>
+          <img src={blog} className="blim"></img>
+        </Col>
+        <Col sm={6} style={{ paddingRight: "2%" }}>
+          <Row>
+            <Col>
+              <Marquee key={1} velocity={30}>
+                <Mar>
+                  <Row style={{ marginLeft: "0%" }}>
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingRight: 0,
+                      }}
+                    >
+                      <img src={coin} className="image-bl"></img>
+                    </Col>
+                  </Row>
+                  <Row className="bl-con">
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "2%",
+                      }}
+                    >
+                      <p className="bcon">
+                        Counterfeiting, manufacture of false money for gain, a
+                        kind of forgery in that something is copied so as to
+                        defraud by passing it for the original or..
+                        <a
+                          href="https://www.britannica.com/topic/counterfeiting"
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </p>
+                    </Col>
+                  </Row>
+                </Mar>
+                <Mar>
+                  <Row>
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingRight: 0,
+                      }}
+                    >
+                      <img src={auto} className="image-bl"></img>
+                    </Col>
+                  </Row>
+                  <Row className="bl-con">
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "2%",
+                      }}
+                    >
+                      <p className="bcon">
+                        According to the Authentication Solution Providers’
+                        Association (ASPA), the overall counterfeit products
+                        across various industries in India are..
+                        <a
+                          href="https://auto.economictimes.indiatimes.com/news/auto-components/opinion-its-time-to-call-a-fake-a-fake/74225240"
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </p>
+                    </Col>
+                  </Row>
+                </Mar>
+                <Mar>
+                  <Row
+                    style={{
+                      fontFamily: "Roboto",
+                      color: "#00000",
+                    }}
+                  >
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingRight: 0,
+                      }}
+                    >
+                      <img src={med} className="image-bl"></img>
+                    </Col>
+                  </Row>
+                  <Row className="bl-con">
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "2%",
+                      }}
+                    >
+                      <p className="bcon">
+                        $200 Billion Pharma Counterfeit Drug Market Growing by
+                        20% Per Year alarming growth i.e. twice the rate of the
+                        legitimate pharmaceutical market, and..
+                        <a
+                          href="https://www.packworld.com/home/article/21102806/200-billion-pharma-counterfeit-drug-market-growing-by-20-per-year"
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </p>
+                    </Col>
+                  </Row>
+                </Mar>
+              </Marquee>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Marquee key={2} velocity={32}>
+                <Mar>
+                  <Row>
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingRight: 0,
+                      }}
+                    >
+                      <img src={good} className="image-bl"></img>
+                    </Col>
+                  </Row>
+                  <Row className="bl-con">
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "2%",
+                      }}
+                    >
+                      <p className="bcon">
+                        Fast-moving consumer goods (FMCG) packaging remains the
+                        worst affected industry due to fraudulent products which
+                        account for over 30%..
+                        <a
+                          href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/fmcg-loses-30-of-its-business-due-to-counterfeit-products/56965353"
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </p>
+                    </Col>
+                  </Row>
+                </Mar>
+                <Mar>
+                  <Row>
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingRight: 0,
+                      }}
+                    >
+                      <img src={pest} className="image-bl"></img>
+                    </Col>
+                  </Row>
+                  <Row className="bl-con">
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "2%",
+                      }}
+                    >
+                      <p className="bcon">
+                        There is a significant share of non-genuine pesticides
+                        in the Indian market, which can be counterfeit,
+                        spurious, adulterated or sub-standard..
+                        <a
+                          href="https://kashmirreader.com/2020/06/14/fake-pesticide-mafia-and-destruction-of-apple-industry/"
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </p>
+                    </Col>
+                  </Row>
+                </Mar>
+                <Mar>
+                  <Row>
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingRight: 0,
+                      }}
+                    >
+                      <img src={bev} className="image-bl"></img>
+                    </Col>
+                  </Row>
+                  <Row className="bl-con">
+                    <Col
+                      sm={12}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "2%",
+                      }}
+                    >
+                      <p className="bcon">
+                        Counterfeit alcohol is defined as “fake or illegally
+                        produced alcohol made in unlicensed distilleries or
+                        people’s homes, packaged to look like..
+                        <a
+                          href="https://alcoholchange.org.uk/blog/2020/counterfeit-alcohol-getting-to-grips-with-fake-booze#:~:text=Recent%20seizures%20of%20counterfeit%20alcohol,of%20fake%20Smirnoff%20were%20found"
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </p>
+                    </Col>
+                  </Row>
+                </Mar>
+              </Marquee>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row className="blog-slides">
+        <Carousel>
+          <Carousel.Item interval={1000}>
+            <img className="d-block w-100" src={coin} alt="First slide" />
+            <Carousel.Caption>
+              <p className="bcon">
+                Counterfeiting, manufacture of false money for gain, a kind of
+                forgery in that something is copied so as to defraud by passing
+                it for the original or..
+                <a
+                  href="https://www.britannica.com/topic/counterfeiting"
+                  target="_blank"
+                >
+                  Read More
+                </a>
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={500}>
+            <img
+              className="d-block w-100"
+              src={good}
+              alt="Third slide"
+              style={{ height: "39vh" }}
+            />
+            <Carousel.Caption>
+              <p className="bcon">
+                Fast-moving consumer goods (FMCG) packaging remains the worst
+                affected industry due to fraudulent products which account for
+                over 30%..
+                <a
+                  href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/fmcg-loses-30-of-its-business-due-to-counterfeit-products/56965353"
+                  target="_blank"
+                >
+                  Read More
+                </a>
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={med} alt="Third slide" />
+            <Carousel.Caption>
+              <p className="bcon">
+                $200 Billion Pharma Counterfeit Drug Market Growing by 20% Per
+                Year alarming growth i.e. twice the rate of the legitimate
+                pharmaceutical market, and..
+                <a
+                  href="https://www.packworld.com/home/article/21102806/200-billion-pharma-counterfeit-drug-market-growing-by-20-per-year"
+                  target="_blank"
+                >
+                  Read More
+                </a>
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </Row>
+      <Row className="com-row" id={"about"}>
+        <Col>
+          <h2 className="com-head">Our Company</h2>
+        </Col>
+      </Row>
       <Footer
         columns={[
           {
