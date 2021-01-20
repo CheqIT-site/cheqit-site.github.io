@@ -1,3 +1,7 @@
+.main-container{
+  width: 100vw;
+  overflow-x: hidden !important;
+}
 .topDiv {
   align-items: center;
   background-image: url(../images/topBackground.svg);
