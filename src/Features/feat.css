@@ -1,0 +1,59 @@
+.features-maindiv {
+  background-image: url("../images/Background\ Special.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+.feat-head-col {
+  display: flex;
+  justify-content: center;
+}
+.feat-head-para {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 3vw;
+  line-height: 70px;
+  color: #001449;
+  margin: 2% 0%;
+}
+.feat-box-row{
+    margin-bottom: 3%;
+}
+.feat-box-col {
+  display: flex;
+  justify-content: center;
+}
+.feat-box {
+  width: 381.49px;
+  height: 339px;
+  left: 113px;
+  top: 130px;
+
+  background: rgba(200, 252, 234, 0.62);
+  backdrop-filter: blur(250px);
+
+  border-radius: 82px;
+}
+.feat-img-col {
+  display: flex;
+  justify-content: center;
+}
+.feat-img {
+  padding: 5% 0%;
+}
+.feat-text-col {
+  display: flex;
+  justify-content: center;
+}
+.feat-text-para {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 1.8vw;
+  line-height: 35px;
+  text-align: center;
+  padding: 5% 0%;
+  color: #2a453d;
+}

@@ -1,0 +1,109 @@
+import React from "react";
+import "./feat.css";
+import { Row, Col } from "react-bootstrap";
+import Fake from "../images/Fake.svg";
+import Magnet from "../images/Magnet.svg";
+import Analytics from "../images/analytics 1.svg";
+import End from "../images/End to end 1.svg";
+import secure from "../images/secure 1.svg";
+import track from "../images/track 1.svg";
+
+export default function Features() {
+  return (
+    <div className="features-maindiv">
+      <Row className="feat-head-row">
+        <Col className="feat-head-col">
+          <p className="feat-head-para">Our Specialities</p>
+        </Col>
+      </Row>
+      <Row className="feat-box-row">
+        <Col lg={4} className="feat-box-col">
+          <div className="feat-box">
+            <Row className="feat-img-row">
+              <Col lg={12} className="feat-img-col">
+                <img src={Fake} className="feat-img"></img>
+              </Col>
+            </Row>
+            <Row className="feat-text-row">
+              <Col lg={12} className="feat-text-col">
+                <p className="feat-text-para">Anti-Counterfeiting Solution</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col lg={4} className="feat-box-col">
+          <div className="feat-box">
+            <Row className="feat-img-row">
+              <Col lg={12} className="feat-img-col">
+                <img src={Analytics} className="feat-img"></img>
+              </Col>
+            </Row>
+            <Row className="feat-text-row">
+              <Col lg={12} className="feat-text-col">
+                <p className="feat-text-para">User Analytics</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col lg={4} className="feat-box-col">
+          <div className="feat-box">
+            <Row className="feat-img-row">
+              <Col lg={12} className="feat-img-col">
+                <img src={track} className="feat-img"></img>
+              </Col>
+            </Row>
+            <Row className="feat-text-row">
+              <Col lg={12} className="feat-text-col">
+                <p className="feat-text-para">Track 'N' Trace</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+      </Row>
+      <Row className="feat-box-row">
+        <Col lg={4} className="feat-box-col">
+          <div className="feat-box">
+            <Row className="feat-img-row">
+              <Col lg={12} className="feat-img-col">
+                <img src={Magnet} className="feat-img"></img>
+              </Col>
+            </Row>
+            <Row className="feat-text-row">
+              <Col lg={12} className="feat-text-col">
+                <p className="feat-text-para">Customer <br></br>Engagement</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col lg={4} className="feat-box-col">
+          <div className="feat-box">
+            <Row className="feat-img-row">
+              <Col lg={12} className="feat-img-col">
+                <img src={secure} className="feat-img"></img>
+              </Col>
+            </Row>
+            <Row className="feat-text-row">
+              <Col lg={12} className="feat-text-col">
+                <p className="feat-text-para">Highly Secured</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col lg={4} className="feat-box-col">
+          <div className="feat-box">
+            <Row className="feat-img-row">
+              <Col lg={12} className="feat-img-col">
+                <img src={End} className="feat-img"></img>
+              </Col>
+            </Row>
+            <Row className="feat-text-row">
+              <Col lg={12} className="feat-text-col">
+                <p className="feat-text-para">End-To -End <br></br> Integration</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+      </Row>
+    </div>
+  );
+}

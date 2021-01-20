@@ -2,6 +2,8 @@ import React from "react";
 import "./HomeNavbar.css";
 import {Navbar, Nav } from "react-bootstrap";
 import logo from "../images/cheqitlogo.svg";
+// import { Link } from "react-router-dom";
+
 
 export default function HomeNav() {
   return (
