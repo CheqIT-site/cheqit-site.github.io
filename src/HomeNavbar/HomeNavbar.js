@@ -6,7 +6,7 @@ import logo from "../images/cheqitlogo.svg";
 export default function HomeNav() {
   return (
     <Navbar bg="white" fixed="top" expand="lg" style={{
-      boxShadow: "0px 9px 25px rgba(0, 20, 73, 0.14)",
+      boxShadow: "0px 6px 10px rgba(0, 20, 73, 0.14)",
       borderRadius: "0px 0px 114px 114px",
       padding: "0% 3% 0% 5%"
     }}>
