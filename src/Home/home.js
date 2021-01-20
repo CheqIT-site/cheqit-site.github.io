@@ -3,49 +3,45 @@ import "./hom.css";
 import {
   Row,
   Col,
-  Card,
-  Modal,
-  ModalBody,
-  Container,
-  Carousel,
 } from "react-bootstrap";
 import AOS from 'aos';
-import Button from "react-bootstrap/Button";
-import thumb from "../images/1.svg";
+// import Button from "react-bootstrap/Button";
+// import thumb from "../images/1.svg";
 import main from "../images/topImage.svg";
 import blur from "../images/translucent one.svg";
-import Icon from "@material-ui/core/Icon";
-import { Link } from "react-router-dom";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
-import { makeStyles } from "@material-ui/core/styles";
-import Manu from "../images/manu.svg";
-import war from "../images/ware.svg";
-import con from "../images/cost.svg";
-import ReactPlayer from "react-player";
-import vid from "../images/vid.mp4";
-import Marquee from "react-marquee-slider";
-import styled from "styled-components";
+// import Icon from "@material-ui/core/Icon";
+// import { Link } from "react-router-dom";
+// import Flippy, { FrontSide, BackSide } from "react-flippy";
+// import { makeStyles } from "@material-ui/core/styles";
+// import Manu from "../images/manu.svg";
+// import war from "../images/ware.svg";
+// import con from "../images/cost.svg";
+// import ReactPlayer from "react-player";
+// import vid from "../images/vid.mp4";
+// import Marquee from "react-marquee-slider";
+// import styled from "styled-components";
 
-import Zoom from "react-reveal/Zoom";
-import blog from "../images/bl.jpg";
+// import Zoom from "react-reveal/Zoom";
+// import blog from "../images/bl.jpg";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
-import prob from "../images/prob.svg";
-import doubt from "../images/doubt.svg";
-import sol from "../images/sol.svg";
-import post from "../images/post.svg";
-import before from "../images/before.png";
-import after from "../images/After.png";
-import gr from "../images/graph.jpg";
-import { Link as scroll } from "react-scroll";
-import { HashLink } from "react-router-hash-link";
-import bev from "../images/bev.jpg";
-import pest from "../images/pest.jpg";
-import good from "../images/good.jpg";
-import med from "../images/med.jpg";
-import coin from "../images/coin.jpg";
-import auto from "../images/auto.jpg";
+// import prob from "../images/prob.svg";
+// import doubt from "../images/doubt.svg";
+// import sol from "../images/sol.svg";
+// import post from "../images/post.svg";
+// import before from "../images/before.png";
+// import after from "../images/After.png";
+// import gr from "../images/graph.jpg";
+// import { Link as scroll } from "react-scroll";
+// import { HashLink } from "react-router-hash-link";
+// import bev from "../images/bev.jpg";
+// import pest from "../images/pest.jpg";
+// import good from "../images/good.jpg";
+// import med from "../images/med.jpg";
+// import coin from "../images/coin.jpg";
+// import auto from "../images/auto.jpg";
 import HomeNav from "../HomeNavbar/HomeNavbar";
+import Features from "../Features/feat";
 
 export default function Home() {
   AOS.init();
@@ -84,7 +80,7 @@ export default function Home() {
           <img src={main} alt="main" className="topImage" data-aos="fade-left" data-aos-duration="1000"/>
         </Col>
       </Row>
-      <Row>
+      <Row style={{marginBottom: "8vh"}}>
         <Col lg={5} className="blur-bg" >
           <img src={blur} alt="blur" className="blur-bg-image" data-aos="fade-up" data-aos-duration="500"/>
           <div className="blurDiv" data-aos="fade-up" data-aos-duration="1000">
@@ -128,6 +124,11 @@ export default function Home() {
               </div>
             </Col>
           </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Features />
         </Col>
       </Row>
       {/* <Row className="workhead">
