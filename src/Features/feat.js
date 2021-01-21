@@ -14,14 +14,14 @@ export default function Features() {
   AOS.init();
 
   return (
-    <div className="features-maindiv"  data-aos="zoom-in-up"  data-aos-duration="1000">
+    <div className="features-maindiv container-fluid"  data-aos="zoom-in-up"  data-aos-duration="1000">
       <Row className="feat-head-row">
         <Col className="feat-head-col">
           <p className="feat-head-para">Our Specialities</p>
         </Col>
       </Row>
       <Row className="feat-box-row">
-        <Col lg={4} className="feat-box-col">
+        <Col lg={4} md={6} sm={12} xs={12} className="feat-box-col">
           <div className="feat-box" data-aos="fade-right">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
@@ -35,8 +35,8 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} className="feat-box-col">
-          <div className="feat-box">
+        <Col lg={4} md={6} sm={12} className="feat-box-col">
+          <div className="feat-box" data-aos="fade-down">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
                 <img src={Analytics} className="feat-img"></img>
@@ -49,8 +49,8 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} className="feat-box-col">
-          <div className="feat-box">
+        <Col lg={4} md={6} sm={12} className="feat-box-col">
+          <div className="feat-box" data-aos="fade-left">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
                 <img src={track} className="feat-img"></img>
@@ -65,8 +65,8 @@ export default function Features() {
         </Col>
       </Row>
       <Row className="feat-box-row">
-        <Col lg={4} className="feat-box-col">
-          <div className="feat-box">
+        <Col lg={4} md={6} sm={12} className="feat-box-col">
+          <div className="feat-box" data-aos="fade-right">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
                 <img src={Magnet} className="feat-img"></img>
@@ -79,8 +79,8 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} className="feat-box-col">
-          <div className="feat-box">
+        <Col lg={4} md={6} sm={12} className="feat-box-col">
+          <div className="feat-box" data-aos="fade-up">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
                 <img src={secure} className="feat-img"></img>
@@ -93,8 +93,8 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} className="feat-box-col">
-          <div className="feat-box">
+        <Col lg={4} md={6} sm={12} className="feat-box-col">
+          <div className="feat-box" data-aos="fade-left">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
                 <img src={End} className="feat-img"></img>

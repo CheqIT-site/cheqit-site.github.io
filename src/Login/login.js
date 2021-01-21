@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import "./login.css";
 import logpic from "../images/login.svg";
@@ -6,6 +6,15 @@ import Home from "../Home/home";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 
 export default function Login() {
+  const AdminUser={
+    email:"cheqit",
+    password:"client",
+  }
+  const [user,setUser]=useState({
+    email:"",
+    password:""
+  })
+  const [error,setError]=useState("");
   return (
     <div className="login-main">
       <Row>
