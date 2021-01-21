@@ -39,27 +39,27 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin"
   },
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "pe-7s-note2",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "pe-7s-news-paper",
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "pe-7s-science",
-    component: Icons,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/table",
+  //   name: "Table List",
+  //   icon: "pe-7s-note2",
+  //   component: TableList,
+  //   layout: "/admin"
+  // },
+  // {
+  //   path: "/typography",
+  //   name: "Typography",
+  //   icon: "pe-7s-news-paper",
+  //   component: Typography,
+  //   layout: "/admin"
+  // },
+  // {
+  //   path: "/icons",
+  //   name: "Icons",
+  //   icon: "pe-7s-science",
+  //   component: Icons,
+  //   layout: "/admin"
+  
   {
     path: "/maps",
     name: "Maps",
@@ -74,14 +74,14 @@ const dashboardRoutes = [
     component: Notifications,
     layout: "/admin"
   },
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "pe-7s-rocket",
-    component: Upgrade,
-    layout: "/admin"
-  }
+  // {
+  //   upgrade: true,
+  //   path: "/upgrade",
+  //   name: "Upgrade to PRO",
+  //   icon: "pe-7s-rocket",
+  //   component: Upgrade,
+  //   layout: "/admin"
+  // }
 ];
 
 export default dashboardRoutes;
