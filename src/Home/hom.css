@@ -1,5 +1,5 @@
 .main-container {
-  width: 100vw;
+  width: calc(100vw-17px);
   overflow-x: hidden !important;
 }
 .topDiv {
