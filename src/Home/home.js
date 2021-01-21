@@ -3,72 +3,120 @@ import "./hom.css";
 import {
   Row,
   Col,
-  Card,
-  Modal,
-  ModalBody,
-  Container,
-  Carousel,
 } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import thumb from "../images/1.svg";
-import main from "../images/main.svg";
-import Icon from "@material-ui/core/Icon";
-import { Link } from "react-router-dom";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
-import { makeStyles } from "@material-ui/core/styles";
-import Manu from "../images/manu.svg";
-import war from "../images/ware.svg";
-import con from "../images/cost.svg";
-import ReactPlayer from "react-player";
-import vid from "../images/vid.mp4";
-import Marquee from "react-marquee-slider";
-import styled from "styled-components";
+import AOS from 'aos';
+// import Button from "react-bootstrap/Button";
+// import thumb from "../images/1.svg";
+import main from "../images/topImage.svg";
+import blur from "../images/translucent one.svg";
+// import Icon from "@material-ui/core/Icon";
+// import { Link } from "react-router-dom";
+// import Flippy, { FrontSide, BackSide } from "react-flippy";
+// import { makeStyles } from "@material-ui/core/styles";
+// import ReactPlayer from "react-player";
+// import vid from "../images/vid.mp4";
+// import Marquee from "react-marquee-slider";
+// import styled from "styled-components";
 
-import Zoom from "react-reveal/Zoom";
-import blog from "../images/bl.jpg";
+// import Zoom from "react-reveal/Zoom";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
-import prob from "../images/prob.svg";
-import doubt from "../images/doubt.svg";
-import sol from "../images/sol.svg";
-import post from "../images/post.svg";
-import before from "../images/before.png";
-import after from "../images/After.png";
-import gr from "../images/graph.jpg";
-import { Link as scroll } from "react-scroll";
-import { HashLink } from "react-router-hash-link";
-import bev from "../images/bev.jpg";
-import pest from "../images/pest.jpg";
-import good from "../images/good.jpg";
-import med from "../images/med.jpg";
-import coin from "../images/coin.jpg";
-import auto from "../images/auto.jpg";
+// import { Link as scroll } from "react-scroll";
+// import { HashLink } from "react-router-hash-link";
 import HomeNav from "../HomeNavbar/HomeNavbar";
-
-// import Flippy, { FrontSide, BackSide } from "react-flippy";
-const Mar = styled.div`
-  width: 18vw;
-  height: 32vh;
-  margin-right: 4vw;
-  background: white;
-  border: 6px solid #ffffff;
-  box-sizing: border-box;
-  box-shadow: inset 2px 2px 7px #735544, inset -2px -2px 7px #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-`;
+import Features from "../Features/feat";
+import Process from "../Process/Process";
 
 export default function Home() {
- 
-
+  AOS.init();
   return (
     <div className="main-container">
       <Row>
         <HomeNav />
       </Row>
-  
-
-      <Row className="workhead">
+      <Row className="topDiv">
+        <Col lg={{ span: 4, offset: 1 }} data-aos="fade-right">
+          <Row>
+            <Col>
+              <p className="tagline">A tagline that explains why you rock!</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p className="topText">
+                Anti-Counterfeiting solutions to protect your brand through
+                continual innovations and keeping pace with your end customers
+                expectations by delivering authentic products to ensure better
+                customer satisfaction, enhanced productivity, thus sustainable
+                growth and business profitability
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="tryNow">
+                <p className="tryNow-text">Try Now</p>
+              </div>
+            </Col>
+          </Row>
+        </Col>
+        <Col lg={7} className="imageColumn">
+          <img src={main} alt="main" className="topImage" data-aos="fade-left" data-aos-duration="1000"/>
+        </Col>
+      </Row>
+      <Row style={{marginBottom: "8vh"}}>
+        <Col lg={5} className="blur-bg" >
+          <img src={blur} alt="blur" className="blur-bg-image" data-aos="fade-up" data-aos-duration="500"/>
+          <div className="blurDiv" data-aos="fade-up" data-aos-duration="1000">
+            <Row>
+              <Col>
+                <p className="tagline">What we do?</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="topText">
+                  In a world full of competition, how CheQIT will help you to
+                  stand out and grow
+                </p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col>
+          <Row>
+            <Col className="wwd-col" style={{justifyContent: "center"}}>
+              <div className="wwd-box" data-aos="fade-down-right" data-aos-duration="1000">
+                <p className="wwd-text">Give you up to <span className="wwd-text2">10x customer</span> engagement</p>
+              </div>
+            </Col>
+            <Col className="wwd-col" style={{justifyContent: "center", alignItems:"flex-end"}}>
+              <div className="wwd-box" data-aos="fade-down-left" data-aos-duration="1000">
+                <p className="wwd-text">End-to-End <span className="wwd-text2">Product Tracking</span></p>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="wwd-col">
+              <div className="wwd-box" data-aos="fade-up-right" data-aos-duration="1000">
+                <p className="wwd-text">Give you a <span className="wwd-text2">Competitive Edge</span></p>
+              </div>
+            </Col>
+            <Col className="wwd-col" style={{alignItems:"flex-end"}}>
+              <div className="wwd-box" data-aos="fade-up-left" data-aos-duration="1000">
+                <p className="wwd-text">Better <span className="wwd-text2">Market Knowledge</span> and Analysis</p>
+              </div>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Features />
+        </Col>
+      </Row>
+      <Process />
+      {/* <Row className="workhead">
         <Col>
           <h2 className="wor">How CheqIt Works</h2>
         </Col>
@@ -403,7 +451,7 @@ export default function Home() {
         <Col>
           <h2 className="com-head">Our Company</h2>
         </Col>
-      </Row>
+      </Row> */}
       <Footer
         columns={[
           {
@@ -446,7 +494,7 @@ export default function Home() {
             items: [
               {
                 icon: <i class="fa foot fa-envelope-o" aria-hidden="true"></i>,
-                title: "chegit@gmail.com",
+                title: "cheqit@gmail.com",
               },
               {
                 icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
