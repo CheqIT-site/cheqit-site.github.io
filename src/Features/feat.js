@@ -7,10 +7,14 @@ import Analytics from "../images/analytics 1.svg";
 import End from "../images/End to end 1.svg";
 import secure from "../images/secure 1.svg";
 import track from "../images/track 1.svg";
+import AOS from 'aos';
+
 
 export default function Features() {
+  AOS.init();
+
   return (
-    <div className="features-maindiv">
+    <div className="features-maindiv"  data-aos="zoom-in-up"  data-aos-duration="1000">
       <Row className="feat-head-row">
         <Col className="feat-head-col">
           <p className="feat-head-para">Our Specialities</p>
@@ -18,7 +22,7 @@ export default function Features() {
       </Row>
       <Row className="feat-box-row">
         <Col lg={4} className="feat-box-col">
-          <div className="feat-box">
+          <div className="feat-box" data-aos="fade-right">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
                 <img src={Fake} className="feat-img"></img>

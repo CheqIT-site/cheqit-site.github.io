@@ -1,0 +1,20 @@
+.Demo-main {
+  height: 50vh;
+  background-color: #c8fcea;
+}
+.demo-head-col {
+  display: flex;
+  justify-content: center;
+}
+.demo-head-para {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vw;
+  line-height: 75px;
+  margin: 3% 0%;
+  color: #001449;
+}
+.demo-text{color: #ffffff;
+    font: 500 1.5vw Roboto;
+    margin-bottom: 0 !important;}
