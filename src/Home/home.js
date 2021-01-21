@@ -6,18 +6,17 @@ import {
 } from "react-bootstrap";
 import AOS from 'aos';
 // import Button from "react-bootstrap/Button";
-// import thumb from "../images/1.svg";
+import thumb from "../images/1.svg";
 import main from "../images/topImage.svg";
 import blur from "../images/translucent one.svg";
 // import Icon from "@material-ui/core/Icon";
 // import { Link } from "react-router-dom";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 // import { makeStyles } from "@material-ui/core/styles";
-// import ReactPlayer from "react-player";
-// import vid from "../images/vid.mp4";
+import ReactPlayer from "react-player";
+import vid from "../images/vid.mp4";
 // import Marquee from "react-marquee-slider";
 // import styled from "styled-components";
-
 // import Zoom from "react-reveal/Zoom";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
@@ -116,6 +115,18 @@ export default function Home() {
         </Col>
       </Row>
       <Process />
+      <Row className="work">
+        <Col xs={12} md={10} lg={7} xl={6} >
+          <div className="vid" data-aos="fade-up" data-aos-duration="1000">
+            <ReactPlayer
+              className="player"
+              controls="true"
+              url={vid}
+              light={thumb}
+            />
+          </div>
+        </Col>
+      </Row>
       {/* <Row className="workhead">
         <Col>
           <h2 className="wor">How CheqIt Works</h2>
