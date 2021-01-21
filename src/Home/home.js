@@ -13,7 +13,7 @@ import blur from "../images/translucent one.svg";
 // import { Link } from "react-router-dom";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 // import { makeStyles } from "@material-ui/core/styles";
-// import ReactPlayer from "react-player";
+// import ReactPlayer from "react-playernpm i";
 // import vid from "../images/vid.mp4";
 // import Marquee from "react-marquee-slider";
 // import styled from "styled-components";
@@ -26,6 +26,7 @@ import "rc-footer/assets/index.css";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import Features from "../Features/feat";
 import Process from "../Process/Process";
+import Demo from "../Demo/Demo";
 
 export default function Home() {
   AOS.init();
@@ -38,7 +39,7 @@ export default function Home() {
         <Col lg={{ span: 4, offset: 1 }} data-aos="fade-right">
           <Row>
             <Col>
-              <p className="tagline">A tagline that explains why you rock!</p>
+              <p className="tagline">The Power in your Scan!</p>
             </Col>
           </Row>
           <Row>
@@ -116,6 +117,7 @@ export default function Home() {
         </Col>
       </Row>
       <Process />
+      <Demo/>
       {/* <Row className="workhead">
         <Col>
           <h2 className="wor">How CheqIt Works</h2>
