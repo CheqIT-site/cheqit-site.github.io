@@ -13,35 +13,19 @@ import blur from "../images/translucent one.svg";
 // import { Link } from "react-router-dom";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 // import { makeStyles } from "@material-ui/core/styles";
-// import Manu from "../images/manu.svg";
-// import war from "../images/ware.svg";
-// import con from "../images/cost.svg";
 // import ReactPlayer from "react-player";
 // import vid from "../images/vid.mp4";
 // import Marquee from "react-marquee-slider";
 // import styled from "styled-components";
 
 // import Zoom from "react-reveal/Zoom";
-// import blog from "../images/bl.jpg";
 import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
-// import prob from "../images/prob.svg";
-// import doubt from "../images/doubt.svg";
-// import sol from "../images/sol.svg";
-// import post from "../images/post.svg";
-// import before from "../images/before.png";
-// import after from "../images/After.png";
-// import gr from "../images/graph.jpg";
 // import { Link as scroll } from "react-scroll";
 // import { HashLink } from "react-router-hash-link";
-// import bev from "../images/bev.jpg";
-// import pest from "../images/pest.jpg";
-// import good from "../images/good.jpg";
-// import med from "../images/med.jpg";
-// import coin from "../images/coin.jpg";
-// import auto from "../images/auto.jpg";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import Features from "../Features/feat";
+import Process from "../Process/Process";
 
 export default function Home() {
   AOS.init();
@@ -131,6 +115,7 @@ export default function Home() {
           <Features />
         </Col>
       </Row>
+      <Process />
       {/* <Row className="workhead">
         <Col>
           <h2 className="wor">How CheqIt Works</h2>
