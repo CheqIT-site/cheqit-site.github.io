@@ -18,14 +18,13 @@ import vid from "../images/vid.mp4";
 // import Marquee from "react-marquee-slider";
 // import styled from "styled-components";
 // import Zoom from "react-reveal/Zoom";
-import Footer from "rc-footer";
-import "rc-footer/assets/index.css";
 // import { Link as scroll } from "react-scroll";
 // import { HashLink } from "react-router-hash-link";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import Features from "../Features/feat";
 import Process from "../Process/Process";
 import Demo from "../Demo/Demo";
+import CommonFooter from "../Footer/Footer";
 
 export default function Home() {
   AOS.init();
@@ -129,6 +128,7 @@ export default function Home() {
         </Col>
       </Row>
       <Demo/>
+      <CommonFooter />
       {/* <Row className="workhead">
         <Col>
           <h2 className="wor">How CheqIt Works</h2>
@@ -465,7 +465,7 @@ export default function Home() {
           <h2 className="com-head">Our Company</h2>
         </Col>
       </Row> */}
-      <Footer
+      {/* <Footer
         columns={[
           {
             title: "CheqIt",
@@ -527,7 +527,7 @@ export default function Home() {
         ]}
         backgroundColor="#001449"
       />
-      ,
-    </div>
+      ,*/}
+    </div> 
   );
 }
