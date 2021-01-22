@@ -16,7 +16,7 @@ export default function Process() {
       <Col>
         <Row>
           <Col>
-            <p className="process-head">How it happens...</p>
+            <p className="process-head" data-aos="zoom-in-up"  data-aos-duration="1000">How it happens...</p>
           </Col>
         </Row>
         <Row style={{ alignItems: "center" }}>

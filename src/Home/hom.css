@@ -21,10 +21,11 @@
 
 .topText {
   font: 300 1.6rem Roboto;
-  color: #00c894;
+  color: #001449;
 }
 
 .tryNow {
+  margin-top: 1%;
   padding: 2% 7%;
   width: max-content;
   border-radius: 50px;
