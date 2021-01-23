@@ -1,16 +1,13 @@
 import React from "react";
 import "./hom.css";
-import {
-  Row,
-  Col,
-} from "react-bootstrap";
-import AOS from 'aos';
+import { Row, Col } from "react-bootstrap";
+import AOS from "aos";
 // import Button from "react-bootstrap/Button";
 import thumb from "../images/1.svg";
 import main from "../images/topImage.svg";
 import blur from "../images/translucent one.svg";
 // import Icon from "@material-ui/core/Icon";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 // import { makeStyles } from "@material-ui/core/styles";
 import ReactPlayer from "react-player";
@@ -54,18 +51,32 @@ export default function Home() {
           <Row>
             <Col>
               <div className="tryNow">
-                <p className="tryNow-text">Try Now</p>
+                <Link to="/try">
+                  <p className="tryNow-text">Try Now</p>
+                </Link>
               </div>
             </Col>
           </Row>
         </Col>
         <Col lg={7} className="imageColumn">
-          <img src={main} alt="main" className="topImage" data-aos="fade-left" data-aos-duration="1000"/>
+          <img
+            src={main}
+            alt="main"
+            className="topImage"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          />
         </Col>
       </Row>
-      <Row style={{marginBottom: "8vh"}}>
-        <Col lg={5} className="blur-bg" >
-          <img src={blur} alt="blur" className="blur-bg-image" data-aos="fade-up" data-aos-duration="500"/>
+      <Row style={{ marginBottom: "8vh" }}>
+        <Col lg={5} className="blur-bg">
+          <img
+            src={blur}
+            alt="blur"
+            className="blur-bg-image"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          />
           <div className="blurDiv" data-aos="fade-up" data-aos-duration="1000">
             <Row>
               <Col>
@@ -84,26 +95,55 @@ export default function Home() {
         </Col>
         <Col>
           <Row>
-            <Col className="wwd-col" style={{justifyContent: "center"}}>
-              <div className="wwd-box" data-aos="fade-down-right" data-aos-duration="1000">
-                <p className="wwd-text">Give you up to <span className="wwd-text2">10x customer</span> engagement</p>
+            <Col className="wwd-col" style={{ justifyContent: "center" }}>
+              <div
+                className="wwd-box"
+                data-aos="fade-down-right"
+                data-aos-duration="1000"
+              >
+                <p className="wwd-text">
+                  Give you up to <span className="wwd-text2">10x customer</span>{" "}
+                  engagement
+                </p>
               </div>
             </Col>
-            <Col className="wwd-col" style={{justifyContent: "center", alignItems:"flex-end"}}>
-              <div className="wwd-box" data-aos="fade-down-left" data-aos-duration="1000">
-                <p className="wwd-text">End-to-End <span className="wwd-text2">Product Tracking</span></p>
+            <Col
+              className="wwd-col"
+              style={{ justifyContent: "center", alignItems: "flex-end" }}
+            >
+              <div
+                className="wwd-box"
+                data-aos="fade-down-left"
+                data-aos-duration="1000"
+              >
+                <p className="wwd-text">
+                  End-to-End <span className="wwd-text2">Product Tracking</span>
+                </p>
               </div>
             </Col>
           </Row>
           <Row>
             <Col className="wwd-col">
-              <div className="wwd-box" data-aos="fade-up-right" data-aos-duration="1000">
-                <p className="wwd-text">Give you a <span className="wwd-text2">Competitive Edge</span></p>
+              <div
+                className="wwd-box"
+                data-aos="fade-up-right"
+                data-aos-duration="1000"
+              >
+                <p className="wwd-text">
+                  Give you a <span className="wwd-text2">Competitive Edge</span>
+                </p>
               </div>
             </Col>
-            <Col className="wwd-col" style={{alignItems:"flex-end"}}>
-              <div className="wwd-box" data-aos="fade-up-left" data-aos-duration="1000">
-                <p className="wwd-text">Better <span className="wwd-text2">Market Knowledge</span> and Analysis</p>
+            <Col className="wwd-col" style={{ alignItems: "flex-end" }}>
+              <div
+                className="wwd-box"
+                data-aos="fade-up-left"
+                data-aos-duration="1000"
+              >
+                <p className="wwd-text">
+                  Better <span className="wwd-text2">Market Knowledge</span> and
+                  Analysis
+                </p>
               </div>
             </Col>
           </Row>
@@ -116,7 +156,7 @@ export default function Home() {
       </Row>
       <Process />
       <Row className="work">
-        <Col xs={12} md={10} lg={7} xl={6} >
+        <Col xs={12} md={10} lg={7} xl={6}>
           <div className="vid" data-aos="fade-up" data-aos-duration="1000">
             <ReactPlayer
               className="player"
@@ -127,7 +167,7 @@ export default function Home() {
           </div>
         </Col>
       </Row>
-      <Demo/>
+      <Demo />
       <CommonFooter />
       {/* <Row className="workhead">
         <Col>
@@ -528,6 +568,6 @@ export default function Home() {
         backgroundColor="#001449"
       />
       ,*/}
-    </div> 
+    </div>
   );
 }
