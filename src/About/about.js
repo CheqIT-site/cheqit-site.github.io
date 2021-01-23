@@ -5,8 +5,10 @@ import HomeNavbar from "../HomeNavbar/HomeNavbar";
 
 export default function About() {
   return (
-    <div className="about-main">
-        
-    </div>
+    <Row>
+      <Col>
+        <HomeNavbar />
+      </Col>
+    </Row>
   );
 }

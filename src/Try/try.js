@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import { Row, Col, Nav, Navbar, Modal, ModalFooter } from "react-bootstrap";
+import { Row, Col, Modal, ModalFooter } from "react-bootstrap";
 import logo from "../images/cheqitlogo.svg";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import trypic from "../images/try.jpg";
 import "./try.css";
 import Form from "react-bootstrap/Form";
-import apk from "../images/APK.jpeg";
-import Footer from "rc-footer";
-import "rc-footer/assets/index.css";
+import apk from "../images/APK.svg";
 import { Document } from "react-pdf/dist/esm/entry.webpack";
 import { saveAs } from "file-saver";
 import HomeNav from "../HomeNavbar/HomeNavbar";
@@ -56,7 +52,6 @@ export default function Try() {
     const value = e.target.value;
     setfile((prevdata) => ({ ...prevdata, [name]: value }));
   };
-  // console.log(file);
   const [code, setCode] = useState({
     code: logo,
   });
@@ -120,12 +115,6 @@ export default function Try() {
   console.log(dateExp);
   console.log(pdf);
 
-  // process to auto download it
-
-  const tabstyle = {
-    color: "#212121",
-  };
-
   return (
     <div className="try-main">
       <Row>
@@ -134,12 +123,13 @@ export default function Try() {
         </Col>
       </Row>
       <Row className="try-section">
-        <Col sm={6} style={{ padding: "4%" }}>
+        <Col xl={{span: 6, offset: 0}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={12} style={{ padding: "4%" }}>
           <Form onSubmit={handlesubmit} className="Form">
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label className="cri">Name</Form.Label>
               <Form.Control
                 className="field na"
+                style={{borderRadius: "50px"}}
                 type="text"
                 placeholder="Name of product/company"
                 value={name}
@@ -151,6 +141,7 @@ export default function Try() {
               <Form.Label className="cri">Description</Form.Label>
               <Form.Control
                 className="field des"
+                style={{borderRadius: "20px"}}
                 as="textarea"
                 name="description"
                 value={description}
@@ -159,7 +150,7 @@ export default function Try() {
               />
             </Form.Group>
             <Row style={{ justifyContent: "space-around" }}>
-              <Button className="btn-learn" type="submit">
+              <Button className="get-pdf-btn" type="submit">
                 <span>Get QR Code</span>
               </Button>
             </Row>
@@ -172,7 +163,7 @@ export default function Try() {
             centered
           >
             <Modal.Header style={{ justifyContent: "center" }}>
-              <Modal.Title className="scan">Scan It !!!!!</Modal.Title>
+              <Modal.Title className="scan">Scan It !!!!!</Modal.Title> 
             </Modal.Header>
             <Modal.Body>
               <Row>
@@ -181,7 +172,7 @@ export default function Try() {
                   style={{ display: "flex", justifyContent: "center" }}
                 >
                   {show === false ? (
-                    <img src={logo}></img>
+                    <img src={logo} alt="logo"></img>
                   ) : (
                     <img
                       src={"data:image/png;base64," + code.code}
@@ -337,23 +328,16 @@ export default function Try() {
             </ModalFooter>
           </Modal>
         </Col>
-        <Col sm={6}>
+        <Col xl={{span: 6, offset: 0}} lg={{span: 8, offset: 2}} md={{span: 8, offset: 2}} sm={12}>
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
-              <p className="inst">
-                Get CHEQIT APP by scanning or clicking the button below.
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
-              <img src={apk}></img>
+              <img src={apk} alt="apk" width= "80%"></img>
             </Col>
           </Row>
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
               <Button
-                className="btn-learn"
+                className="download-app-btn"
                 href="https://cheqit.in/Identify/download/androidAPK"
                 style={{ paddingTop: "1%" }}
               >
