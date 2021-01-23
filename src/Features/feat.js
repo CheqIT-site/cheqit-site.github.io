@@ -14,7 +14,7 @@ export default function Features() {
   AOS.init();
 
   return (
-    <div className="features-maindiv container-fluid"  data-aos="zoom-in-up"  data-aos-duration="1000">
+    <div className="features-maindiv container-fluid"  data-aos="zoom-in"  data-aos-duration="1000">
       <Row className="feat-head-row">
         <Col className="feat-head-col">
           <p className="feat-head-para">Our Specialities</p>
