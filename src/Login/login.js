@@ -4,17 +4,48 @@ import "./login.css";
 import logpic from "../images/login.svg";
 import Home from "../Home/home";
 import HomeNav from "../HomeNavbar/HomeNavbar";
+import { Redirect } from "react-router-dom";
+import Admin from "../layouts/Admin";
 
 export default function Login() {
   const AdminUser={
     email:"cheqit",
     password:"client",
   }
+
   const [user,setUser]=useState({
     email:"",
     password:""
   })
+
+
+  const {email,password}=user;
+  
   const [error,setError]=useState("");
+  
+  const handleDetails=(e)=>{
+    const name = e.target.name;
+    const value = e.target.value;
+    setUser((prevdata)=>({...prevdata,[name]:value}));
+  }
+
+  const loginSubmit=(e)=>{
+    e.preventDefault();
+    if(email===AdminUser.email && password===AdminUser.password)
+    {
+      
+    }
+    else{
+      console.log("404");
+    }
+  }
+  console.log(user);
+
+
+
+
+
+
   return (
     <div className="login-main">
       <Row>
@@ -32,18 +63,19 @@ export default function Login() {
                 type="email"
                 name="email"
                 placeholder="Enter email"
-                // onChange={(e) => handleChange(e)}
+                value={email}
+                onChange={handleDetails}
               />
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
               <Form.Label className="login-fields">Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" name="password" placeholder="Password" value={password} onChange={handleDetails} />
             </Form.Group>
             <Button
               className="btn-learn"
               type="submit"
-              // onClick={() => sign(userData.email, userData.password)}
+              onClick={loginSubmit}
             >
               Login
             </Button>

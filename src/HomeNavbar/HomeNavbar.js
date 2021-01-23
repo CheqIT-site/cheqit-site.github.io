@@ -22,7 +22,7 @@ export default function HomeNav() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/admin/dashboard" className="home-nav">
+          <Nav.Link href="/login" className="home-nav">
             Dashboard
           </Nav.Link>
           <Nav.Link href="/try" className="home-nav">
