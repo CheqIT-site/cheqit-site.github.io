@@ -21,7 +21,7 @@ export default function Features() {
         </Col>
       </Row>
       <Row className="feat-box-row">
-        <Col lg={4} md={6} sm={12} xs={12} className="feat-box-col">
+        <Col xl={4} lg={4} md={6} sm={{span:10, offset:1}} xs={{span:10,offset:1}} className="feat-box-col">
           <div className="feat-box" data-aos="fade-right">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
@@ -35,7 +35,7 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} md={6} sm={12} className="feat-box-col">
+        <Col lg={4} md={6} sm={{span:10, offset:1}} xs={{span:10,offset:1}}  className="feat-box-col">
           <div className="feat-box" data-aos="fade-down">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
@@ -49,7 +49,7 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} md={6} sm={12} className="feat-box-col">
+        <Col lg={4} md={6}  sm={{span:10, offset:1}} xs={{span:10,offset:1}}  className="feat-box-col">
           <div className="feat-box" data-aos="fade-left">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
@@ -65,7 +65,7 @@ export default function Features() {
         </Col>
       </Row>
       <Row className="feat-box-row">
-        <Col lg={4} md={6} sm={12} className="feat-box-col">
+        <Col lg={4} md={6} sm={{span:10, offset:1}} xs={{span:10,offset:1}}  className="feat-box-col">
           <div className="feat-box" data-aos="fade-right">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
@@ -79,7 +79,7 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} md={6} sm={12} className="feat-box-col">
+        <Col lg={4} md={6} sm={{span:10, offset:1}} xs={{span:10,offset:1}}  className="feat-box-col">
           <div className="feat-box" data-aos="fade-up">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
@@ -93,7 +93,7 @@ export default function Features() {
             </Row>
           </div>
         </Col>
-        <Col lg={4} md={6} sm={12} className="feat-box-col">
+        <Col lg={4} md={6} sm={{span:10, offset:1}} xs={{span:10,offset:1}}  className="feat-box-col">
           <div className="feat-box" data-aos="fade-left">
             <Row className="feat-img-row">
               <Col lg={12} className="feat-img-col">
