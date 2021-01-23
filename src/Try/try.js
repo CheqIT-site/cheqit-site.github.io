@@ -12,6 +12,8 @@ import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
 import { Document } from "react-pdf/dist/esm/entry.webpack";
 import { saveAs } from "file-saver";
+import HomeNav from "../HomeNavbar/HomeNavbar";
+import CommonFooter from "../Footer/Footer";
 
 export default function Try() {
   const [file, setfile] = useState({
@@ -128,39 +130,7 @@ export default function Try() {
     <div className="try-main">
       <Row>
         <Col sm={12}>
-          <Navbar
-            bg="dark"
-            fixed="top"
-            expand="lg"
-            style={{ paddingLeft: "3%" }}
-          >
-            <Navbar.Brand href="/">
-              <img className="chq-logo" src={logo} alt="Cheqit-logo" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav.Link href="/" className="home-nav">
-                  Features
-                </Nav.Link>
-                <Nav.Link href="/cert" className="home-nav">
-                  Get Certificate
-                </Nav.Link>
-                <Nav.Link href="/try" className="home-nav">
-                  Get Demo
-                </Nav.Link>
-                <Nav.Link href="/" className="home-nav">
-                  Blogs
-                </Nav.Link>
-                <Nav.Link href="/" className="home-nav">
-                  About Us
-                </Nav.Link>
-                <Nav.Link href="/contact" className="home-nav">
-                  Contact Us
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
+          <HomeNav />
         </Col>
       </Row>
       <Row className="try-section">
@@ -216,6 +186,7 @@ export default function Try() {
                     <img
                       src={"data:image/png;base64," + code.code}
                       className="qr-img"
+                      alt="qr"
                     ></img>
                   )}
                 </Col>
@@ -392,68 +363,7 @@ export default function Try() {
           </Row>
         </Col>
       </Row>
-      <Footer
-        columns={[
-          {
-            title: "CHEQIT",
-            url: "CHEQIT.COM",
-            items: [
-              { title: "Anti-Counterfeiting solutions to protect your brand" },
-              { title: "Pune, India" },
-            ],
-
-            openExternal: true,
-          },
-          {
-            title: "Useful Links",
-            items: [
-              {
-                title: "Get Demo",
-                url: "/try",
-                openExternal: false,
-              },
-              {
-                title: "About Us",
-                url: "/about",
-                openExternal: false,
-              },
-              {
-                title: "Features",
-                url: "#features",
-                openExternal: false,
-              },
-              {
-                title: "Vector Credits",
-                url: "/credit",
-                openExternal: true,
-              },
-            ],
-          },
-          {
-            title: "Contact Us",
-            items: [
-              {
-                icon: <i class="fa foot fa-phone" aria-hidden="true"></i>,
-                title: "8074638794",
-              },
-              {
-                icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
-                title: "cheqitco",
-                url: "https://www.instagram.com/cheqitco/",
-              },
-              {
-                icon: (
-                  <i class="fa foot fa-linkedin-square" aria-hidden="true"></i>
-                ),
-
-                title: "cheqit-co",
-                url: "https://www.linkedin.com/in/cheqit-co-1b59371b7",
-              },
-            ],
-          },
-        ]}
-        backgroundColor="#343a40"
-      />
+      <CommonFooter />
     </div>
   );
 }

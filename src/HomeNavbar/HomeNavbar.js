@@ -12,7 +12,7 @@ export default function HomeNav() {
       expand="lg"
       style={{
         boxShadow: "0px 6px 10px rgba(0, 20, 73, 0.14)",
-        borderRadius: "0px 0px 114px 114px",
+        borderRadius: "0vw 0vw 10vw 10vw",
         padding: "0% 3% 0% 5%",
       }}
     >
