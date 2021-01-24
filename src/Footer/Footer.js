@@ -53,6 +53,7 @@ export default function CommonFooter() {
                 icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
                 title: "cheqitco",
                 url: "https://www.instagram.com/cheqitco/",
+                openExternal:true
               },
               {
                 icon: (
@@ -61,6 +62,7 @@ export default function CommonFooter() {
 
                 title: "cheqit-co",
                 url: "https://www.linkedin.com/in/cheqit-co-1b59371b7",
+                openExternal:true
               },
             ],
           },

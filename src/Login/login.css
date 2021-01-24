@@ -1,6 +1,6 @@
 .login-main {
   height: 100vh;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .login-col-1 {
   display: flex;
@@ -17,6 +17,7 @@
     height: fit-content;
     border-radius: 0vh 0vh 0vh 15vh ;
     padding: 5% 0%;
+    
 }
 .login-fields {
   margin-top: 1rem;
@@ -46,4 +47,8 @@
   color: #518071 !important;
   font: 400 1.2rem Roboto;
   margin-bottom: 0 !important;
+}
+.login-btn:hover {
+  box-shadow: 0px 6px 19px rgba(29, 245, 155, 0.25);
+  transform: scale(1.1);
 }
