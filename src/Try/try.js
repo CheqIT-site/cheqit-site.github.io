@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import { Row, Col, Nav, Navbar, Modal, ModalFooter } from "react-bootstrap";
+import { Row, Col, Modal, ModalFooter } from "react-bootstrap";
 import logo from "../images/cheqitlogo.svg";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import trypic from "../images/try.jpg";
 import "./try.css";
 import Form from "react-bootstrap/Form";
-import apk from "../images/APK.jpeg";
-import Footer from "rc-footer";
-import "rc-footer/assets/index.css";
+import apk from "../images/APK.svg";
 import { Document } from "react-pdf/dist/esm/entry.webpack";
 import { saveAs } from "file-saver";
+import HomeNav from "../HomeNavbar/HomeNavbar";
+import CommonFooter from "../Footer/Footer";
 
 export default function Try() {
   const [file, setfile] = useState({
@@ -54,7 +52,6 @@ export default function Try() {
     const value = e.target.value;
     setfile((prevdata) => ({ ...prevdata, [name]: value }));
   };
-  // console.log(file);
   const [code, setCode] = useState({
     code: logo,
   });
@@ -118,58 +115,21 @@ export default function Try() {
   console.log(dateExp);
   console.log(pdf);
 
-  // process to auto download it
-
-  const tabstyle = {
-    color: "#212121",
-  };
-
   return (
     <div className="try-main">
       <Row>
         <Col sm={12}>
-          <Navbar
-            bg="dark"
-            fixed="top"
-            expand="lg"
-            style={{ paddingLeft: "3%" }}
-          >
-            <Navbar.Brand href="/">
-              <img className="chq-logo" src={logo} alt="Cheqit-logo" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav.Link href="/" className="home-nav">
-                  Features
-                </Nav.Link>
-                <Nav.Link href="/cert" className="home-nav">
-                  Get Certificate
-                </Nav.Link>
-                <Nav.Link href="/try" className="home-nav">
-                  Get Demo
-                </Nav.Link>
-                <Nav.Link href="/" className="home-nav">
-                  Blogs
-                </Nav.Link>
-                <Nav.Link href="/" className="home-nav">
-                  About Us
-                </Nav.Link>
-                <Nav.Link href="/contact" className="home-nav">
-                  Contact Us
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
+          <HomeNav />
         </Col>
       </Row>
       <Row className="try-section">
-        <Col sm={6} style={{ padding: "4%" }}>
+        <Col xl={{span: 6, offset: 0}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={12} style={{ padding: "4%" }}>
           <Form onSubmit={handlesubmit} className="Form">
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label className="cri">Name</Form.Label>
               <Form.Control
                 className="field na"
+                style={{borderRadius: "50px"}}
                 type="text"
                 placeholder="Name of product/company"
                 value={name}
@@ -181,6 +141,7 @@ export default function Try() {
               <Form.Label className="cri">Description</Form.Label>
               <Form.Control
                 className="field des"
+                style={{borderRadius: "20px"}}
                 as="textarea"
                 name="description"
                 value={description}
@@ -189,7 +150,7 @@ export default function Try() {
               />
             </Form.Group>
             <Row style={{ justifyContent: "space-around" }}>
-              <Button className="btn-learn" type="submit">
+              <Button className="get-pdf-btn" type="submit">
                 <span>Get QR Code</span>
               </Button>
             </Row>
@@ -202,7 +163,7 @@ export default function Try() {
             centered
           >
             <Modal.Header style={{ justifyContent: "center" }}>
-              <Modal.Title className="scan">Scan It !!!!!</Modal.Title>
+              <Modal.Title className="scan">Scan It !!!!!</Modal.Title> 
             </Modal.Header>
             <Modal.Body>
               <Row>
@@ -211,11 +172,12 @@ export default function Try() {
                   style={{ display: "flex", justifyContent: "center" }}
                 >
                   {show === false ? (
-                    <img src={logo}></img>
+                    <img src={logo} alt="logo"></img>
                   ) : (
                     <img
                       src={"data:image/png;base64," + code.code}
                       className="qr-img"
+                      alt="qr"
                     ></img>
                   )}
                 </Col>
@@ -366,23 +328,16 @@ export default function Try() {
             </ModalFooter>
           </Modal>
         </Col>
-        <Col sm={6}>
+        <Col xl={{span: 6, offset: 0}} lg={{span: 8, offset: 2}} md={{span: 8, offset: 2}} sm={12}>
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
-              <p className="inst">
-                Get CHEQIT APP by scanning or clicking the button below.
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
-              <img src={apk}></img>
+              <img src={apk} alt="apk" width= "80%"></img>
             </Col>
           </Row>
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
               <Button
-                className="btn-learn"
+                className="download-app-btn"
                 href="https://cheqit.in/Identify/download/androidAPK"
                 style={{ paddingTop: "1%" }}
               >
@@ -392,68 +347,7 @@ export default function Try() {
           </Row>
         </Col>
       </Row>
-      <Footer
-        columns={[
-          {
-            title: "CHEQIT",
-            url: "CHEQIT.COM",
-            items: [
-              { title: "Anti-Counterfeiting solutions to protect your brand" },
-              { title: "Pune, India" },
-            ],
-
-            openExternal: true,
-          },
-          {
-            title: "Useful Links",
-            items: [
-              {
-                title: "Get Demo",
-                url: "/try",
-                openExternal: false,
-              },
-              {
-                title: "About Us",
-                url: "/about",
-                openExternal: false,
-              },
-              {
-                title: "Features",
-                url: "#features",
-                openExternal: false,
-              },
-              {
-                title: "Vector Credits",
-                url: "/credit",
-                openExternal: true,
-              },
-            ],
-          },
-          {
-            title: "Contact Us",
-            items: [
-              {
-                icon: <i class="fa foot fa-phone" aria-hidden="true"></i>,
-                title: "8074638794",
-              },
-              {
-                icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
-                title: "cheqitco",
-                url: "https://www.instagram.com/cheqitco/",
-              },
-              {
-                icon: (
-                  <i class="fa foot fa-linkedin-square" aria-hidden="true"></i>
-                ),
-
-                title: "cheqit-co",
-                url: "https://www.linkedin.com/in/cheqit-co-1b59371b7",
-              },
-            ],
-          },
-        ]}
-        backgroundColor="#343a40"
-      />
+      <CommonFooter />
     </div>
   );
 }
