@@ -25,19 +25,17 @@
 }
 .feat-box {
   width: 80%;
-  height: fit-content;
   background: rgba(200, 252, 234, 0.62);
   backdrop-filter: blur(250px);
-  border-radius: 82px;
-  margin-bottom: 3%;
-
+  border-radius: 70px;
+  margin-bottom: 5%;
 }
 .feat-img-col {
   display: flex;
   justify-content: center;
 }
 .feat-img {
-  padding: 5% 0%;
+  width: 80%;
 }
 .feat-text-col {
   display: flex;
@@ -52,4 +50,14 @@
   text-align: center;
   padding: 5% 0%;
   color: #2a453d;
+}
+
+@media (max-width: 1200px){
+  .feat-box {
+    width: 100%;
+    background: rgba(200, 252, 234, 0.62);
+    backdrop-filter: blur(250px);
+    border-radius: 70px;
+    margin-bottom: 5%;
+  }
 }
