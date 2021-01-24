@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import "./login.css";
-import logpic from "../images/login.svg";
+import logpic from "../images/signin.jpg";
 import Home from "../Home/home";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import { Redirect } from "react-router-dom";
@@ -10,7 +10,7 @@ import Features from "../Features/feat";
 
 export default function Login() {
   const AdminUser = {
-    email: "cheqit",
+    email: "scan@cheqit",
     password: "client",
   };
 
@@ -22,23 +22,26 @@ export default function Login() {
   const { email, password } = user;
 
   const [error, setError] = useState("");
-  
 
-
+  const [sign, setSign] = useState(false);
   const handleDetails = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setUser((prevdata) => ({ ...prevdata, [name]: value }));
   };
 
-  const loginSubmit = user => {
-    
+  const loginSubmit = (e) => {
+    if (email === AdminUser.email && password === AdminUser.password) {
+      setSign(true);
+    } else {
+      setError("incorrect");
+    }
   };
   console.log(user);
 
   return (
     <div className="login-main">
-      {email === AdminUser.email && password === AdminUser.password ? (
+      {sign === true ? (
         <Redirect to="/admin/dashboard"></Redirect>
       ) : (
         <div>
@@ -49,40 +52,54 @@ export default function Login() {
             <Col sm={6} className="login-col-1">
               <img src={logpic} className="login-pic"></img>
             </Col>
-            <Col sm={6} className="login-col-2">
-              <Form className="login-form" onSubmit={loginSubmit}>
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label className="login-fields">
-                    Email address
-                  </Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    placeholder="Enter email"
-                    value={email}
-                    onChange={handleDetails}
-                  />
-                </Form.Group>
+            <Col
+              xl={{ span: 4, offset: 0 }}
+              lg={{ span: 4, offset: 0 }}
+              md={{ span: 5, offset: 0 }}
+              sm={{ span: 10, offset: 1 }}
+              xs={{ span: 10, offset: 1 }}
+              className="login-col-2"
+            >
+              <Row>
+                <Col xs={{ span: 8, offset: 2 }}>
+                  <p className="getintouchText">Login</p>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={{ span: 8, offset: 2 }}>
+                  <Form className="login-form" onSubmit={loginSubmit}>
+                    <Form.Group controlId="formBasicEmail">
+                      <Form.Label className="login-fields">
+                        Email address
+                      </Form.Label>
+                      <Form.Control
+                        type="email"
+                        name="email"
+                        placeholder="Enter email"
+                        value={email}
+                        onChange={handleDetails}
+                        className="login-input"
+                      />
+                    </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
-                  <Form.Label className="login-fields">Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={handleDetails}
-                  />
-                </Form.Group>
-                {error};
-                <Button
-                  className="btn-learn"
-                  type="submit"
-                  
-                >
-                  Login
-                </Button>
-              </Form>
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label className="login-fields">Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={handleDetails}
+                        className="login-input"
+                      />
+                    </Form.Group>
+
+                    <Button className="login-btn" type="submit">
+                      Login
+                    </Button>
+                  </Form>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </div>
