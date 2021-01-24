@@ -7,6 +7,8 @@ import HomeNav from "../HomeNavbar/HomeNavbar";
 import { Redirect } from "react-router-dom";
 import Admin from "../layouts/Admin";
 import Features from "../Features/feat";
+import CommonFooter from "../Footer/Footer";
+
 
 export default function Login() {
   const AdminUser = {
@@ -102,6 +104,11 @@ export default function Login() {
               </Row>
             </Col>
           </Row>
+          <Row>
+        <Col>
+          <CommonFooter />
+        </Col>
+      </Row>
         </div>
       )}
     </div>
