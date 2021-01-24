@@ -3,8 +3,10 @@ import { Col, Row } from "react-bootstrap";
 import CommonFooter from "../Footer/Footer";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import "./Contact.css";
+import AOS from "aos";
 
 export default function Contact() {
+  AOS.init();
   return (
     <div className="containerMain">
       <Row>
@@ -18,6 +20,8 @@ export default function Contact() {
           sm={{ span: 10, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
           style={{marginTop: "11vh"}}
+          data-aos="zoom-out-right"
+          data-aos-duration="1000"
         >
           <Row>
             <Col>
@@ -85,6 +89,8 @@ export default function Contact() {
           sm={{ span: 10, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
           className="rightBox"
+          data-aos="zoom-out-left"
+          data-aos-duration="1200"
         >
           <Row>
             <Col xs={{ span: 8, offset: 2 }}>

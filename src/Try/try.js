@@ -10,8 +10,10 @@ import { Document } from "react-pdf/dist/esm/entry.webpack";
 import { saveAs } from "file-saver";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import CommonFooter from "../Footer/Footer";
+import AOS from "aos";
 
 export default function Try() {
+  AOS.init();
   const [file, setfile] = useState({
     name: "",
     description: "",
@@ -123,7 +125,8 @@ export default function Try() {
         </Col>
       </Row>
       <Row className="try-section">
-        <Col xl={{span: 6, offset: 0}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={12} style={{ padding: "4%" }}>
+        <Col xl={{span: 6, offset: 0}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={12} style={{ padding: "4%" }} data-aos="fade-up"
+     data-aos-duration="1000">
           <Form onSubmit={handlesubmit} className="Form">
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label className="cri">Name</Form.Label>
@@ -184,7 +187,7 @@ export default function Try() {
               </Row>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={handleClose} className="btn-learn">
+              <Button onClick={handleClose} className="download-app-btn">
                 Done
               </Button>
             </Modal.Footer>
@@ -328,7 +331,8 @@ export default function Try() {
             </ModalFooter>
           </Modal>
         </Col>
-        <Col xl={{span: 6, offset: 0}} lg={{span: 8, offset: 2}} md={{span: 8, offset: 2}} sm={12}>
+        <Col xl={{span: 6, offset: 0}} lg={{span: 8, offset: 2}} md={{span: 8, offset: 2}} sm={12} data-aos="fade-up"
+     data-aos-duration="1800">
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
               <img src={apk} alt="apk" width= "80%"></img>

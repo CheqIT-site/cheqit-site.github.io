@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Row, Col, Nav, Navbar, Modal, ModalFooter } from "react-bootstrap";
+import { Row, Col, Modal, ModalFooter } from "react-bootstrap";
 import logo from "../images/cheqitlogo.svg";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import trypic from "../images/try.jpg";
@@ -12,8 +11,10 @@ import { saveAs } from "file-saver";
 import "./cert.css";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import CommonFooter from "../Footer/Footer";
+import AOS from "aos";
 
 export default function Cert() {
+  AOS.init();
   const [file, setfile] = useState({
     name: "",
     description: "",
@@ -171,15 +172,30 @@ export default function Cert() {
         </Col>
       </Row>
       <Row className="cert-section">
-        <Col xl={{span: 7, offset: 1}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={{span: 10, offset: 1}} xs={{span: 12}} className="cert-col-1">
+        <Col
+          xl={{ span: 7, offset: 1 }}
+          lg={{ span: 10, offset: 1 }}
+          md={{ span: 10, offset: 1 }}
+          sm={{ span: 10, offset: 1 }}
+          xs={{ span: 12 }}
+          className="cert-col-1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <Form onSubmit={handlepdf} className="detail">
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri imp">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri imp"
+                  >
                     Business ID No.
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -193,7 +209,7 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri imp">
+                  <Form.Label column lg="11" sm="12" className="cri imp">
                     Business Name
                   </Form.Label>
                   <Col lg="11" sm="12">
@@ -212,10 +228,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri imp">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri imp"
+                  >
                     CoR No.
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -248,10 +270,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri imp">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri imp"
+                  >
                     BPA
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -265,10 +293,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri imp">
+                  <Form.Label column lg="11" sm="12" className="cri imp">
                     Plot No.
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -284,10 +312,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri imp">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri imp"
+                  >
                     Date of Issue
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="date"
@@ -301,10 +335,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri imp">
+                  <Form.Label column lg="11" sm="12" className="cri imp">
                     Date of Expiry
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="date"
@@ -320,10 +354,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     County
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -336,10 +376,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri">
+                  <Form.Label column lg="11" sm="12" className="cri">
                     Sub County
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -354,10 +394,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     Pin No.
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -370,10 +416,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri">
+                  <Form.Label column lg="11" sm="12" className="cri">
                     VAT No.
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -388,10 +434,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     P.O.Box
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -404,10 +456,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri">
+                  <Form.Label column lg="11" sm="12" className="cri">
                     Postal Code
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -422,10 +474,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     Postal Town
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -440,10 +498,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     Telephone No.1
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -456,10 +520,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri">
+                  <Form.Label column lg="11" sm="12" className="cri">
                     Telephone No.2
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="number"
@@ -474,10 +538,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     FAX
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       type="text"
@@ -490,10 +560,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri">
+                  <Form.Label column lg="11" sm="12" className="cri">
                     Email Address
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       type="email"
@@ -508,10 +578,16 @@ export default function Cert() {
             <Row>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg={{span: 11, offset: 1}} md="12" xs="12" className="cri">
+                  <Form.Label
+                    column
+                    lg={{ span: 11, offset: 1 }}
+                    md="12"
+                    xs="12"
+                    className="cri"
+                  >
                     Business Activity Code & Description
                   </Form.Label>
-                  <Col lg={{span: 11, offset: 1}} md="12" xs="12">
+                  <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
                       name="busiActivity"
@@ -524,10 +600,10 @@ export default function Cert() {
               </Col>
               <Col sm={6}>
                 <Form.Group as={Col} controlId="formPlaintextPassword">
-                  <Form.Label column lg="11"  sm="12" className="cri">
+                  <Form.Label column lg="11" sm="12" className="cri">
                     Detailed Activity Description
                   </Form.Label>
-                  <Col lg="11"  sm="12">
+                  <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
                       name="detailActivity"
@@ -573,7 +649,7 @@ export default function Cert() {
               </Row>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={handleClose} className="btn-learn">
+              <Button onClick={handleClose} className="download-app-btn">
                 Done
               </Button>
             </Modal.Footer>
@@ -719,13 +795,21 @@ export default function Cert() {
               </Form>
             </Modal.Body>
             <ModalFooter>
-              <Button onClick={OffOpen} className="btn-learn">
+              <Button onClick={OffOpen} className="download-app-btn">
                 Done
               </Button>
             </ModalFooter>
           </Modal>
         </Col>
-        <Col xl={{span: 4, offset: 0}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={{span: 10, offset: 1}} xs={{span: 12}}>
+        <Col
+          xl={{ span: 4, offset: 0 }}
+          lg={{ span: 10, offset: 1 }}
+          md={{ span: 10, offset: 1 }}
+          sm={{ span: 10, offset: 1 }}
+          xs={{ span: 12 }}
+          data-aos="fade-up"
+          data-aos-duration="1600"
+        >
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
               <img src={apk} width="90%" alt="apk"></img>

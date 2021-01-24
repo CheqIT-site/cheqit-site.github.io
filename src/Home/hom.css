@@ -15,12 +15,12 @@
 }
 
 .tagline {
-  font: bold 4rem Roboto;
+  font: bold 7vh Roboto;
   color: #001449;
 }
 
 .topText {
-  font: 300 1.6rem Roboto;
+  font: 300 2.5vh Roboto;
   color: #001449;
 }
 
@@ -29,7 +29,7 @@
   padding: 2% 7%;
   width: max-content;
   border-radius: 50px;
-  background-color: #001449;
+  background-color: #518071;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@
 
 .tryNow-text {
   color: #ffffff;
-  font: 500 1.4rem Roboto;
+  font: 500 2.5vh Roboto;
   margin-bottom: 0 !important;
 }
 
@@ -53,7 +53,7 @@
   justify-content: center;
 }
 .topImage {
-  width: 40vw;
+  width: 70%;
   height: 80%;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .wwd-text {
-  font: 500 3rem Roboto;
+  font: 500 5vh Roboto;
   color: #001449;
 }
 
@@ -136,4 +136,61 @@
   border-radius: 30px;
   overflow: hidden;
   max-width: 90vw;
+}
+
+@media (max-width: 1280px){
+  .topDiv{
+    background-image: none;
+  }
+  .wwd-box {
+    background: #ffffff;
+    border: 1px solid #8195ca;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px rgba(35, 34, 73, 0.11);
+    border-radius: 50px;
+    width: 85%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 992px){
+  .topDiv{
+    margin-top: 11vh;
+    height: fit-content;
+    margin-bottom: 3%;
+  }
+  .main-container {
+    width: 100vw;
+    overflow-x: hidden !important;
+  }
+  .wwd-text {
+    font: 500 4vh Roboto;
+    color: #001449;
+  }
+  .blur-bg {
+    margin-bottom: 5%;
+  }
+  .bottomColHome{
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 576px){
+  .wwd-box {
+    background: #ffffff;
+    border: 1px solid #8195ca;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px rgba(35, 34, 73, 0.11);
+    border-radius: 30px;
+    width: 95%;
+    height: 70%;
+  }
+  .wwd-col {
+    height: fit-content;
+    display: flex;
+    margin-bottom: 5%;
+  }
+  .blurDiv {
+    width: 70%;
+  }
 }

@@ -22,7 +22,7 @@ export default function Home() {
         <HomeNav />
       </Row>
       <Row className="topDiv">
-        <Col lg={{ span: 4, offset: 1 }} data-aos="fade-right">
+        <Col lg={{ span: 4, offset: 1 }} xs={{span: 10, offset: 1}} data-aos="fade-right">
           <Row>
             <Col>
               <p className="tagline">The Power in your Scan!</p>
@@ -49,7 +49,7 @@ export default function Home() {
             </Col>
           </Row>
         </Col>
-        <Col lg={7} className="imageColumn">
+        <Col lg={{span: 7, offset: 0}} xs={{span: 12}} className="imageColumn">
           <img
             src={main}
             alt="main"
@@ -60,7 +60,7 @@ export default function Home() {
         </Col>
       </Row>
       <Row style={{ marginBottom: "8vh" }}>
-        <Col lg={{span: 5, offset: 0}} md={{span: 8, offset: 2}} xs={{span: 10, offset: 1}} className="blur-bg">
+        <Col lg={{span: 5, offset: 0}} md={{span: 10, offset: 1}} xs={{span: 12}} className="blur-bg">
           <img
             src={blur}
             alt="blur"
@@ -86,7 +86,7 @@ export default function Home() {
         </Col>
         <Col>
           <Row>
-            <Col className="wwd-col" style={{ justifyContent: "center" }}>
+            <Col xl={6} lg={6} sm={6}  className="wwd-col"  style={{ justifyContent: "center" }}>
               <div
                 className="wwd-box"
                 data-aos="fade-down-right"
@@ -99,6 +99,7 @@ export default function Home() {
               </div>
             </Col>
             <Col
+            xl={6} lg={6} sm={6} 
               className="wwd-col"
               style={{ justifyContent: "center", alignItems: "flex-end" }}
             >
@@ -113,8 +114,8 @@ export default function Home() {
               </div>
             </Col>
           </Row>
-          <Row>
-            <Col className="wwd-col">
+          <Row className ="bottomColHome">
+            <Col xl={6} lg={6} md={6} sm={6} className="wwd-col">
               <div
                 className="wwd-box"
                 data-aos="fade-up-right"
@@ -125,7 +126,7 @@ export default function Home() {
                 </p>
               </div>
             </Col>
-            <Col className="wwd-col" style={{ alignItems: "flex-end" }}>
+            <Col xl={6} lg={6} md={6} sm={6} className="wwd-col" style={{ alignItems: "flex-end" }}>
               <div
                 className="wwd-box"
                 data-aos="fade-up-left"

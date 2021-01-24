@@ -6,8 +6,10 @@ import CommonFooter from "../Footer/Footer";
 import N from "../images/N.png";
 import RA from "../images/RA.png";
 import RI from "../images/RI.png";
+import AOS from "aos";
 
 export default function About() {
+  AOS.init();
   return (
     <div className="about-container">
       <Row>
@@ -22,7 +24,13 @@ export default function About() {
           md={{ span: 4, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
         >
-          <p className="gtkText">Get To Know Us</p>
+          <p
+            className="gtkText"
+            data-aos="zoom-in-right"
+            data-aos-duration="1000"
+          >
+            Get To Know Us
+          </p>
         </Col>
         <Col
           xl={{ span: 4, offset: 0 }}
@@ -30,7 +38,11 @@ export default function About() {
           md={{ span: 5, offset: 0 }}
           xs={{ span: 10, offset: 1 }}
         >
-          <p className="topTextRight">
+          <p
+            data-aos="zoom-in-left"
+            data-aos-duration="1000"
+            className="topTextRight"
+          >
             We're an association of youthful and innovative entrepreneurs. We
             help you build stronger, more secure and transparent supply chain
             and help your consumers verify authenticity of your products to make
@@ -43,7 +55,9 @@ export default function About() {
       <hr width="10%" />
       <Row>
         <Col>
-          <p className="tt">The Team</p>
+          <p className="tt" data-aos="zoom-in-up" data-aos-duration="1000">
+            The Team
+          </p>
         </Col>
       </Row>
       <Row className="sirRow">
@@ -54,7 +68,12 @@ export default function About() {
           md={{ span: 5, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
         >
-          <img src={N} alt="Naman Agarwal" />
+          <img
+            src={N}
+            alt="Naman Agarwal"
+            data-aos="zoom-in-right"
+            data-aos-duration="1000"
+          />
         </Col>
         <Col
           xl={{ span: 4, offset: 0 }}
@@ -62,17 +81,17 @@ export default function About() {
           md={{ span: 5, offset: 0 }}
           xs={{ span: 8, offset: 2 }}
         >
-          <Row>
+          <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
               <p className="nameText">Naman Agarwal</p>
             </Col>
           </Row>
-          <Row>
+          <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
               <p className="desig">Founder</p>
             </Col>
           </Row>
-          <Row>
+          <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
               <p className="aboutSir">
                 CheqIt came into existence with an only aim to secure and grow
@@ -89,17 +108,17 @@ export default function About() {
           md={{ span: 5, offset: 1 }}
           xs={{ span: 8, offset: 2 }}
         >
-          <Row>
+          <Row data-aos="zoom-in-right" data-aos-duration="1000">
             <Col>
               <p className="nameText">Raj Kumar</p>
             </Col>
           </Row>
-          <Row>
+          <Row data-aos="zoom-in-right" data-aos-duration="1000">
             <Col>
               <p className="desig">Tech-Lead | Co-Founder</p>
             </Col>
           </Row>
-          <Row>
+          <Row data-aos="zoom-in-right" data-aos-duration="1000">
             <Col>
               <p className="aboutSir">
                 CheqIt came into existence with an only aim to secure and grow
@@ -113,7 +132,9 @@ export default function About() {
           xl={{ span: 4, offset: 0, order: "last" }}
           lg={{ span: 5, offset: 0, order: "last" }}
           md={{ span: 5, offset: 0, order: "last" }}
-          xs={{ span: 10, offset: 1, order: "first"}}
+          xs={{ span: 10, offset: 1, order: "first" }}
+          data-aos="zoom-in-left"
+          data-aos-duration="1000"
         >
           <img src={RA} alt="Raj Kumar" />
         </Col>
@@ -125,6 +146,8 @@ export default function About() {
           md={{ span: 5, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
           className="imgCol"
+          data-aos="zoom-in-right"
+          data-aos-duration="1000"
         >
           <img src={RI} alt="Ritesh Kumar" />
         </Col>
@@ -134,17 +157,17 @@ export default function About() {
           md={{ span: 5, offset: 0 }}
           xs={{ span: 8, offset: 2 }}
         >
-          <Row>
+          <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
               <p className="nameText">Ritesh Kumar</p>
             </Col>
           </Row>
-          <Row>
+          <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
               <p className="desig">DevOps | Co-Founder</p>
             </Col>
           </Row>
-          <Row>
+          <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
               <p className="aboutSir">
                 CheqIt came into existence with an only aim to secure and grow

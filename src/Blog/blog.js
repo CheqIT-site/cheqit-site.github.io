@@ -9,8 +9,10 @@ import med from "../images/med.jpg";
 import good from "../images/good.jpg";
 import pest from "../images/pest.jpg";
 import bev from "../images/bev.jpg";
+import AOS from "aos";
 
 export default function Blog() {
+  AOS.init();
   return (
     <div className="blog-container">
       <Row>
@@ -20,11 +22,13 @@ export default function Blog() {
       </Row>
       <Row className="topRowHeading">
         <Col>
-          <p className="tt">Blogs</p>
+          <p className="tt" data-aos="fade-down"
+     data-aos-duration="1000">Blogs</p>
         </Col>
       </Row>
       <hr width="10%" />
-      <Row className="blogRow">
+      <Row className="blogRow" data-aos="fade-up"
+     data-aos-duration="1000">
         <Col
           className="imgCol"
           xl={{ span: 4, offset: 2 }}
@@ -59,7 +63,8 @@ export default function Blog() {
         </Col>
       </Row>
       <hr width="5%" />
-      <Row className="blogRow">
+      <Row className="blogRow" data-aos="fade-up"
+     data-aos-duration="1000">
         <Col
           xl={{ span: 4, offset: 2 }}
           lg={{ span: 5, offset: 1 }}
@@ -94,7 +99,8 @@ export default function Blog() {
         </Col>
       </Row>
       <hr width="5%" />
-      <Row className="blogRow">
+      <Row className="blogRow" data-aos="fade-up"
+     data-aos-duration="1000">
         <Col
           xl={{ span: 4, offset: 2 }}
           lg={{ span: 5, offset: 1 }}
@@ -129,7 +135,8 @@ export default function Blog() {
         </Col>
       </Row>
       <hr width="5%" />
-      <Row className="blogRow">
+      <Row className="blogRow" data-aos="fade-up"
+     data-aos-duration="1000">
         <Col
           xl={{ span: 4, offset: 2 }}
           lg={{ span: 5, offset: 1 }}
@@ -164,7 +171,8 @@ export default function Blog() {
         </Col>
       </Row>
       <hr width="5%" />
-      <Row className="blogRow">
+      <Row className="blogRow" data-aos="fade-up"
+     data-aos-duration="1000">
         <Col
           xl={{ span: 4, offset: 2 }}
           lg={{ span: 5, offset: 1 }}
@@ -199,7 +207,8 @@ export default function Blog() {
         </Col>
       </Row>
       <hr width="5%" />
-      <Row className="blogRow">
+      <Row className="blogRow" data-aos="fade-up"
+     data-aos-duration="1000">
         <Col
           xl={{ span: 4, offset: 2 }}
           lg={{ span: 5, offset: 1 }}
