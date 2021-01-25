@@ -16,6 +16,7 @@ import Home from "../Home/home";
 import Cert from "../Cert/cert";
 import AdminLayout from "../layouts/Admin.jsx";
 import Contact from "../Contact/Contact";
+import Pricing from "../Pricing/price"
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/try" component={Try}></Route>
+          <Route path="/pricing" component={Pricing}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/about" component={About}></Route>
           <Route path="/contact" component={Contact}></Route>
