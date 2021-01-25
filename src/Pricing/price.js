@@ -17,7 +17,7 @@ export default function Price() {
       <Row className="top-row-price">
         <Col>
           <p className="fp" data-aos="zoom-in-up" data-aos-duration="1000">
-            <span style={{color: "#518071"}}>Flexible</span> Plans
+            <span style={{ color: "#518071" }}>Flexible</span> Plans
           </p>
         </Col>
       </Row>
@@ -30,68 +30,240 @@ export default function Price() {
       </Row>
       <hr width="10%" />
       <Row>
-          <Col xl={{span: 4}} className="priceBox-col" style={{justifyContent: "flex-end"}}>
-              <div className="priceBox">
-                  <Row><Col><p className="planType">Basic</p></Col></Row>
-                  <Row><Col><p className="typePrice">$10,000</p></Col></Row>
-                  <hr width="80%" align="left"></hr>
-                  <Row><Col><p className="offerings">✔  5000 Anti Counterfeiting Tags</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customized Dashboard</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customer Demographics</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  CheQIT Analytics Integration</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Upfront contractual period $9000</p></Col></Row>
-              </div>
-          </Col>
-          <Col xl={{span: 4}} className="priceBox-col" style={{justifyContent: "center"}}>
-              <div className="priceBox">
-                  <Row><Col><p className="planType">Basic</p></Col></Row>
-                  <Row><Col><p className="typePrice">$10,000</p></Col></Row>
-                  <hr width="80%" align="left"></hr>
-                  <Row><Col><p className="offerings">✔  5000 Anti Counterfeiting Tags</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customized Dashboard</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customer Demographics</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  CheQIT Analytics Integration</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Upfront contractual period $9000</p></Col></Row>
-              </div>
-          </Col>
-          <Col xl={{span: 4}} className="priceBox-col" style={{justifyContent: "flex-start"}}>
-              <div className="priceBox">
-                  <Row><Col><p className="planType">Basic</p></Col></Row>
-                  <Row><Col><p className="typePrice">$10,000</p></Col></Row>
-                  <hr width="80%" align="left"></hr>
-                  <Row><Col><p className="offerings">✔  5000 Anti Counterfeiting Tags</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customized Dashboard</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customer Demographics</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  CheQIT Analytics Integration</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Upfront contractual period $9000</p></Col></Row>
-              </div>
-          </Col>
-      </Row>
-      <Row>
-      <Col xl={{span: 4, offset: 2}} className="priceBox-col" style={{justifyContent: "center"}}>
-              <div className="priceBox">
-                  <Row><Col><p className="planType">Basic</p></Col></Row>
-                  <Row><Col><p className="typePrice">$10,000</p></Col></Row>
-                  <hr width="80%" align="left"></hr>
-                  <Row><Col><p className="offerings">✔  5000 Anti Counterfeiting Tags</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customized Dashboard</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customer Demographics</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  CheQIT Analytics Integration</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Upfront contractual period $9000</p></Col></Row>
-              </div>
-          </Col>
-          <Col xl={{span: 4}} className="priceBox-col" style={{justifyContent: "center"}}>
-              <div className="priceBox">
-                  <Row><Col><p className="planType">Basic</p></Col></Row>
-                  <Row><Col><p className="typePrice">$10,000</p></Col></Row>
-                  <hr width="80%" align="left"></hr>
-                  <Row><Col><p className="offerings">✔  5000 Anti Counterfeiting Tags</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customized Dashboard</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Customer Demographics</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  CheQIT Analytics Integration</p></Col></Row>
-                  <Row><Col><p className="offerings">✔  Upfront contractual period $9000</p></Col></Row>
-              </div>
-          </Col>
+        <Col
+          xl={{ span: 4 }}
+          lg={{ span: 6 }}
+          md={{span: 6}}
+          xs={12}
+          className="priceBox-col firstCol"
+        >
+          <div className="priceBox">
+            <Row>
+              <Col>
+                <p className="planType">Basic</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="typePrice">$10,000</p>
+              </Col>
+            </Row>
+            <hr width="80%" align="left"></hr>
+            <Row>
+              <Col>
+                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customized Dashboard</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customer Demographics</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ CheQIT Analytics Integration</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Upfront contractual period $9000</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col
+          xl={{ span: 4 }}
+          lg={{ span: 6 }}
+          md={{span: 6}}
+          xs={12}
+          className="priceBox-col secondCol"
+          style={{ justifyContent: "center" }}
+        >
+          <div className="priceBox">
+            <Row>
+              <Col>
+                <p className="planType">Basic</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="typePrice">$10,000</p>
+              </Col>
+            </Row>
+            <hr width="80%" align="left"></hr>
+            <Row>
+              <Col>
+                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customized Dashboard</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customer Demographics</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ CheQIT Analytics Integration</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Upfront contractual period $9000</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col
+          xl={{ span: 4 }}
+          lg={{ span: 6 }}
+          md={{span: 6}}
+          xs={12}
+          className="priceBox-col thirdCol"
+          style={{ justifyContent: "flex-start" }}
+        >
+          <div className="priceBox">
+            <Row>
+              <Col>
+                <p className="planType">Basic</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="typePrice">$10,000</p>
+              </Col>
+            </Row>
+            <hr width="80%" align="left"></hr>
+            <Row>
+              <Col>
+                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customized Dashboard</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customer Demographics</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ CheQIT Analytics Integration</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Upfront contractual period $9000</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col
+          xl={{ span: 4, offset: 2 }}
+          lg={{ span: 6 }}
+          md={{span: 6}}
+          xs={12}
+          className="priceBox-col secondCol"
+          style={{ justifyContent: "center" }}
+        >
+          <div className="priceBox">
+            <Row>
+              <Col>
+                <p className="planType">Basic</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="typePrice">$10,000</p>
+              </Col>
+            </Row>
+            <hr width="80%" align="left"></hr>
+            <Row>
+              <Col>
+                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customized Dashboard</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customer Demographics</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ CheQIT Analytics Integration</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Upfront contractual period $9000</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col
+          xl={{ span: 4, offset: 0 }}
+          lg={{ span: 6, offset: 3 }}
+          md={{ span: 6, offset: 3 }}
+          xs={12}
+          className="priceBox-col secondCol"
+          style={{ justifyContent: "center" }}
+        >
+          <div className="priceBox">
+            <Row>
+              <Col>
+                <p className="planType">Basic</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="typePrice">$10,000</p>
+              </Col>
+            </Row>
+            <hr width="80%" align="left"></hr>
+            <Row>
+              <Col>
+                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customized Dashboard</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Customer Demographics</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ CheQIT Analytics Integration</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <p className="offerings">✔ Upfront contractual period $9000</p>
+              </Col>
+            </Row>
+          </div>
+        </Col>
       </Row>
       <Row>
         <Col>
