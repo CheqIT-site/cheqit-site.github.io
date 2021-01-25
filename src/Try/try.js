@@ -125,14 +125,21 @@ export default function Try() {
         </Col>
       </Row>
       <Row className="try-section">
-        <Col xl={{span: 6, offset: 0}} lg={{span: 10, offset: 1}} md={{span: 10, offset: 1}} sm={12} style={{ padding: "4%" }} data-aos="fade-up"
-     data-aos-duration="1000">
+        <Col
+          xl={{ span: 6, offset: 0 }}
+          lg={{ span: 10, offset: 1 }}
+          md={{ span: 10, offset: 1 }}
+          sm={12}
+          style={{ padding: "4%" }}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <Form onSubmit={handlesubmit} className="Form">
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label className="cri">Name</Form.Label>
               <Form.Control
                 className="field na"
-                style={{borderRadius: "50px"}}
+                style={{ borderRadius: "50px" }}
                 type="text"
                 placeholder="Name of product/company"
                 value={name}
@@ -144,7 +151,7 @@ export default function Try() {
               <Form.Label className="cri">Description</Form.Label>
               <Form.Control
                 className="field des"
-                style={{borderRadius: "20px"}}
+                style={{ borderRadius: "20px" }}
                 as="textarea"
                 name="description"
                 value={description}
@@ -166,7 +173,7 @@ export default function Try() {
             centered
           >
             <Modal.Header style={{ justifyContent: "center" }}>
-              <Modal.Title className="scan">Scan It !!!!!</Modal.Title> 
+              <Modal.Title className="scan">Scan It !!!!!</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Row>
@@ -331,15 +338,21 @@ export default function Try() {
             </ModalFooter>
           </Modal>
         </Col>
-        <Col xl={{span: 6, offset: 0}} lg={{span: 8, offset: 2}} md={{span: 8, offset: 2}} sm={12} data-aos="fade-up"
-     data-aos-duration="1800">
+        <Col
+          xl={{ span: 6, offset: 0 }}
+          lg={{ span: 8, offset: 2 }}
+          md={{ span: 8, offset: 2 }}
+          sm={12}
+          data-aos="fade-up"
+          data-aos-duration="1800"
+        >
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
-              <img src={apk} alt="apk" width= "80%"></img>
+              <img src={apk} alt="apk" width="80%"></img>
             </Col>
           </Row>
           <Row>
-            <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
+            <Col sm={12} style={{ display: "flex", justifyContent: "center", marginBottom: "4%" }}>
               <Button
                 className="download-app-btn"
                 href="https://cheqit.in/Identify/download/androidAPK"

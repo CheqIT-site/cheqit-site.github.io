@@ -3,7 +3,8 @@
   width: 100vw;
 }
 .try-section {
-  height: 100vh;
+  /* height: 100vh; */
+  margin-top: 11vh;
   align-items: center;
 }
 .try-form {
@@ -50,9 +51,10 @@ a {
   padding: 5% !important;
   background-color: #518071;
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .try-section {
-    height: 150vh;
+    margin-top: 11vh;
+    height: fit-content;
   }
   .cri {
     font-size: 3.6vw;

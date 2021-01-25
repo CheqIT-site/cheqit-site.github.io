@@ -13,7 +13,7 @@ export default function HomeNav() {
       style={{
         boxShadow: "0px 6px 10px rgba(0, 20, 73, 0.14)",
         borderRadius: "0vw 0vw 10vw 10vw",
-        padding: "0% 3% 0% 5%",
+        padding: "0% 5% 0% 5%"
       }}
     >
       <Navbar.Brand href="/">
