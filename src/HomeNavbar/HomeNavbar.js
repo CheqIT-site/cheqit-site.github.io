@@ -25,7 +25,7 @@ export default function HomeNav() {
           <Nav.Link href="/login" className="home-nav">
             Dashboard
           </Nav.Link>
-          <Nav.Link href="/pricing" className="home-nav">
+          <Nav.Link href="/price" className="home-nav">
             Pricing
           </Nav.Link>
           <Nav.Link href="/cert" className="home-nav">

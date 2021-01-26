@@ -17,6 +17,7 @@ import Cert from "../Cert/cert";
 import AdminLayout from "../layouts/Admin.jsx";
 import Contact from "../Contact/Contact";
 import Pricing from "../Pricing/price"
+import Temp from "../Pricetemp/temp";
 
 class App extends Component {
   render() {
@@ -31,6 +32,8 @@ class App extends Component {
           <Route path="/contact" component={Contact}></Route>
           <Route path="/blog" component={Blog}></Route>
           <Route path="/cert" component={Cert}></Route>
+          <Route path="/price" component={Temp}></Route>
+
           <Route
             path="/admin"
             render={(props) => <AdminLayout {...props} />}
