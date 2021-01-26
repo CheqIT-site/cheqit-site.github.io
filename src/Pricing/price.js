@@ -40,7 +40,7 @@ export default function Price() {
           <div className="priceBox">
             <Row>
               <Col>
-                <p className="planType">Basic</p>
+                <p className="planType">Starter</p>
               </Col>
             </Row>
             <Row>
@@ -71,7 +71,7 @@ export default function Price() {
             </Row>
             <Row>
               <Col>
-                <p className="offerings">✔ Upfront contractual period $9000</p>
+                <p className="offerings">✔ Upfront contractual period price- $9000</p>
               </Col>
             </Row>
           </div>
@@ -87,18 +87,18 @@ export default function Price() {
           <div className="priceBox">
             <Row>
               <Col>
-                <p className="planType">Basic</p>
+                <p className="planType">Pro</p>
               </Col>
             </Row>
             <Row>
               <Col>
-                <p className="typePrice">$10,000</p>
+                <p className="typePrice">$15,000</p>
               </Col>
             </Row>
             <hr width="80%" align="left"></hr>
             <Row>
               <Col>
-                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+                <p className="offerings">✔ 10000 Anti Counterfeiting Tags</p>
               </Col>
             </Row>
             <Row>
@@ -118,7 +118,7 @@ export default function Price() {
             </Row>
             <Row>
               <Col>
-                <p className="offerings">✔ Upfront contractual period $9000</p>
+                <p className="offerings">✔ Upfront contractual period price- $13000</p>
               </Col>
             </Row>
           </div>
@@ -134,18 +134,18 @@ export default function Price() {
           <div className="priceBox">
             <Row>
               <Col>
-                <p className="planType">Basic</p>
+                <p className="planType">Powerhouse+</p>
               </Col>
             </Row>
             <Row>
               <Col>
-                <p className="typePrice">$10,000</p>
+                <p className="typePrice">$25,000</p>
               </Col>
             </Row>
             <hr width="80%" align="left"></hr>
             <Row>
               <Col>
-                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+                <p className="offerings">✔ 50000 Anti Counterfeiting Tags</p>
               </Col>
             </Row>
             <Row>
@@ -165,7 +165,7 @@ export default function Price() {
             </Row>
             <Row>
               <Col>
-                <p className="offerings">✔ Upfront contractual period $9000</p>
+                <p className="offerings">✔ Upfront contractual period price- $22000</p>
               </Col>
             </Row>
           </div>
@@ -181,18 +181,18 @@ export default function Price() {
           <div className="priceBox">
             <Row>
               <Col>
-                <p className="planType">Basic</p>
+                <p className="planType">Business Class</p>
               </Col>
             </Row>
             <Row>
               <Col>
-                <p className="typePrice">$10,000</p>
+                <p className="typePrice">$35,000</p>
               </Col>
             </Row>
             <hr width="80%" align="left"></hr>
             <Row>
               <Col>
-                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+                <p className="offerings">✔ 100000 Anti Counterfeiting Tags</p>
               </Col>
             </Row>
             <Row>
@@ -212,7 +212,7 @@ export default function Price() {
             </Row>
             <Row>
               <Col>
-                <p className="offerings">✔ Upfront contractual period $9000</p>
+                <p className="offerings">✔ Upfront contractual period price- $30000</p>
               </Col>
             </Row>
           </div>
@@ -228,18 +228,18 @@ export default function Price() {
           <div className="priceBox">
             <Row>
               <Col>
-                <p className="planType">Basic</p>
+                <p className="planType">Enterprise</p>
               </Col>
             </Row>
             <Row>
               <Col>
-                <p className="typePrice">$10,000</p>
+                <p className="typePrice">Get in touch</p>
               </Col>
             </Row>
             <hr width="80%" align="left"></hr>
             <Row>
               <Col>
-                <p className="offerings">✔ 5000 Anti Counterfeiting Tags</p>
+                <p className="offerings">✔ 100000+ Anti Counterfeiting Tags</p>
               </Col>
             </Row>
             <Row>
@@ -259,7 +259,7 @@ export default function Price() {
             </Row>
             <Row>
               <Col>
-                <p className="offerings">✔ Upfront contractual period $9000</p>
+                <p className="offerings">✔ Upfront contractual period price- Custom</p>
               </Col>
             </Row>
           </div>
