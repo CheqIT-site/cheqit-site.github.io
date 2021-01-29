@@ -807,6 +807,7 @@ export default function Cert() {
           md={{ span: 10, offset: 1 }}
           sm={{ span: 10, offset: 1 }}
           xs={{ span: 12 }}
+          className="imageCol"
         >
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
