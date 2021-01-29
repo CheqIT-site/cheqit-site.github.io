@@ -811,7 +811,7 @@ export default function Cert() {
         >
           <Row>
             <Col sm={12} style={{ display: "flex", justifyContent: "center" }}>
-              <img src={apk} width="90%" alt="apk" style={{position:"sticky"}}></img>
+              <img src={apk} width="90%" alt="apk" style={{position:"sticky",top:"0"}}></img>
             </Col>
           </Row>
           <Row>
