@@ -47,7 +47,7 @@ export default function CommonFooter() {
             items: [
               {
                 icon: <i class="fa foot fa-envelope-o" aria-hidden="true"></i>,
-                title: "cheqit@gmail.com",
+                title: "info@cheqit.in",
               },
               {
                 icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
