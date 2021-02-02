@@ -50,7 +50,7 @@ export default function Contact() {
           </Row>
           <Row>
             <Col>
-              <p className="epsText">cheqit@gmail.com</p>
+              <p className="epsText">info@cheqit.in</p>
             </Col>
           </Row>
           <hr align="left" width="50%"></hr>
@@ -61,7 +61,7 @@ export default function Contact() {
           </Row>
           <Row>
             <Col>
-              <p className="epsText">9838899373</p>
+              <p className="epsText">9454788859</p>
             </Col>
           </Row>
           <hr align="left" width="50%"></hr>

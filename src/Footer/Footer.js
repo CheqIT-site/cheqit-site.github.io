@@ -27,12 +27,12 @@ export default function CommonFooter() {
               },
               {
                 title: "About Us",
-                url: "#about",
+                url: "/about",
                 openExternal: false,
               },
               {
-                title: "Features",
-                url: "#features",
+                title: "Dashboard",
+                url: "/login",
                 openExternal: false,
               },
               {
@@ -47,7 +47,7 @@ export default function CommonFooter() {
             items: [
               {
                 icon: <i class="fa foot fa-envelope-o" aria-hidden="true"></i>,
-                title: "cheqit@gmail.com",
+                title: "info@cheqit.in",
               },
               {
                 icon: <i class="fa foot fa-instagram" aria-hidden="true"></i>,
