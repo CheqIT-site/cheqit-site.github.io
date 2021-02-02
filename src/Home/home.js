@@ -90,7 +90,7 @@ export default function Home() {
             <Row>
               <Col>
                 <p className="topText">
-                  In a world full of competition, how CheQIT will help you to
+                  In a world full of competition, how CheqIt will help you to
                   stand out and grow
                 </p>
               </Col>

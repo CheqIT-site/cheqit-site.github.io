@@ -37,13 +37,14 @@ export default function About() {
           lg={{ span: 5, offset: 0 }}
           md={{ span: 5, offset: 0 }}
           xs={{ span: 10, offset: 1 }}
+          className="about-box"
         >
           <p
             data-aos="zoom-in-left"
             data-aos-duration="1000"
             className="topTextRight"
           >
-            We're an association of youthful and innovative entrepreneurs. We
+             We
             help you build stronger, more secure and transparent supply chain
             and help your consumers verify authenticity of your products to make
             them your forever loyal customers. <br></br>
