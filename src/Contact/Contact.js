@@ -13,13 +13,25 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const target = e.target;
-    setQuery(prev => ({
+    setQuery((prev) => ({
       ...prev,
-      [target.name]: target.value
-    }))
-  }
+      [target.name]: target.value,
+    }));
+  };
+
+  // const submitmsg = (e) => {
+  //   e.preventDefault();
+    
+  //   axios
+  //     .post("https://www.cheqit.in/Identify/contactUs", query)
+  //     .then((res) => {
+  //       console.log("done");
+  //     });
+  // };
+
+
   return (
     <div className="containerMain">
       <Row>
@@ -112,30 +124,31 @@ export default function Contact() {
               <p className="getintouchText">Get in touch</p>
             </Col>
           </Row>
-          <Row>
-            <Col xs={{ span: 8, offset: 2 }}>
-              <p
-                className="labelText"
-                style={{
-                  color: "#ffffff",
-                  marginBottom: "0.6rem",
-                }}
-              >
-                Name
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={{ span: 8, offset: 2 }}>
-              <input
-                className="contactInput"
-                name="name"
-                value={query.name}
-                onChange={(e) => handleChange(e)}
-              />
-            </Col>
-          </Row>
           <form>
+            <Row>
+              <Col xs={{ span: 8, offset: 2 }}>
+                <p
+                  className="labelText"
+                  style={{
+                    color: "#ffffff",
+                    marginBottom: "0.6rem",
+                  }}
+                >
+                  Name
+                </p>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={{ span: 8, offset: 2 }}>
+                <input
+                  className="contactInput"
+                  name="name"
+                  value={query.name}
+                  onChange={(e) => handleChange(e)}
+                />
+              </Col>
+            </Row>
+
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
                 <p
@@ -181,7 +194,7 @@ export default function Contact() {
             </Row>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
-                <div className="send">
+                <div className="send" type="submit">
                   <p className="send-text">Send</p>
                 </div>
               </Col>
