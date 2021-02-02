@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import CommonFooter from "../Footer/Footer";
 import HomeNav from "../HomeNavbar/HomeNavbar";
@@ -7,6 +7,19 @@ import AOS from "aos";
 
 export default function Contact() {
   AOS.init();
+  const [query, setQuery] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = e => {
+    const target = e.target;
+    setQuery(prev => ({
+      ...prev,
+      [target.name]: target.value
+    }))
+  }
   return (
     <div className="containerMain">
       <Row>
@@ -19,13 +32,15 @@ export default function Contact() {
           md={{ span: 5, offset: 1 }}
           sm={{ span: 10, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
-          style={{marginTop: "11vh"}}
+          style={{ marginTop: "11vh" }}
           data-aos="zoom-out-right"
           data-aos-duration="1000"
         >
           <Row>
             <Col>
-              <p className="LGTtext">Let's<br></br> Grow <br></br>Together</p>
+              <p className="LGTtext">
+                Let's<br></br> Grow <br></br>Together
+              </p>
             </Col>
           </Row>
           <Row>
@@ -112,7 +127,12 @@ export default function Contact() {
           </Row>
           <Row>
             <Col xs={{ span: 8, offset: 2 }}>
-              <input className="contactInput" />
+              <input
+                className="contactInput"
+                name="name"
+                value={query.name}
+                onChange={(e) => handleChange(e)}
+              />
             </Col>
           </Row>
           <form>
@@ -128,7 +148,13 @@ export default function Contact() {
             </Row>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
-                <input type="email" className="contactInput" />
+                <input
+                  type="email"
+                  name="email"
+                  className="contactInput"
+                  value={query.email}
+                  onChange={(e) => handleChange(e)}
+                />
               </Col>
             </Row>
             <Row>
@@ -145,8 +171,11 @@ export default function Contact() {
               <Col xs={{ span: 8, offset: 2 }}>
                 <textarea
                   className="contactInput"
+                  name="message"
                   style={{ borderRadius: "20px" }}
                   rows="5"
+                  value={query.message}
+                  onChange={(e) => handleChange(e)}
                 />
               </Col>
             </Row>
