@@ -1,12 +1,41 @@
-import React from "react";
+import React,{useState} from "react";
 import { Col, Row } from "react-bootstrap";
 import CommonFooter from "../Footer/Footer";
 import HomeNav from "../HomeNavbar/HomeNavbar";
+import axios from "axios";
 
 import AOS from "aos";
 
 export default function Temp() {
   AOS.init();
+  const [showA, setShowA] = useState(false);
+  const toggleShowA = () => setShowA(!showA);
+  const [query, setQuery] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const target = e.target;
+    setQuery((prev) => ({
+      ...prev,
+      [target.name]: target.value,
+    }));
+  };
+
+  const submitmsg = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("https://www.cheqit.in/Identify/contactUs", query)
+      .then((res) => {
+        if (res.status === 200) {
+          setQuery({ name: "", email: "", message: "" });
+          toggleShowA();
+        }
+      });
+  };
   return (
     <div className="containerMain">
       <Row>
@@ -19,13 +48,15 @@ export default function Temp() {
           md={{ span: 5, offset: 1 }}
           sm={{ span: 10, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
-          style={{marginTop: "11vh"}}
+          style={{ marginTop: "11vh" }}
           data-aos="zoom-out-right"
           data-aos-duration="1000"
         >
           <Row>
             <Col>
-              <p className="LGTtext">For<br></br> Pricing <br></br>Details</p>
+              <p className="LGTtext">
+                For<br></br> Pricing <br></br>Details
+              </p>
             </Col>
           </Row>
           <Row>
@@ -112,7 +143,13 @@ export default function Temp() {
           </Row>
           <Row>
             <Col xs={{ span: 8, offset: 2 }}>
-              <input className="contactInput" />
+              <input
+                className="contactInput"
+                name="name"
+                value={query.name}
+                required
+                onChange={(e) => handleChange(e)}
+              />
             </Col>
           </Row>
           <form>
@@ -128,7 +165,14 @@ export default function Temp() {
             </Row>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
-                <input type="email" className="contactInput" />
+                <input
+                  type="email"
+                  name="email"
+                  className="contactInput"
+                  required
+                  value={query.email}
+                  onChange={(e) => handleChange(e)}
+                />
               </Col>
             </Row>
             <Row>
@@ -144,9 +188,13 @@ export default function Temp() {
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
                 <textarea
+                  required
                   className="contactInput"
+                  name="message"
                   style={{ borderRadius: "20px" }}
                   rows="5"
+                  value={query.message}
+                  onChange={(e) => handleChange(e)}
                 />
               </Col>
             </Row>
