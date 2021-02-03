@@ -4,6 +4,8 @@ import CommonFooter from "../Footer/Footer";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import "./Contact.css";
 import AOS from "aos";
+import axios from "axios";
+
 
 export default function Contact() {
   AOS.init();
@@ -21,15 +23,12 @@ export default function Contact() {
     }));
   };
 
-  // const submitmsg = (e) => {
-  //   e.preventDefault();
+  const submitmsg = (e) => {
+    e.preventDefault();
     
-  //   axios
-  //     .post("https://www.cheqit.in/Identify/contactUs", query)
-  //     .then((res) => {
-  //       console.log("done");
-  //     });
-  // };
+    axios
+      .post("https://www.cheqit.in/Identify/contactUs", query)
+  };
 
 
   return (
@@ -124,7 +123,7 @@ export default function Contact() {
               <p className="getintouchText">Get in touch</p>
             </Col>
           </Row>
-          <form>
+          <form onsubmit={submitmsg}>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
                 <p
