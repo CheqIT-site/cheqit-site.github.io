@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Toast } from "react-bootstrap";
 import CommonFooter from "../Footer/Footer";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import "./Contact.css";
 import AOS from "aos";
 import axios from "axios";
 
-
 export default function Contact() {
   AOS.init();
+  const [showA, setShowA] = useState(false);
+  const toggleShowA = () => setShowA(!showA);
   const [query, setQuery] = useState({
     name: "",
     email: "",
@@ -25,11 +26,16 @@ export default function Contact() {
 
   const submitmsg = (e) => {
     e.preventDefault();
-    
+
     axios
       .post("https://www.cheqit.in/Identify/contactUs", query)
+      .then((res) => {
+        if (res.status === 200) {
+          setQuery({ name: "", email: "", message: "" });
+          toggleShowA();
+        }
+      });
   };
-
 
   return (
     <div className="containerMain">
@@ -123,7 +129,7 @@ export default function Contact() {
               <p className="getintouchText">Get in touch</p>
             </Col>
           </Row>
-          <form onsubmit={submitmsg}>
+          <form onSubmit={submitmsg}>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
                 <p
@@ -143,6 +149,7 @@ export default function Contact() {
                   className="contactInput"
                   name="name"
                   value={query.name}
+                  required
                   onChange={(e) => handleChange(e)}
                 />
               </Col>
@@ -164,6 +171,7 @@ export default function Contact() {
                   type="email"
                   name="email"
                   className="contactInput"
+                  required
                   value={query.email}
                   onChange={(e) => handleChange(e)}
                 />
@@ -182,6 +190,7 @@ export default function Contact() {
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
                 <textarea
+                  required
                   className="contactInput"
                   name="message"
                   style={{ borderRadius: "20px" }}
@@ -193,12 +202,25 @@ export default function Contact() {
             </Row>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
-                <div className="send" type="submit">
+                <button className="send" type="submit">
                   <p className="send-text">Send</p>
-                </div>
+                </button>
               </Col>
             </Row>
           </form>
+          <Toast
+            style={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+            }}
+            show={showA}
+            onClose={toggleShowA}
+            delay={2000}
+            autohide
+          >
+            <Toast.Body>Your Message has been received!</Toast.Body>
+          </Toast>
         </Col>
       </Row>
       <Row>
