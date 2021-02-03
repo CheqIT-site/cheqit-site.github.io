@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Toast } from "react-bootstrap";
 import CommonFooter from "../Footer/Footer";
 import HomeNav from "../HomeNavbar/HomeNavbar";
 import axios from "axios";
@@ -128,6 +128,7 @@ export default function Temp() {
               <p className="getintouchText">Get in touch</p>
             </Col>
           </Row>
+          <form onSubmit={submitmsg}>
           <Row>
             <Col xs={{ span: 8, offset: 2 }}>
               <p
@@ -152,7 +153,7 @@ export default function Temp() {
               />
             </Col>
           </Row>
-          <form>
+          
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
                 <p
@@ -200,12 +201,25 @@ export default function Temp() {
             </Row>
             <Row>
               <Col xs={{ span: 8, offset: 2 }}>
-                <div className="send">
+                <button className="send" type="submit">
                   <p className="send-text">Send</p>
-                </div>
+                </button>
               </Col>
             </Row>
           </form>
+          <Toast
+            style={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+            }}
+            show={showA}
+            onClose={toggleShowA}
+            delay={2000}
+            autohide
+          >
+            <Toast.Body>Your Message has been received!</Toast.Body>
+          </Toast>
         </Col>
       </Row>
       <Row>
