@@ -6,6 +6,7 @@ import CommonFooter from "../Footer/Footer";
 import N from "../images/N.png";
 import RA from "../images/RA.png";
 import RI from "../images/RI.png";
+import Am from "../images/Am.png";
 import AOS from "aos";
 
 export default function About() {
@@ -44,8 +45,7 @@ export default function About() {
             data-aos-duration="1000"
             className="topTextRight"
           >
-             We
-            help you build stronger, more secure and transparent supply chain
+            We help you build stronger, more secure and transparent supply chain
             and help your consumers verify authenticity of your products to make
             them your forever loyal customers. <br></br>
             <br></br>CheqIt came into existence with an only aim to secure and
@@ -98,6 +98,17 @@ export default function About() {
                 CheqIt came into existence with an only aim to secure and grow
                 your brand value and enable trust in your customers
               </p>
+              <a
+                href="www.linkedin.com/in/amtul-maswara"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  class="fa fa-linkedin-square fa-2x"
+                  style={{ color: "#518071" }}
+                  aria-hidden="true"
+                ></i>
+              </a>
             </Col>
           </Row>
         </Col>
@@ -125,6 +136,17 @@ export default function About() {
                 CheqIt came into existence with an only aim to secure and grow
                 your brand value and enable trust in your customers
               </p>
+              <a
+                href="www.linkedin.com/in/amtul-maswara"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  class="fa fa-linkedin-square fa-2x"
+                  style={{ color: "#518071" }}
+                  aria-hidden="true"
+                ></i>
+              </a>
             </Col>
           </Row>
         </Col>
@@ -174,10 +196,71 @@ export default function About() {
                 CheqIt came into existence with an only aim to secure and grow
                 your brand value and enable trust in your customers
               </p>
+              <a
+                href="www.linkedin.com/in/amtul-maswara"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  class="fa fa-linkedin-square fa-2x"
+                  style={{ color: "#518071" }}
+                  aria-hidden="true"
+                ></i>
+              </a>
             </Col>
           </Row>
         </Col>
       </Row>
+      <Row className="sirRow">
+        <Col
+          xl={{ span: 4, offset: 2 }}
+          lg={{ span: 5, offset: 1 }}
+          md={{ span: 5, offset: 1 }}
+          xs={{ span: 8, offset: 2 }}
+        >
+          <Row data-aos="zoom-in-right" data-aos-duration="1000">
+            <Col>
+              <p className="nameText">Amtul Maswara Ahmed</p>
+            </Col>
+          </Row>
+          <Row data-aos="zoom-in-right" data-aos-duration="1000">
+            <Col>
+              <p className="desig">Webmaster | Product Head</p>
+            </Col>
+          </Row>
+          <Row data-aos="zoom-in-right" data-aos-duration="1000">
+            <Col>
+              <p className="aboutSir">
+                CheqIt came into existence with an only aim to secure and grow
+                your brand value and enable trust in your customers
+              </p>
+              <a
+                href="www.linkedin.com/in/amtul-maswara"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  class="fa fa-linkedin-square fa-2x"
+                  style={{ color: "#518071" }}
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </Col>
+          </Row>
+        </Col>
+        <Col
+          className="imgCol"
+          xl={{ span: 4, offset: 0, order: "last" }}
+          lg={{ span: 5, offset: 0, order: "last" }}
+          md={{ span: 5, offset: 0, order: "last" }}
+          xs={{ span: 10, offset: 1, order: "first" }}
+          data-aos="zoom-in-left"
+          data-aos-duration="1000"
+        >
+          <img src={Am} alt="Raj Kumar" />
+        </Col>
+      </Row>
+
       <Row>
         <Col>
           <CommonFooter />
