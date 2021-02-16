@@ -145,6 +145,7 @@ export default function Try() {
                 value={name}
                 onChange={changehandle}
                 name="name"
+                required
               />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -157,6 +158,7 @@ export default function Try() {
                 value={description}
                 onChange={changehandle}
                 rows={3}
+                required
               />
             </Form.Group>
             <Row style={{ justifyContent: "space-around" }}>

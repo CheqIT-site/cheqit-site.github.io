@@ -198,7 +198,7 @@ export default function Cert() {
                   <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
-                      type="number"
+                      type="text"
                       name="businessID"
                       value={businessID}
                       onChange={handleData}
@@ -240,7 +240,7 @@ export default function Cert() {
                   <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
-                      type="number"
+                      type="text"
                       name="corNo"
                       value={corNo}
                       onChange={handleData}
@@ -257,7 +257,7 @@ export default function Cert() {
                   <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
-                      type="number"
+                      type="text"
                       name="spaNo"
                       value={spaNo}
                       onChange={handleData}
@@ -299,7 +299,7 @@ export default function Cert() {
                   <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
-                      type="number"
+                      type="text"
                       name="plotNo"
                       value={plotNo}
                       onChange={handleData}
@@ -406,7 +406,7 @@ export default function Cert() {
                   <Col lg={{ span: 11, offset: 1 }} md="12" xs="12">
                     <Form.Control
                       className="certInputs"
-                      type="number"
+                      type="text"
                       name="pinNo"
                       value={pinNo}
                       onChange={handleData}
@@ -422,7 +422,7 @@ export default function Cert() {
                   <Col lg="11" sm="12">
                     <Form.Control
                       className="certInputs"
-                      type="number"
+                      type="text"
                       name="vatNo"
                       value={vatNo}
                       onChange={handleData}
