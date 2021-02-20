@@ -163,7 +163,7 @@ export default function Try() {
             </Form.Group>
             <Row style={{ justifyContent: "space-around" }}>
               <Button className="get-pdf-btn" type="submit">
-                <span>Get QR Code</span>
+                <span>Get ACT Code</span>
               </Button>
             </Row>
           </Form>
