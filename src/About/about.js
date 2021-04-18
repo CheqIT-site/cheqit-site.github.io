@@ -5,7 +5,7 @@ import HomeNavbar from "../HomeNavbar/HomeNavbar";
 import CommonFooter from "../Footer/Footer";
 import N from "../images/N.png";
 import RA from "../images/RA.png";
-import RI from "../images/Manjeet.jpeg";
+import RI from "../images/Group 27.png";
 import Am from "../images/Am.png";
 import AOS from "aos";
 
