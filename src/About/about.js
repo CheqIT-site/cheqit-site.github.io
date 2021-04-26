@@ -5,7 +5,7 @@ import HomeNavbar from "../HomeNavbar/HomeNavbar";
 import CommonFooter from "../Footer/Footer";
 import N from "../images/N.png";
 import RA from "../images/RA.png";
-import RI from "../images/Group 27.png";
+import RI from "../images/RI.png";
 import Am from "../images/Am.png";
 import AOS from "aos";
 
@@ -182,7 +182,7 @@ export default function About() {
         >
           <Row data-aos="zoom-in-left" data-aos-duration="1000">
             <Col>
-              <p className="nameText">Manjeet Raj</p>
+              <p className="nameText">Ritesh Lamba</p>
             </Col>
           </Row>
           <Row data-aos="zoom-in-left" data-aos-duration="1000">
