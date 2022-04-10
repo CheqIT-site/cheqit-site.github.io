@@ -72,7 +72,7 @@ export default function Try() {
     e.preventDefault();
     console.log(file);
     axios
-      .post("https://cheqit.co.in/Identify/web-checker/genDemoQR", file)
+      .post("https://cheqit.in/Identify/web-checker/genDemoQR", file)
       .then((res) => {
         console.log(res);
         setCode({
@@ -99,7 +99,7 @@ export default function Try() {
     console.log(sendData);
 
     axios
-      .post("https://cheqit.co.in/Identify/web-checker/generatePDF", sendData, {
+      .post("https://cheqit.in/Identify/web-checker/generatePDF", sendData, {
         responseType: "blob",
       })
       .then((res) => {
@@ -357,7 +357,7 @@ export default function Try() {
             <Col sm={12} style={{ display: "flex", justifyContent: "center", marginBottom: "4%" }}>
               <Button
                 className="download-app-btn"
-                href="https://cheqit.co.in/Identify/download/androidAPK"
+                href="https://cheqit.in/Identify/download/androidAPK"
                 style={{ paddingTop: "1%" }}
               >
                 <span>Download APP</span>
