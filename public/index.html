@@ -43,6 +43,31 @@
       type="text/css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirectPath = params.get("p");
+        if (!redirectPath) return;
+
+        var base = "/Vector";
+        var normalized = redirectPath;
+
+        if (normalized.indexOf(base) === 0) {
+          normalized = normalized.slice(base.length);
+        }
+
+        if (!normalized || normalized === "/") {
+          window.history.replaceState(null, "", base + "/");
+          return;
+        }
+
+        if (normalized.charAt(0) !== "/") {
+          normalized = "/" + normalized;
+        }
+
+        window.history.replaceState(null, "", base + "/#" + normalized);
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
