@@ -30,7 +30,14 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Build app
+        env:
+          CI: false
+          NODE_OPTIONS: --openssl-legacy-provider
+          PUBLIC_URL: /Vector
         run: npm run build
 
       - name: Upload Pages artifact

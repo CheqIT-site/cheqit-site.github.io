@@ -2,9 +2,10 @@ import React, { Component } from "react";
 
 import "./App.css";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 
 import About from "../About/about";
