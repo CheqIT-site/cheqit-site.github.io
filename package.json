@@ -2,7 +2,7 @@
   "name": "vector",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cheqit-site.github.io/Vector",
+  "homepage": "https://cheqit-site.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
