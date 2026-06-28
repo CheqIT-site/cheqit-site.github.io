@@ -32,7 +32,6 @@ jobs:
         env:
           CI: false
           NODE_OPTIONS: --openssl-legacy-provider
-          PUBLIC_URL: /Vector
         run: npm run build
 
       - name: Deploy to GitHub Pages

@@ -10,7 +10,7 @@
         var search = window.location.search || '';
         var hash = window.location.hash || '';
         var redirectPath = path + search + hash;
-        var base = '/Vector/';
+        var base = '/';
         var target = base + '?p=' + encodeURIComponent(redirectPath);
         window.location.replace(target);
       })();
